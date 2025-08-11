@@ -11,7 +11,7 @@ This is a comprehensive documentation repository for modern website development,
 ### Core Documentation Structure
 ```
 claude-code-websites/
-├── claude-context/               # iMPORTANT READ ALL THESE MARKDOWNS
+├── claude-context/               # IMPORTANT READ ALL THESE MARKDOWNS
 │   ├── system-prompt.md         # Development standards and best practices
 │   ├── website-development-guide.md  # Complete website building patterns
 │   ├── technical-specifications.md   # Framework compatibility and setup

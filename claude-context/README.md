@@ -1,24 +1,22 @@
-# Claude Context - Comprehensive Website Development Documentation
+# Claude Context - Website Development Documentation
 
-This directory contains markdown documentation that provides Claude Code with complete context for building websites and applications from scratch. All files are now in markdown format for better readability and maintenance.
+This directory contains focused documentation for building websites efficiently. All files provide essential guidance for modern web development.
 
 ## Documentation Files:
 
 ### system-prompt.md
-Complete development guidelines and best practices:
-- **Core Standards**: Modern web development principles and senior developer practices
-- **Local Development Environment**: Standard Node.js and browser-based development
-- **Development Standards**: Code formatting, project structure, and best practices
-- **Project Creation**: Rules for creating comprehensive project structures
-- **Communication Guidelines**: Clear documentation and code organization
+Core development standards and best practices:
+- **Local Development Environment**: Node.js runtime and build tools
+- **Code Standards**: Formatting, project structure, and modularity
+- **Project Creation**: Complete project setup workflows
+- **Communication Guidelines**: Clear, concise development practices
 
 ### prompt-enhancement.md
-Prompt enhancement system documentation:
-- **API Endpoint**: `/api/enhancer` functionality and implementation
-- **Frontend Integration**: React hook usage and state management
-- **Enhancement Process**: How prompts are improved using AI
-- **Technical Architecture**: Streaming responses and error handling
-- **Best Practices**: What gets enhanced and how to use the system
+Website prompt improvement guidelines:
+- **Prompt Best Practices**: Creating clear, actionable website requests  
+- **Enhancement Examples**: Transforming vague prompts into detailed specifications
+- **Common Website Types**: Business sites, portfolios, e-commerce patterns
+- **Content Structure**: Essential sections and features for different site types
 
 ### website-development-guide.md
 Complete guide for building modern websites:
