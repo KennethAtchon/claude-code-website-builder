@@ -75,6 +75,31 @@ npm run build
 npm run preview
 ```
 
+## 🌐 Deployment
+
+### Netlify Deployment
+
+This project is configured for seamless Netlify deployment with the included `netlify.toml` file:
+
+1. **Connect your repository** to Netlify
+2. **No build configuration needed** - Netlify will automatically use the settings from `netlify.toml`
+3. **Automatic deployments** on every push to your main branch
+
+The configuration includes:
+- **Optimized caching** for static assets
+- **Security headers** for production
+- **SPA routing support** for client-side navigation
+- **Performance optimizations** with proper cache headers
+
+### Manual Deployment
+
+You can also deploy the built files manually:
+
+```bash
+npm run build
+# Upload the contents of the 'dist' folder to your hosting provider
+```
+
 ## 🎨 Design System
 
 ### Color Palette
