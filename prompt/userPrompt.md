@@ -1,6 +1,6 @@
 1. Auto Repair Shop Website Prompt
 Prompt:
-Create a visually stunning, high-converting website design for an auto repair shop.
+Create a visually stunning, high-converting website design for an auto repair shop. Use Vite as the build tool for fast development and optimal performance.
 
 Design Goals:
 

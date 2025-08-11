@@ -1,7 +1,7 @@
 Prompt Template:
 
 Prompt:
-Create a visually stunning, high-converting website design for a [type of service business, e.g., auto repair shop, roofing contractor, electrician].
+Create a visually stunning, high-converting website design for a [type of service business, e.g., auto repair shop, roofing contractor, electrician]. Use Vite as the build tool for fast development and optimal performance.
 
 Design Goals:
 

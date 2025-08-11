@@ -1,0 +1,40 @@
+{
+    "prompt": "Create a visually imaginative, image-rich, high-converting website for {{business_name}}, a {{service_type}}. The design should feel premium yet approachable, blending modern aesthetics with playful, unexpected details. Every section should feature high-quality images or custom illustrations that visually communicate the brand and services. Start by running 'npm create vite@latest project-name --template react' to set up the project, then build the website using Vite for fast development and optimal performance.",
+    "required_sections": [
+      "Navbar (sticky, animated hover effects, logo for {{business_name}}, small brand-related image or icon)",
+      "Hero section (full-width animated multi-stop gradient background: {{hero_gradient}}, oversized headline, punchy tagline, bold CTA: {{cta_text}}, large high-quality hero image or collage that represents {{service_type}})",
+      "About section (photo of {{business_name}} team or workspace, paired with short story text)",
+      "Services section (service cards with relevant high-quality photos or custom illustrations, one image per service)",
+      "Testimonials section (photos of customers or their projects + glassmorphism review cards with star ratings)",
+      "Gallery or Portfolio section (grid or masonry layout of at least 6–8 images showcasing work)",
+      "Contact section (clean form + embedded map, background image or illustration for visual depth)",
+      "Footer ({{business_name}} logo, key links, socials, business info, small brand-relevant background image or pattern)"
+    ],
+    "style": {
+      "layout": "modern, airy, soft rounded corners, generous white space",
+      "typography": {
+        "headlines": "modern sans-serif",
+        "body": "friendly sans-serif"
+      },
+      "color_palette": "{{color_theme}}",
+      "details": [
+        "subtle animated shapes or blobs floating in the background",
+        "minimal yet elegant shadows",
+        "smooth hover animations",
+        "scroll-triggered reveal effects",
+        "image hover zoom or parallax"
+      ],
+      "imagery": "mix of lifestyle photography, action shots, and playful brand-specific illustrations; images should be high-resolution and fill large portions of each section"
+    },
+    "random_creative_touches": [
+      "use a large background photo overlayed with gradient color in one section",
+      "add image-based call-to-action cards",
+      "combine photography with illustrated doodles for a hybrid style",
+      "include a carousel of images in hero or gallery",
+      "make services section image cards flip or animate on hover",
+      "add a subtle looping video background instead of a static image"
+    ],
+    "mobile_experience": "keep images prominent, optimize for fast load without losing quality, maintain visual balance",
+    "vibe": "approachable yet premium; image-rich storytelling that builds trust and connection"
+  }
+  
