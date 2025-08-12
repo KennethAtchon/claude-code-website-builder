@@ -1,0 +1,219 @@
+{
+  "project_name": "bellas_bistro_website",
+  "business_type": "restaurant", 
+  "business_name": "Bella's Bistro",
+  "tagline": "Authentic Italian Cuisine in the Heart of Downtown",
+  "description": "Family-owned Italian restaurant serving traditional recipes passed down through three generations, featuring fresh pasta, wood-fired pizza, and an extensive wine collection.",
+  
+  "brand": {
+    "primary_color": "#8B4513",
+    "secondary_color": "#D2691E",
+    "accent_color": "#228B22",
+    "logo_text": "Bella's Bistro",
+    "font_style": "elegant",
+    "use_gradient": true
+  },
+
+  "contact_info": {
+    "phone": "(555) 123-4567",
+    "email": "info@bellasbistro.com",
+    "address": {
+      "street": "123 Main Street",
+      "city": "Downtown",
+      "state": "California",
+      "zip": "90210",
+      "country": "USA"
+    },
+    "social_media": {
+      "facebook": "https://facebook.com/bellasbistro",
+      "instagram": "https://instagram.com/bellasbistro",
+      "twitter": "",
+      "linkedin": "",
+      "youtube": ""
+    },
+    "hours": {
+      "monday": "Closed",
+      "tuesday": "5:00 PM - 10:00 PM",
+      "wednesday": "5:00 PM - 10:00 PM",
+      "thursday": "5:00 PM - 10:00 PM",
+      "friday": "5:00 PM - 11:00 PM",
+      "saturday": "4:00 PM - 11:00 PM",
+      "sunday": "4:00 PM - 9:00 PM"
+    }
+  },
+
+  "website_structure": {
+    "pages": [
+      "home",
+      "about",
+      "services",
+      "portfolio",
+      "testimonials",
+      "contact",
+      "menu",
+      "reservations"
+    ],
+    "sections": {
+      "hero": {
+        "enabled": true,
+        "style": "video_background",
+        "background_type": "video",
+        "cta_primary": "View Our Menu",
+        "cta_secondary": "Make Reservation"
+      },
+      "about": {
+        "enabled": true,
+        "story": "Founded in 1952 by Giovanni Rossini, Bella's Bistro has been serving authentic Italian cuisine to our community for over 70 years. What started as a small family trattoria has grown into downtown's most beloved Italian restaurant, while never losing sight of our commitment to traditional recipes and warm hospitality.",
+        "mission": "To bring the authentic flavors of Italy to your table while creating memorable dining experiences for families and friends.",
+        "values": ["Authentic Italian Traditions", "Fresh Local Ingredients", "Family-Friendly Atmosphere"],
+        "team_section": true
+      },
+      "services": {
+        "enabled": true,
+        "display_style": "card_grid",
+        "services_list": [
+          {
+            "name": "Dine-In Experience",
+            "description": "Enjoy our full menu in our warm, inviting dining room with live acoustic music on weekends",
+            "price": "Entrees $18-32",
+            "features": ["Full Bar", "Wine Pairings", "Live Music Weekends"]
+          },
+          {
+            "name": "Private Events",
+            "description": "Host your special occasion in our private dining room for groups up to 40 guests",
+            "price": "Starting at $45/person",
+            "features": ["Customized Menus", "Dedicated Service", "Audio/Visual Setup"]
+          },
+          {
+            "name": "Catering Services",
+            "description": "Bring Bella's authentic flavors to your office or home gathering",
+            "price": "From $12/person",
+            "features": ["Fresh Preparation", "Delivery Available", "Full Service Options"]
+          }
+        ]
+      },
+      "portfolio": {
+        "enabled": true,
+        "gallery_style": "masonry",
+        "categories": ["Signature Dishes", "Wine Collection", "Restaurant Ambiance"],
+        "showcase_count": 20
+      },
+      "testimonials": {
+        "enabled": true,
+        "display_style": "carousel",
+        "testimonials_list": [
+          {
+            "name": "Maria Rodriguez",
+            "title": "Local Food Critic",
+            "company": "Downtown Gazette",
+            "content": "Bella's Bistro transports you straight to Italy with every bite. The osso buco is absolutely divine, and the tiramisu is the best I've had outside of Rome!",
+            "rating": 5
+          },
+          {
+            "name": "James Thompson",
+            "title": "Regular Customer",
+            "company": "Thompson Family",
+            "content": "We've been coming here for family dinners for over 15 years. The Rossini family treats everyone like family, and the food is consistently amazing. Our go-to spot for celebrations!",
+            "rating": 5
+          }
+        ]
+      },
+      "contact": {
+        "enabled": true,
+        "form_fields": ["name", "email", "phone", "service", "message"],
+        "include_map": true,
+        "booking_system": true
+      }
+    }
+  },
+
+  "design_preferences": {
+    "style": "warm_traditional",
+    "layout": "classic",
+    "animations": "subtle",
+    "mobile_first": true,
+    "accessibility": true,
+    "color_scheme": "warm_earth_tones",
+    "image_style": "rich_photography"
+  },
+
+  "features": {
+    "blog": false,
+    "ecommerce": false,
+    "booking": true,
+    "multilingual": false,
+    "search": true,
+    "newsletter": true,
+    "live_chat": false,
+    "analytics": true
+  },
+
+  "seo": {
+    "meta_title": "Bella's Bistro - Authentic Italian Restaurant | Downtown CA",
+    "meta_description": "Experience authentic Italian cuisine at Bella's Bistro. Family-owned restaurant serving traditional pasta, wood-fired pizza & fine wines since 1952. Reservations available.",
+    "keywords": ["Italian restaurant", "authentic Italian food", "downtown dining", "family restaurant", "wood-fired pizza"],
+    "local_seo": true,
+    "schema_markup": true
+  },
+
+  "content_strategy": {
+    "tone": "warm_welcoming",
+    "target_audience": "families, couples, food enthusiasts, business diners",
+    "key_messages": ["Authentic Italian tradition since 1952", "Fresh ingredients, family recipes"],
+    "call_to_actions": ["Make a Reservation", "View Our Menu", "Order Catering"],
+    "content_themes": ["family tradition", "authentic cuisine", "memorable experiences"]
+  },
+
+  "industry_specific": {
+    "restaurant": {
+      "menu_integration": true,
+      "online_ordering": false,
+      "reservations": true
+    },
+    "healthcare": {
+      "appointment_booking": false,
+      "patient_portal": false,
+      "hipaa_compliance": false
+    },
+    "ecommerce": {
+      "product_catalog": "",
+      "payment_methods": [],
+      "shipping_options": []
+    },
+    "professional_services": {
+      "case_studies": false,
+      "consultation_booking": false,
+      "resource_library": false
+    },
+    "creative": {
+      "portfolio_focus": false,
+      "client_galleries": false,
+      "process_showcase": false
+    }
+  },
+
+  "technical_requirements": {
+    "framework": "nextjs",
+    "styling": "tailwindcss",
+    "ui_library": "shadcn/ui",
+    "animations": "framer-motion",
+    "forms": "react-hook-form",
+    "cms": "contentful",
+    "hosting": "vercel",
+    "performance_optimization": true,
+    "seo_optimization": true
+  },
+
+  "launch_checklist": [
+    "responsive_design_tested",
+    "cross_browser_compatibility",
+    "performance_optimized",
+    "seo_implemented",
+    "analytics_configured",
+    "forms_tested",
+    "contact_info_verified",
+    "ssl_certificate",
+    "backup_system",
+    "maintenance_plan"
+  ]
+}

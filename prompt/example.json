@@ -44,7 +44,7 @@
       }
     ],
     "images": {
-      "sources": "Use two recyclable placeholder images from Unsplash (https://unsplash.com/photos/J5feaur-y6I and https://unsplash.com/photos/e080KjvQKGc) for all sections. I'll replace them with actual images later.",
+      "sources": "Use two recyclable placeholder images from Unsplash for all sections. I'll replace them with actual images later.",
       "styling": "Use 'w-full h-auto' for responsive images, 'object-cover' for consistent sizing",
       "imagery": "high-res placeholders filling sections"
     }

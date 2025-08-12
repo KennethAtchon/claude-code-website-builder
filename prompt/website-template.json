@@ -1,0 +1,218 @@
+{
+  "project_name": "{{business_name}}_website",
+  "business_type": "{{business_type}}", 
+  "business_name": "{{business_name}}",
+  "tagline": "{{tagline}}",
+  "description": "{{business_description}}",
+  
+  "brand": {
+    "primary_color": "{{primary_color}}",
+    "secondary_color": "{{secondary_color}}",
+    "accent_color": "{{accent_color}}",
+    "logo_text": "{{business_name}}",
+    "font_style": "{{font_style}}",
+    "use_gradient": "{{use_gradient}}"
+  },
+
+  "contact_info": {
+    "phone": "{{phone_number}}",
+    "email": "{{email_address}}",
+    "address": {
+      "street": "{{street_address}}",
+      "city": "{{city}}",
+      "state": "{{state}}",
+      "zip": "{{zip_code}}",
+      "country": "{{country}}"
+    },
+    "social_media": {
+      "facebook": "{{facebook_url}}",
+      "instagram": "{{instagram_url}}",
+      "twitter": "{{twitter_url}}",
+      "linkedin": "{{linkedin_url}}",
+      "youtube": "{{youtube_url}}"
+    },
+    "hours": {
+      "monday": "{{monday_hours}}",
+      "tuesday": "{{tuesday_hours}}",
+      "wednesday": "{{wednesday_hours}}",
+      "thursday": "{{thursday_hours}}",
+      "friday": "{{friday_hours}}",
+      "saturday": "{{saturday_hours}}",
+      "sunday": "{{sunday_hours}}"
+    }
+  },
+
+  "website_structure": {
+    "pages": [
+      "home",
+      "about",
+      "services",
+      "portfolio",
+      "testimonials",
+      "contact",
+      "{{additional_pages}}"
+    ],
+    "sections": {
+      "hero": {
+        "enabled": true,
+        "style": "{{hero_style}}",
+        "background_type": "{{hero_background}}",
+        "cta_primary": "{{primary_cta}}",
+        "cta_secondary": "{{secondary_cta}}"
+      },
+      "about": {
+        "enabled": true,
+        "story": "{{company_story}}",
+        "mission": "{{company_mission}}",
+        "values": ["{{value_1}}", "{{value_2}}", "{{value_3}}"],
+        "team_section": "{{include_team}}"
+      },
+      "services": {
+        "enabled": true,
+        "display_style": "{{services_layout}}",
+        "services_list": [
+          {
+            "name": "{{service_1_name}}",
+            "description": "{{service_1_description}}",
+            "price": "{{service_1_price}}",
+            "features": ["{{service_1_feature_1}}", "{{service_1_feature_2}}"]
+          },
+          {
+            "name": "{{service_2_name}}",
+            "description": "{{service_2_description}}",
+            "price": "{{service_2_price}}",
+            "features": ["{{service_2_feature_1}}", "{{service_2_feature_2}}"]
+          },
+          {
+            "name": "{{service_3_name}}",
+            "description": "{{service_3_description}}",
+            "price": "{{service_3_price}}",
+            "features": ["{{service_3_feature_1}}", "{{service_3_feature_2}}"]
+          }
+        ]
+      },
+      "portfolio": {
+        "enabled": "{{include_portfolio}}",
+        "gallery_style": "{{gallery_layout}}",
+        "categories": ["{{portfolio_category_1}}", "{{portfolio_category_2}}"],
+        "showcase_count": "{{portfolio_items_count}}"
+      },
+      "testimonials": {
+        "enabled": true,
+        "display_style": "{{testimonials_layout}}",
+        "testimonials_list": [
+          {
+            "name": "{{testimonial_1_name}}",
+            "title": "{{testimonial_1_title}}",
+            "company": "{{testimonial_1_company}}",
+            "content": "{{testimonial_1_content}}",
+            "rating": "{{testimonial_1_rating}}"
+          },
+          {
+            "name": "{{testimonial_2_name}}",
+            "title": "{{testimonial_2_title}}",
+            "company": "{{testimonial_2_company}}",
+            "content": "{{testimonial_2_content}}",
+            "rating": "{{testimonial_2_rating}}"
+          }
+        ]
+      },
+      "contact": {
+        "enabled": true,
+        "form_fields": ["name", "email", "phone", "service", "message"],
+        "include_map": "{{include_google_map}}",
+        "booking_system": "{{include_booking}}"
+      }
+    }
+  },
+
+  "design_preferences": {
+    "style": "{{design_style}}",
+    "layout": "{{layout_preference}}",
+    "animations": "{{animation_level}}",
+    "mobile_first": true,
+    "accessibility": true,
+    "color_scheme": "{{color_scheme}}",
+    "image_style": "{{image_treatment}}"
+  },
+
+  "features": {
+    "blog": "{{include_blog}}",
+    "ecommerce": "{{include_shop}}",
+    "booking": "{{include_booking}}",
+    "multilingual": "{{include_languages}}",
+    "search": "{{include_search}}",
+    "newsletter": "{{include_newsletter}}",
+    "live_chat": "{{include_chat}}",
+    "analytics": "{{include_analytics}}"
+  },
+
+  "seo": {
+    "meta_title": "{{seo_title}}",
+    "meta_description": "{{seo_description}}",
+    "keywords": ["{{keyword_1}}", "{{keyword_2}}", "{{keyword_3}}"],
+    "local_seo": "{{enable_local_seo}}",
+    "schema_markup": true
+  },
+
+  "content_strategy": {
+    "tone": "{{brand_tone}}",
+    "target_audience": "{{target_audience}}",
+    "key_messages": ["{{key_message_1}}", "{{key_message_2}}"],
+    "call_to_actions": ["{{cta_1}}", "{{cta_2}}"],
+    "content_themes": ["{{theme_1}}", "{{theme_2}}"]
+  },
+
+  "industry_specific": {
+    "restaurant": {
+      "menu_integration": "{{include_menu}}",
+      "online_ordering": "{{include_ordering}}",
+      "reservations": "{{include_reservations}}"
+    },
+    "healthcare": {
+      "appointment_booking": "{{include_appointments}}",
+      "patient_portal": "{{include_portal}}",
+      "hipaa_compliance": true
+    },
+    "ecommerce": {
+      "product_catalog": "{{product_count}}",
+      "payment_methods": ["{{payment_1}}", "{{payment_2}}"],
+      "shipping_options": ["{{shipping_1}}", "{{shipping_2}}"]
+    },
+    "professional_services": {
+      "case_studies": "{{include_case_studies}}",
+      "consultation_booking": "{{include_consultation}}",
+      "resource_library": "{{include_resources}}"
+    },
+    "creative": {
+      "portfolio_focus": true,
+      "client_galleries": "{{include_galleries}}",
+      "process_showcase": "{{show_process}}"
+    }
+  },
+
+  "technical_requirements": {
+    "framework": "nextjs",
+    "styling": "tailwindcss",
+    "ui_library": "shadcn/ui",
+    "animations": "framer-motion",
+    "forms": "react-hook-form",
+    "cms": "{{cms_preference}}",
+    "hosting": "{{hosting_preference}}",
+    "performance_optimization": true,
+    "seo_optimization": true
+  },
+
+  "launch_checklist": [
+    "responsive_design_tested",
+    "cross_browser_compatibility",
+    "performance_optimized",
+    "seo_implemented",
+    "analytics_configured",
+    "forms_tested",
+    "contact_info_verified",
+    "ssl_certificate",
+    "backup_system",
+    "maintenance_plan"
+  ]
+}
