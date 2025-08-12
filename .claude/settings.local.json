@@ -20,6 +20,7 @@
       "Bash(find:*)",
       "Bash(curl:*)",
       "Bash(wget:*)",
+      "Bash(echo:*)",
       "Write(*)",
       "Edit(*)",
       "MultiEdit(*)",

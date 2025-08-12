@@ -1,0 +1,88 @@
+{
+  "business_name": "Elite Auto Repair",
+  "service_type": "automotive repair",
+  "color_theme": "professional blue and silver with orange accents (#1E3A8A, #64748B, #F97316)",
+  "hero_gradient": "from-blue-900 via-blue-700 to-blue-500",
+  "cta_text": "Schedule Service Today",
+  "content": {
+    "prompt": "Build a visually appealing, high-converting website for Elite Auto Repair, a local automotive repair business. Design should be premium yet approachable, with modern aesthetics and playful details tailored for local customers.",
+    "sections": [
+      {
+        "name": "Navbar",
+        "description": "Sticky, animated hover, Elite Auto Repair logo, small wrench icon"
+      },
+      {
+        "name": "Hero", 
+        "description": "Full-width from-blue-900 via-blue-700 to-blue-500 gradient, bold headline, tagline, CTA (Schedule Service Today), large placeholder image",
+        "mobile": "Use 'h-screen md:h-96', 'flex-col md:flex-row' for responsive layout"
+      },
+      {
+        "name": "About",
+        "description": "Placeholder team/workspace image, short story text about 20+ years serving the community"
+      },
+      {
+        "name": "Services", 
+        "description": "Cards with placeholder image per service: Oil Changes, Brake Repair, Engine Diagnostics, Transmission Service",
+        "mobile": "Grid with 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' responsive columns"
+      },
+      {
+        "name": "Testimonials",
+        "description": "Placeholder customer/project images, glassmorphism review cards with 5-star ratings from satisfied customers"
+      },
+      {
+        "name": "Gallery",
+        "description": "Grid of 6–8 placeholder work images showing before/after repairs, clean shop interior",
+        "mobile": "Grid with 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4' responsive layout"
+      },
+      {
+        "name": "Contact",
+        "description": "Contact form, embedded map showing shop location, placeholder garage background image"
+      },
+      {
+        "name": "Footer",
+        "description": "Elite Auto Repair logo, quick links, social media icons, placeholder subtle pattern background"
+      }
+    ],
+    "images": {
+      "sources": "Use two recyclable placeholder images from Unsplash (https://unsplash.com/photos/J5feaur-y6I and https://unsplash.com/photos/e080KjvQKGc) for all sections. I'll replace them with actual images later.",
+      "styling": "Use 'w-full h-auto' for responsive images, 'object-cover' for consistent sizing",
+      "imagery": "high-res placeholders filling sections"
+    }
+  },
+  "design": {
+    "style": {
+      "layout": "modern, airy, rounded corners, spacious",
+      "typography": {
+        "headlines": "modern sans-serif",
+        "body": "friendly sans-serif", 
+        "mobile": "Use 'text-2xl md:text-4xl' for responsive font sizes"
+      },
+      "colors": "professional blue and silver with orange accents (#1E3A8A, #64748B, #F97316)",
+      "details": [
+        "animated background shapes",
+        "subtle shadows",
+        "hover animations", 
+        "scroll reveals",
+        "image hover zoom"
+      ]
+    },
+    "creative_touches": [
+      "gradient-overlay placeholder in hero section",
+      "image-based service CTA cards",
+      "automotive-themed design elements",
+      "image carousel in gallery",
+      "animated service card hover effects",
+      "subtle gear/wrench icon animations"
+    ],
+    "vibe": "premium, trustworthy, professional yet approachable for local car owners"
+  },
+  "mobile": {
+    "layout": "Use 'flex flex-col' for mobile, 'md:flex-row' for desktop stacking",
+    "navigation": "Hidden mobile menu with 'hidden md:flex', hamburger with 'md:hidden'",
+    "spacing": "Use 'p-4 md:p-8', 'm-2 md:m-4' for responsive padding/margins", 
+    "containers": "Use 'max-w-full md:max-w-6xl mx-auto px-4' for responsive containers"
+  },
+  "netlify": {
+    "config": "Create a netlify.toml file with build settings for Next.js deployment"
+  }
+}
