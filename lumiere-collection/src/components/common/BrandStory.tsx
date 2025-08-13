@@ -106,16 +106,15 @@ export default function BrandStory() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
               >
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-text hover:bg-text/90 text-white font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
-                >
-                  <Link href="/heritage">
+                <Link href="/heritage">
+                  <Button
+                    size="lg"
+                    className="bg-text hover:bg-text/90 text-white font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+                  >
                     Our Story
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

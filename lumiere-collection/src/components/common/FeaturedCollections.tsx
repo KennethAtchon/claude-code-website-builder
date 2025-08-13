@@ -140,17 +140,16 @@ export default function FeaturedCollections() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="border-text text-text hover:bg-text hover:text-white font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300"
-          >
-            <Link href="/collections">
+          <Link href="/collections">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-text text-text hover:bg-text hover:text-white font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300"
+            >
               View All Collections
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

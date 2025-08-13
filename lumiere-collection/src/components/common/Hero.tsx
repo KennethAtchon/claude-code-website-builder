@@ -99,22 +99,24 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
             >
-              <Button
-                asChild
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-black font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
-              >
-                <Link href="/collections">Explore Collection</Link>
-              </Button>
+              <Link href="/collections">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-black font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore Collection
+                </Button>
+              </Link>
               
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-black font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
-              >
-                <Link href="/heritage">Watch Story</Link>
-              </Button>
+              <Link href="/heritage">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-black font-medium px-8 py-4 rounded-none uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+                >
+                  Watch Story
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
