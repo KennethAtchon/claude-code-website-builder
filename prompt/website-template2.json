@@ -1,0 +1,134 @@
+{
+    "website": {
+      "name": "{{websiteName}}",
+      "styles": {
+        "colors": {
+          "primary": "{{primaryColor}}",
+          "secondary": "{{secondaryColor}}",
+          "accent": "{{accentColor}}",
+          "background": "{{backgroundColor}}",
+          "text": "{{textColor}}"
+        },
+        "typography": {
+          "primaryFont": {
+            "name": "{{primaryFontName}}",
+            "weights": "{{primaryFontWeights}}",
+            "source": "{{primaryFontSource}}"
+          },
+          "secondaryFont": {
+            "name": "{{secondaryFontName}}",
+            "weights": "{{secondaryFontWeights}}",
+            "source": "{{secondaryFontSource}}"
+          },
+          "fontSizes": {
+            "h1": "{{h1FontSize}}",
+            "h2": "{{h2FontSize}}",
+            "body": "{{bodyFontSize}}"
+          }
+        },
+        "spacing": {
+          "padding": {
+            "small": "{{smallPadding}}",
+            "medium": "{{mediumPadding}}",
+            "large": "{{largePadding}}"
+          },
+          "gap": "{{gap}}"
+        },
+        "borderRadius": {
+          "default": "{{defaultBorderRadius}}"
+        },
+        "breakpoints": {
+          "mobile": "{{mobileBreakpoint}}",
+          "tablet": "{{tabletBreakpoint}}",
+          "desktop": "{{desktopBreakpoint}}"
+        }
+      },
+      "structure": {
+        "pages": [
+          {
+            "name": "{{pageName}}",
+            "path": "{{pagePath}}",
+            "layout": {
+              "header": {
+                "type": "{{headerType}}",
+                "components": [
+                  {
+                    "type": "logo",
+                    "position": "{{logoPosition}}",
+                    "content": {
+                      "text": "{{logoText}}",
+                      "image": "{{logoImagePath}}"
+                    }
+                  },
+                  {
+                    "type": "nav",
+                    "position": "{{navPosition}}",
+                    "items": [
+                      {"label": "{{navItem1Label}}", "path": "{{navItem1Path}}"},
+                      {"label": "{{navItem2Label}}", "path": "{{navItem2Path}}"}
+                    ]
+                  }
+                ]
+              },
+              "main": {
+                "sections": [
+                  {
+                    "type": "hero",
+                    "content": {
+                      "title": "{{heroTitle}}",
+                      "subtitle": "{{heroSubtitle}}",
+                      "cta": {
+                        "label": "{{ctaLabel}}",
+                        "path": "{{ctaPath}}"
+                      }
+                    },
+                    "styles": {
+                      "backgroundColor": "{{heroBackgroundColor}}",
+                      "textColor": "{{heroTextColor}}",
+                      "padding": "{{heroPadding}}"
+                    }
+                  },
+                  {
+                    "type": "features",
+                    "content": {
+                      "title": "{{featuresTitle}}",
+                      "items": [
+                        {
+                          "title": "{{feature1Title}}",
+                          "description": "{{feature1Description}}"
+                        },
+                        {
+                          "title": "{{feature2Title}}",
+                          "description": "{{feature2Description}}"
+                        }
+                      ]
+                    },
+                    "layout": "{{featuresLayout}}",
+                    "columns": "{{featuresColumns}}"
+                  }
+                ]
+              },
+              "footer": {
+                "components": [
+                  {
+                    "type": "links",
+                    "items": [
+                      {"label": "{{footerLink1Label}}", "path": "{{footerLink1Path}}"},
+                      {"label": "{{footerLink2Label}}", "path": "{{footerLink2Path}}"}
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "settings": {
+        "responsive": "{{responsive}}",
+        "accessibility": {
+          "ariaLabels": "{{ariaLabels}}",
+          "keyboardNav": "{{keyboardNav}}"
+        }
+      }
+    }
+  }

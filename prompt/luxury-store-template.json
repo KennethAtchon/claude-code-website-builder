@@ -1,0 +1,332 @@
+{
+  "project_name": "{{business_name}}_luxury_store",
+  "business_type": "luxury_retail",
+  "business_name": "{{business_name}}",
+  "tagline": "{{luxury_tagline}}",
+  "description": "{{luxury_description}}",
+  
+  "brand": {
+    "primary_color": "#1a1a1a",
+    "secondary_color": "#d4af37",
+    "accent_color": "#ffffff",
+    "logo_text": "{{business_name}}",
+    "font_style": "elegant_serif",
+    "use_gradient": false,
+    "luxury_elements": {
+      "gold_accents": true,
+      "premium_typography": true,
+      "subtle_animations": true,
+      "minimalist_design": true
+    }
+  },
+
+  "contact_info": {
+    "phone": "{{luxury_phone}}",
+    "email": "{{luxury_email}}",
+    "address": {
+      "street": "{{luxury_address}}",
+      "city": "{{luxury_city}}",
+      "state": "{{luxury_state}}",
+      "zip": "{{luxury_zip}}",
+      "country": "{{luxury_country}}"
+    },
+    "social_media": {
+      "instagram": "{{luxury_instagram}}",
+      "facebook": "{{luxury_facebook}}",
+      "pinterest": "{{luxury_pinterest}}",
+      "youtube": "{{luxury_youtube}}"
+    },
+    "hours": {
+      "monday": "10:00 AM - 7:00 PM",
+      "tuesday": "10:00 AM - 7:00 PM",
+      "wednesday": "10:00 AM - 7:00 PM",
+      "thursday": "10:00 AM - 7:00 PM",
+      "friday": "10:00 AM - 8:00 PM",
+      "saturday": "10:00 AM - 8:00 PM",
+      "sunday": "12:00 PM - 6:00 PM"
+    },
+    "private_appointments": {
+      "enabled": true,
+      "after_hours": true,
+      "personal_shopping": true
+    }
+  },
+
+  "website_structure": {
+    "pages": [
+      "home",
+      "collections",
+      "about",
+      "heritage",
+      "private_shopping",
+      "services",
+      "contact",
+      "appointments"
+    ],
+    "sections": {
+      "hero": {
+        "enabled": true,
+        "style": "cinematic_fullscreen",
+        "background_type": "luxury_video",
+        "cta_primary": "Explore Collections",
+        "cta_secondary": "Book Private Appointment",
+        "parallax_effect": true,
+        "hero_video": "{{luxury_hero_video}}"
+      },
+      "featured_collections": {
+        "enabled": true,
+        "display_style": "luxury_grid",
+        "collections": [
+          {
+            "name": "{{collection_1_name}}",
+            "description": "{{collection_1_description}}",
+            "price_range": "{{collection_1_price_range}}",
+            "featured_image": "{{collection_1_image}}",
+            "exclusivity": "{{collection_1_exclusivity}}"
+          },
+          {
+            "name": "{{collection_2_name}}",
+            "description": "{{collection_2_description}}",
+            "price_range": "{{collection_2_price_range}}",
+            "featured_image": "{{collection_2_image}}",
+            "exclusivity": "{{collection_2_exclusivity}}"
+          },
+          {
+            "name": "{{collection_3_name}}",
+            "description": "{{collection_3_description}}",
+            "price_range": "{{collection_3_price_range}}",
+            "featured_image": "{{collection_3_image}}",
+            "exclusivity": "{{collection_3_exclusivity}}"
+          }
+        ]
+      },
+      "about": {
+        "enabled": true,
+        "heritage_story": "{{luxury_heritage}}",
+        "craftsmanship": "{{craftsmanship_details}}",
+        "awards": [
+          "{{award_1}}",
+          "{{award_2}}",
+          "{{award_3}}"
+        ],
+        "founder_story": "{{founder_story}}",
+        "philosophy": "{{brand_philosophy}}"
+      },
+      "luxury_services": {
+        "enabled": true,
+        "display_style": "premium_cards",
+        "services_list": [
+          {
+            "name": "Personal Shopping",
+            "description": "One-on-one styling consultation with our experts",
+            "duration": "2-3 hours",
+            "price": "Complimentary",
+            "features": ["Private appointment", "Personalized selection", "Styling advice"]
+          },
+          {
+            "name": "Private Viewing",
+            "description": "Exclusive access to new collections before public release",
+            "duration": "By appointment",
+            "price": "VIP Members",
+            "features": ["First access", "Champagne service", "Personal consultant"]
+          },
+          {
+            "name": "Custom Orders",
+            "description": "Bespoke pieces tailored to your specifications",
+            "duration": "4-8 weeks",
+            "price": "Starting at {{custom_price}}",
+            "features": ["Unique design", "Premium materials", "White-glove delivery"]
+          }
+        ]
+      },
+      "testimonials": {
+        "enabled": true,
+        "display_style": "luxury_carousel",
+        "testimonials_list": [
+          {
+            "name": "{{vip_client_1}}",
+            "title": "{{client_1_title}}",
+            "location": "{{client_1_location}}",
+            "content": "{{luxury_testimonial_1}}",
+            "rating": 5,
+            "purchase_history": "{{client_1_history}}"
+          },
+          {
+            "name": "{{vip_client_2}}",
+            "title": "{{client_2_title}}",
+            "location": "{{client_2_location}}",
+            "content": "{{luxury_testimonial_2}}",
+            "rating": 5,
+            "purchase_history": "{{client_2_history}}"
+          }
+        ]
+      },
+      "contact": {
+        "enabled": true,
+        "form_fields": ["name", "email", "phone", "interest", "budget_range", "appointment_preference"],
+        "include_map": true,
+        "concierge_service": true,
+        "vip_contact": {
+          "enabled": true,
+          "dedicated_line": "{{vip_phone}}",
+          "priority_email": "{{vip_email}}"
+        }
+      }
+    }
+  },
+
+  "design_preferences": {
+    "style": "luxury_minimalist",
+    "layout": "premium_spacious",
+    "animations": "subtle_elegant",
+    "mobile_first": true,
+    "accessibility": true,
+    "color_scheme": "monochromatic_gold_accents",
+    "image_style": "high_end_photography",
+    "typography": {
+      "primary": "playfair_display",
+      "secondary": "source_sans_pro",
+      "luxury_script": "great_vibes"
+    },
+    "visual_elements": {
+      "gold_dividers": true,
+      "subtle_shadows": true,
+      "premium_hover_effects": true,
+      "luxury_icons": true
+    }
+  },
+
+  "features": {
+    "vip_membership": true,
+    "private_appointments": true,
+    "personal_shopping": true,
+    "exclusive_previews": true,
+    "concierge_service": true,
+    "white_glove_delivery": true,
+    "authentication_certificates": true,
+    "care_instructions": true,
+    "warranty_registration": true,
+    "newsletter_luxury": true,
+    "live_chat_premium": true,
+    "analytics": true
+  },
+
+  "luxury_specific": {
+    "exclusivity": {
+      "limited_editions": true,
+      "member_only_access": true,
+      "invitation_only_events": true,
+      "early_access_new_arrivals": true
+    },
+    "authentication": {
+      "certificates_of_authenticity": true,
+      "provenance_documentation": true,
+      "quality_guarantees": true
+    },
+    "customer_service": {
+      "24_7_concierge": true,
+      "multilingual_support": true,
+      "white_glove_service": true,
+      "personal_shoppers": true
+    },
+    "presentation": {
+      "premium_packaging": true,
+      "gift_wrapping": true,
+      "custom_monogramming": true,
+      "presentation_boxes": true
+    }
+  },
+
+  "seo": {
+    "meta_title": "{{luxury_seo_title}}",
+    "meta_description": "{{luxury_seo_description}}",
+    "keywords": [
+      "luxury {{product_type}}",
+      "high-end {{category}}",
+      "exclusive {{brand_specialty}}",
+      "premium {{location}} boutique"
+    ],
+    "local_seo": true,
+    "schema_markup": true,
+    "luxury_schema": {
+      "product_markup": true,
+      "brand_markup": true,
+      "store_markup": true
+    }
+  },
+
+  "content_strategy": {
+    "tone": "sophisticated_exclusive",
+    "target_audience": "affluent_discerning_customers",
+    "key_messages": [
+      "Uncompromising quality and craftsmanship",
+      "Exclusive access to the world's finest {{product_category}}",
+      "Personalized luxury shopping experience"
+    ],
+    "call_to_actions": [
+      "Schedule Private Appointment",
+      "Join VIP Membership",
+      "Explore Exclusive Collection"
+    ],
+    "content_themes": [
+      "heritage_craftsmanship",
+      "exclusivity_prestige",
+      "personalized_service"
+    ]
+  },
+
+  "inventory_showcase": {
+    "featured_products": {
+      "display_count": 6,
+      "rotation_frequency": "weekly",
+      "price_display": "on_request",
+      "detailed_descriptions": true
+    },
+    "collection_categories": [
+      "{{category_1}}",
+      "{{category_2}}",
+      "{{category_3}}",
+      "{{category_4}}"
+    ],
+    "product_presentation": {
+      "high_resolution_images": true,
+      "360_degree_views": true,
+      "zoom_functionality": true,
+      "lifestyle_photography": true
+    }
+  },
+
+  "technical_requirements": {
+    "framework": "nextjs",
+    "styling": "tailwindcss",
+    "ui_library": "shadcn/ui",
+    "animations": "framer-motion",
+    "forms": "react-hook-form",
+    "cms": "sanity",
+    "hosting": "vercel",
+    "performance_optimization": true,
+    "seo_optimization": true,
+    "security": {
+      "ssl_certificate": true,
+      "secure_forms": true,
+      "privacy_compliance": true
+    }
+  },
+
+  "launch_checklist": [
+    "responsive_design_tested",
+    "cross_browser_compatibility",
+    "performance_optimized",
+    "luxury_aesthetic_approved",
+    "seo_implemented",
+    "analytics_configured",
+    "appointment_system_tested",
+    "contact_forms_tested",
+    "ssl_certificate_installed",
+    "privacy_policy_implemented",
+    "terms_of_service_added",
+    "luxury_photography_optimized",
+    "vip_features_functional",
+    "concierge_contact_verified"
+  ]
+}

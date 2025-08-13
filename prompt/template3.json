@@ -1,0 +1,153 @@
+{
+    "websiteSchemaVersion": "1.0.0",
+    "identity": {
+      "name": "{companyName}",
+      "tagline": "{companyTagline}",
+      "corePurpose": "{companyCorePurpose}",
+      "logoConcept": "{briefLogoDescription}"
+    },
+    "aesthetic": {
+      "overallMood": "{websiteMood}",
+      "colorPalette": {
+        "primary": "{primaryColorDescription}",
+        "secondary": "{secondaryColorDescription}",
+        "accent": "{accentColorDescription}",
+        "neutral": "{neutralColorDescription}"
+      },
+      "typography": {
+        "headings": {
+          "style": "{headingsFontFamilyDescription}",
+          "weight": "impactful"
+        },
+        "body": {
+          "style": "{bodyFontFamilyDescription}",
+          "weight": "readable"
+        }
+      },
+      "imageryStyle": "{imageryStyleDescription}",
+      "interfaceStyle": {
+        "cornerRadius": "{cornerRadiusStyle}",
+        "iconography": "{iconographyStyle}"
+      }
+    },
+    "structure": {
+      "navigation": {
+        "style": "sticky_header",
+        "links": [
+          "{navLink_1}",
+          "{navLink_2}",
+          "{navLink_3}",
+          {
+            "text": "{primaryCallToAction}",
+            "style": "button"
+          }
+        ]
+      },
+      "pageSections": [
+        {
+          "sectionType": "hero",
+          "layout": "text_left_visual_right",
+          "elements": [
+            {
+              "type": "heading",
+              "content": "{heroTitle}"
+            },
+            {
+              "type": "paragraph",
+              "content": "{heroSubtitle}"
+            },
+            {
+              "type": "button",
+              "content": "{primaryCallToAction}"
+            },
+            {
+              "type": "visual",
+              "prompt": "{heroImagePrompt}"
+            }
+          ]
+        },
+        {
+          "sectionType": "features_overview",
+          "layout": "three_column_grid",
+          "elements": [
+            {
+              "type": "feature_card",
+              "icon_prompt": "{featureIconPrompt_1}",
+              "title": "{featureTitle_1}",
+              "description": "{featureDescription_1}"
+            },
+            {
+              "type": "feature_card",
+              "icon_prompt": "{featureIconPrompt_2}",
+              "title": "{featureTitle_2}",
+              "description": "{featureDescription_2}"
+            },
+            {
+              "type": "feature_card",
+              "icon_prompt": "{featureIconPrompt_3}",
+              "title": "{featureTitle_3}",
+              "description": "{featureDescription_3}"
+            }
+          ]
+        },
+        {
+          "sectionType": "social_proof",
+          "layout": "centered_quote_with_avatar",
+          "elements": [
+            {
+              "type": "visual",
+              "prompt": "{testimonialAuthorImagePrompt}"
+            },
+            {
+              "type": "quote",
+              "content": "{testimonialText}"
+            },
+            {
+              "type": "attribution",
+              "content": "{testimonialAuthorName}, {testimonialAuthorTitle}"
+            }
+          ]
+        },
+        {
+          "sectionType": "final_call_to_action",
+          "layout": "full_width_banner",
+          "elements": [
+            {
+              "type": "heading",
+              "content": "{finalCtaTitle}"
+            },
+            {
+              "type": "paragraph",
+              "content": "{finalCtaSubtitle}"
+            },
+            {
+              "type": "button",
+              "content": "{primaryCallToAction}"
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "layout": "four_column",
+        "columns": [
+          {
+            "title": "Company",
+            "links": ["{footerLink_About}", "{footerLink_Blog}", "{footerLink_Careers}"]
+          },
+          {
+            "title": "Product",
+            "links": ["{footerLink_Features}", "{footerLink_Pricing}", "{footerLink_Docs}"]
+          },
+          {
+            "title": "Legal",
+            "links": ["Privacy Policy", "Terms of Service"]
+          },
+          {
+            "title": "Connect",
+            "socials": ["{socialMediaName_1}", "{socialMediaName_2}", "{socialMediaName_3}"]
+          }
+        ]
+      }
+    }
+  }
+  
