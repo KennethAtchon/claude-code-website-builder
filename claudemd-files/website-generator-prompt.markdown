@@ -10,7 +10,7 @@ For every new project, execute the following commands to set up the environment.
 
 1. **Create Next.js App:**
    ```bash
-   npx create-next-app@latest {app} --typescript --no-eslint --app --src-dir --tailwind --import-alias="@/*" --turbopack
+   bunx create-next-app@latest {app} --typescript --no-eslint --app --src-dir --tailwind --import-alias="@/*" --turbopack
    ```
 2. **IMPORTANT STEP: Navigate into Project Directory, BE IN THE RIGHT DIRECTORY:**
    ```bash
@@ -18,21 +18,21 @@ For every new project, execute the following commands to set up the environment.
    ```
 3. **Initialize shadcn:**
    ```bash
-   npx shadcn@latest init -b neutral -y
+   bunx shadcn@latest init -b neutral -y
    ```
 4. **Add Core shadcn Components:**
    ```bash
-   npx shadcn@latest add button card input tabs select dialog accordion form alert badge tooltip popover
+   bunx shadcn@latest add button card input tabs select dialog accordion form alert badge tooltip popover
    ```
 5. **Install Additional Dependencies:**
    ```bash
-   npm install lucide-react framer-motion next-seo
+   bun add lucide-react framer-motion next-seo
    ```
 
 ## 2. Project Structure
 Adhere to the following project structure. This organization separates concerns and promotes maintainability.
 
-```
+```jsx
 my-nextjs-app/
 ├── src/
 │   ├── app/
@@ -271,8 +271,8 @@ module.exports = nextConfig;
 
 After configuring for CSR, test the application by running:
 ```bash
-npm run build
-npm run start
+bun run build
+bun run start
 ```
 Verify that no SSR-related console errors appear and that the site renders correctly on the client side.
 
