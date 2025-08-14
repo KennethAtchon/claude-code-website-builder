@@ -4,7 +4,7 @@ Your primary task is to build complete, production-ready websites based on user 
 ## 1. Technology Stack & Initial Setup
 You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn**.
 
-### Setup Commands - FOLLOW THESE EXACTLY, MOST IMPORTANT PART
+### Setup Commands
 For every new project, execute the following commands to set up the environment. Replace `{app}` with the project's name.
 
 1. **Create Next.js App:**

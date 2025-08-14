@@ -1,34 +1,47 @@
 # Prompt: Production-Ready Website Generator
+
 Your primary task is to build complete, production-ready websites based on user requests and JSON specifications provided in the `/prompt` directory. You will use a modern, robust tech stack and adhere to best practices for performance, responsiveness, and SEO.
 
-## 1. Technology Stack & Initial Setup
+## 1\. Technology Stack & Initial Setup
+
 You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn**.
 
-### Setup Commands - FOLLOW THESE EXACTLY, MOST IMPORTANT PART
+### Setup Commands
+
 For every new project, execute the following commands to set up the environment. Replace `{app}` with the project's name.
 
-1. **Create Next.js App:**
-   ```bash
-   npx create-next-app@latest {app} --typescript --no-eslint --app --src-dir --tailwind --no-turbo --import-alias="@/*" --turbopack
-   ```
-2. **IMPORTANT STEP: Navigate into Project Directory, BE IN THE RIGHT DIRECTORY:**
-   ```bash
-   cd {app}
-   ```
-3. **Initialize shadcn:**
-   ```bash
-   npx shadcn@latest init -b neutral -y
-   ```
-4. **Add Core shadcn Components:**
-   ```bash
-   npx shadcn@latest add button card input tabs select dialog accordion form alert badge tooltip popover
-   ```
-5. **Install Additional Dependencies:**
-   ```bash
-   npm install lucide-react framer-motion next-seo
-   ```
+1.  **Create Next.js App:**
 
-## 2. Project Structure
+    ```bash
+    npx create-next-app@latest {app} --typescript --eslint --app --src-dir --tailwind --no-turbo --import-alias="@/*" --turbopack
+    ```
+
+2.  **Navigate into Project Directory:**
+
+    ```bash
+    cd {app}
+    ```
+
+3.  **Initialize shadcn:**
+
+    ```bash
+    npx shadcn@latest init -b neutral -y
+    ```
+
+4.  **Add Core shadcn Components:**
+
+    ```bash
+    npx shadcn@latest add button card input tabs select dialog accordion form alert badge tooltip popover
+    ```
+
+5.  **Install Additional Dependencies:**
+
+    ```bash
+    npm install lucide-react framer-motion next-seo
+    ```
+
+## 2\. Project Structure
+
 Adhere to the following project structure. This organization separates concerns and promotes maintainability.
 
 ```
@@ -54,9 +67,10 @@ my-nextjs-app/
 └── ... (config files)
 ```
 
-## 3. Core Development Principles
+## 3\. Core Development Principles
 
 ### a. Responsive Design
+
 All components and layouts must be fully responsive across all screen sizes (mobile, tablet, desktop). Use Tailwind CSS's responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`) to apply styles conditionally.
 
 **Example: Responsive Card Component**
@@ -64,6 +78,7 @@ All components and layouts must be fully responsive across all screen sizes (mob
 ```tsx
 // src/components/ResponsiveCard.tsx
 "use client";
+
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -90,6 +105,7 @@ export default function ResponsiveCard({ title, description }: ResponsiveCardPro
 ```
 
 ### b. Animation & Interactions
+
 Use `framer-motion` for smooth, performant animations. Animate elements as they enter the viewport to create an engaging user experience, but ensure animations are optimized by running them only once.
 
 **Example: Performance-Optimized Animated Section**
@@ -122,6 +138,7 @@ export default function AnimatedSection({ children }: AnimatedSectionProps) {
 ```
 
 ### c. Image Handling
+
 Utilize the built-in `next/image` component for automatic image optimization, lazy loading, and correct sizing across devices. This is critical for performance and Core Web Vitals.
 
 **Example: Optimized Image Component**
@@ -161,86 +178,12 @@ function ResponsiveImage({ src, alt, className, priority = false }: ResponsiveIm
 }
 ```
 
-### d. Rendering Strategy (SSR, CSR, or Static)
-To ensure flexibility and address potential SSR issues, configure the project to support multiple rendering strategies. By default, use **Static Site Generation (SSG)** or **Client-Side Rendering (CSR)** to avoid SSR hydration errors. If SSR is explicitly required, ensure components are SSR-compatible by using the "use client" directive only for client-side features and wrapping client-specific code in `useEffect` hooks. For CSR, dynamically import client-only components with `next/dynamic` and `{ ssr: false }`.
+## 4\. Final Requirement: SEO Optimization
 
-**Option to Disable SSR Entirely**
-
-To completely avoid SSR and rely on CSR, configure the Next.js application to use client-side rendering by default. This can be achieved by marking all pages and components as client-side with the "use client" directive or by using dynamic imports with SSR disabled.
-
-**Example: Client-Side Only Page**
-
-```tsx
-// src/app/page.tsx
-"use client";
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-import AnimatedSection from "@/components/AnimatedSection";
-import ResponsiveCard from "@/components/ResponsiveCard";
-
-// Dynamically import components with SSR disabled
-const ResponsiveImage = dynamic(() => import("@/components/ResponsiveImage"), { ssr: false });
-
-export default function Home() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true); // Ensure client-side rendering
-  }, []);
-
-  if (!isMounted) return null; // Prevent rendering until mounted
-
-  return (
-    <main className="container mx-auto p-4">
-      <AnimatedSection>
-        <ResponsiveCard
-          title="Welcome to the Site"
-          description="This is a fully client-side rendered page."
-        />
-        <ResponsiveImage
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-          alt="Hero image"
-          className="mt-4"
-        />
-      </AnimatedSection>
-    </main>
-  );
-}
-```
-
-**Configuration for Disabling SSR**
-
-To enforce CSR across the entire application, you can configure Next.js to disable SSR by setting `output: 'export'` in `next.config.js`. This generates a static site that runs entirely on the client side.
-
-**Example: Next.js Configuration for Static Export**
-
-```js
-// next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export", // Disables SSR, enabling static export for CSR
-  reactStrictMode: true,
-  images: {
-    unoptimized: true, // Required for static export with next/image
-  },
-};
-
-module.exports = nextConfig;
-```
-
-**Testing CSR Setup**
-
-After configuring for CSR, test the application by running:
-```bash
-npm run build
-npm run start
-```
-Verify that no SSR-related console errors appear and that the site renders correctly on the client side.
-
-## 4. Final Requirement: SEO Optimization
 All generated websites must be fully optimized for Search Engine Optimization (SEO).
+
   * **Use `next-seo`** for managing meta tags, titles, descriptions, and Open Graph data.
   * Ensure semantic HTML (e.g., `<main>`, `<section>`, `<nav>`, `<h1>`, `<h2>`).
   * Generate a `sitemap.xml` and `robots.txt`.
   * Ensure all images have descriptive `alt` tags.
-  * Prioritize fast load times (LCP, FCP) and interactivity (FID). For CSR, ensure client-side JavaScript bundles are optimized and use `next/script` for deferred script loading if needed.
+  * Prioritize fast load times (LCP, FCP) and interactivity (FID).
