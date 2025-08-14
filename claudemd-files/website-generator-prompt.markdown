@@ -214,6 +214,37 @@ node ../color-palette-generator.js "#13EBF6"
 
 The script will output a JSON array with all 8 colors that you can then use in your CSS variables. The generator creates harmonious variations while maintaining proper contrast ratios.
 
+**Recommended Primary Colors:**
+Choose from these professional, brand-friendly colors that work well across all industries:
+
+```javascript
+// Top 20 Primary Colors for Professional Websites
+const recommendedColors = [
+  "#4361EE", // Modern Blue - Tech, SaaS, Finance
+  "#22C55E", // Success Green - Health, Eco, Growth
+  "#EF4444", // Action Red - Food, Entertainment, Alerts
+  "#8B5CF6", // Creative Purple - Design, Art, Luxury
+  "#F59E0B", // Energy Orange - Sports, Energy, Youth
+  "#06B6D4", // Trust Cyan - Medical, Clean Tech
+  "#EC4899", // Bold Pink - Beauty, Fashion, Creative
+  "#10B981", // Nature Green - Organic, Environment
+  "#3B82F6", // Professional Blue - Corporate, Law
+  "#F97316", // Warm Orange - Hospitality, Food
+  "#8B5A2B", // Earth Brown - Crafts, Organic, Rustic
+  "#DC2626", // Strong Red - Emergency, Important
+  "#7C3AED", // Deep Purple - Luxury, Premium
+  "#059669", // Fresh Green - Fresh, Natural, Health
+  "#0EA5E9", // Sky Blue - Travel, Freedom, Open
+  "#E11D48", // Rose Red - Love, Passion, Beauty
+  "#7C2D12", // Coffee Brown - Coffee, Warmth, Comfort
+  "#1E40AF", // Navy Blue - Professional, Trust, Stable
+  "#9333EA", // Vibrant Purple - Innovation, Creative
+  "#0D9488"  // Teal - Balance, Calm, Professional
+];
+```
+
+Each color has been tested to ensure the generator produces professional, accessible color palettes suitable for modern web design.
+
 **Implementation in globals.css:**
 ```css
 /* src/app/globals.css */

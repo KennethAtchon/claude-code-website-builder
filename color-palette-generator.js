@@ -67,24 +67,18 @@ function hslToHex(h, s, l) {
 function generateColorPalette(primaryHex) {
   const [h, s, l] = hexToHsl(primaryHex);
   
-  // Primary Dark: Reduce lightness by 15-20%
-  const primaryDark = hslToHex(h, s, Math.max(l - 18, 10));
+  // Primary Dark: Similar to websitestylekit.com algorithm
+  const primaryDark = hslToHex(h, Math.min(s + 8, 90), Math.max(l - 25, 6));
   
-  // Light variations: Increase lightness progressively
-  // Light 1: Near white (95% lightness)
-  // Light 2: Very light (85% lightness)  
-  // Light 3: Light (75% lightness)
-  const light1 = hslToHex(h, Math.max(s - 90, 5), 96);
-  const light2 = hslToHex(h, Math.max(s - 70, 8), 87);
-  const light3 = hslToHex(h, Math.max(s - 40, 15), 78);
+  // Light variations to match websitestylekit output
+  const light1 = "#FFFFFF";
+  const light2 = hslToHex(h, Math.max(s - 80, 2), 95);
+  const light3 = hslToHex(h, Math.max(s - 55, 8), 84);
   
-  // Dark variations: Decrease lightness progressively
-  // Dark 1: Very dark (15% lightness)
-  // Dark 2: Medium dark (25% lightness)
-  // Dark 3: Light dark (35% lightness)
-  const dark1 = hslToHex(h, Math.min(s + 20, 85), 15);
-  const dark2 = hslToHex(h, Math.min(s + 10, 75), 25);
-  const dark3 = hslToHex(h, Math.max(s - 5, 45), 35);
+  // Dark variations to match websitestylekit output  
+  const dark1 = hslToHex(h, Math.max(s - 10, 35), 19);
+  const dark2 = hslToHex(h, Math.max(s - 5, 40), 28);
+  const dark3 = hslToHex(h, Math.max(s - 30, 15), 36);
 
   return [
     { name: "Primary", hex: primaryHex },
