@@ -10,23 +10,40 @@
         "gradientStyle": "{{themeGradientStyle}}"
       },
       "styles": {
-        "colors": {
-          "primary": "{{primaryColor}}",
-          "secondary": "{{secondaryColor}}",
-          "accent": "{{accentColor}}",
-          "background": "{{backgroundColor}}",
-          "text": "{{textColor}}",
-          "lightShades": [
-            "{{lightColor1}}",
-            "{{lightColor2}}",
-            "{{lightColor3}}"
-          ],
-          "darkShades": [
-            "{{darkColor1}}",
-            "{{darkColor2}}",
-            "{{darkColor3}}"
-          ]
-        },
+        "colors": [
+          {
+            "name": "Primary",
+            "hex": "{{primaryColor}}"
+          },
+          {
+            "name": "Primary Dark",
+            "hex": "{{primaryDarkColor}}"
+          },
+          {
+            "name": "Light 1",
+            "hex": "{{lightColor1}}"
+          },
+          {
+            "name": "Light 2",
+            "hex": "{{lightColor2}}"
+          },
+          {
+            "name": "Light 3",
+            "hex": "{{lightColor3}}"
+          },
+          {
+            "name": "Dark 1",
+            "hex": "{{darkColor1}}"
+          },
+          {
+            "name": "Dark 2",
+            "hex": "{{darkColor2}}"
+          },
+          {
+            "name": "Dark 3",
+            "hex": "{{darkColor3}}"
+          }
+        ],
         "typography": {
           "primaryFont": {
             "name": "{{primaryFontName}}",
@@ -93,5 +110,5 @@
         }
       }
     },
-    "PromptHints": "This gives guidance to any AI creating an example or just putting data in this prompt. This is going to help you enhance the final json. You need to use more background images and layouts. We need atleast two types of forms, free simple quotes forms (for businesses that apply), and contact us form. More creative font choices. Also incorporate like still background images but you can see different parts of it as you scroll. Ensure background images have a clear contrast with CTAs. Maybe use https://websitestylekit.com/, pick your main color and source the subcolors from this website (3 light, 3 dark)."
+    "PromptHints": "This gives guidance to any AI creating an example or just putting data in this prompt. This is going to help you enhance the final json. You need to use more background images and layouts. We need atleast two types of forms, free simple quotes forms (for businesses that apply), and contact us form. More creative font choices. Also incorporate like a still background images but you can see different parts of it as you scroll."
   }
