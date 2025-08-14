@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://luxeboutique.com/sitemap.xml
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /api/

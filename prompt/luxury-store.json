@@ -1,0 +1,128 @@
+{
+  "website": {
+    "name": "Luxe Boutique",
+    "theme": {
+      "name": "Sophisticated Luxury",
+      "aesthetic": "Modern minimalist with elegant touches",
+      "mood": "Exclusive, refined, and aspirational",
+      "targetAudience": "Affluent consumers seeking premium fashion, accessories, and lifestyle products",
+      "designPrinciples": "Clean lines, premium materials, sophisticated color palette, and attention to detail"
+    },
+    "styles": {
+      "colors": {
+        "primary": "#1a1a1a",
+        "secondary": "#c9aa76",
+        "accent": "#f5f5f5",
+        "background": "#ffffff",
+        "text": "#2c2c2c"
+      },
+      "typography": {
+        "primaryFont": {
+          "name": "Playfair Display",
+          "weights": "300, 400, 600, 700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "Inter",
+          "weights": "300, 400, 500, 600",
+          "source": "Google Fonts"
+        }
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/"
+        },
+        {
+          "name": "Collections",
+          "path": "/collections"
+        },
+        {
+          "name": "About",
+          "path": "/about"
+        },
+        {
+          "name": "Contact",
+          "path": "/contact"
+        }
+      ]
+    },
+    "sections": {
+      "hero": {
+        "title": "Elevate Your Style",
+        "subtitle": "Discover curated luxury collections for the discerning individual",
+        "cta": "Shop Collection",
+        "image": "Elegant model in premium fashion against minimal backdrop"
+      },
+      "featured": {
+        "title": "Featured Collections",
+        "subtitle": "Handpicked pieces that define contemporary luxury",
+        "items": [
+          {
+            "name": "Signature Handbags",
+            "description": "Exquisite leather craftsmanship meets timeless design",
+            "price": "$2,500 - $8,500"
+          },
+          {
+            "name": "Premium Jewelry",
+            "description": "Precious metals and stones in contemporary settings",
+            "price": "$1,200 - $15,000"
+          },
+          {
+            "name": "Designer Apparel",
+            "description": "Exclusive fashion pieces from renowned designers",
+            "price": "$800 - $5,000"
+          }
+        ]
+      },
+      "about": {
+        "title": "Curated Excellence",
+        "content": "At Luxe Boutique, we believe luxury is not just about price—it's about craftsmanship, heritage, and the stories behind each piece. Our carefully curated selection represents the pinnacle of design and quality.",
+        "values": [
+          "Authentic luxury pieces",
+          "Exceptional customer service",
+          "Exclusive designer partnerships",
+          "Sustainable luxury practices"
+        ]
+      },
+      "services": {
+        "title": "Personalized Services",
+        "items": [
+          {
+            "name": "Personal Styling",
+            "description": "One-on-one consultation with our expert stylists"
+          },
+          {
+            "name": "Private Appointments",
+            "description": "Exclusive shopping experience in our private showroom"
+          },
+          {
+            "name": "Global Delivery",
+            "description": "Worldwide shipping with white-glove service"
+          },
+          {
+            "name": "Authentication",
+            "description": "Certified authenticity for every piece"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Visit Our Atelier",
+        "address": "123 Madison Avenue, New York, NY 10021",
+        "phone": "+1 (212) 555-0123",
+        "email": "concierge@luxeboutique.com",
+        "hours": {
+          "monday": "10:00 AM - 7:00 PM",
+          "tuesday": "10:00 AM - 7:00 PM",
+          "wednesday": "10:00 AM - 7:00 PM",
+          "thursday": "10:00 AM - 8:00 PM",
+          "friday": "10:00 AM - 8:00 PM",
+          "saturday": "10:00 AM - 6:00 PM",
+          "sunday": "12:00 PM - 5:00 PM"
+        }
+      }
+    }
+  }
+}
