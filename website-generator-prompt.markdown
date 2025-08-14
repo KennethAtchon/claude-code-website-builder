@@ -7,9 +7,10 @@ You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn**.
 ### Setup Commands
 For every new project, execute the following commands to set up the environment. Replace `{app}` with the project's name.
 
+
 1. **Create Next.js App:**
    ```bash
-   npx create-next-app@latest {app} --typescript --no-eslint --app --src-dir --tailwind --no-turbo --import-alias="@/*" --turbopack
+   npx create-next-app@latest {app} --typescript --no-eslint --app --src-dir --tailwind --import-alias="@/*" --turbopack
    ```
 2. **IMPORTANT STEP: Navigate into Project Directory, BE IN THE RIGHT DIRECTORY:**
    ```bash
@@ -161,12 +162,50 @@ function ResponsiveImage({ src, alt, className, priority = false }: ResponsiveIm
 }
 ```
 
-### d. Rendering Strategy (SSR, CSR, or Static)
-To ensure flexibility and address potential SSR issues, configure the project to support multiple rendering strategies. By default, use **Static Site Generation (SSG)** or **Client-Side Rendering (CSR)** to avoid SSR hydration errors. If SSR is explicitly required, ensure components are SSR-compatible by using the "use client" directive only for client-side features and wrapping client-specific code in `useEffect` hooks. For CSR, dynamically import client-only components with `next/dynamic` and `{ ssr: false }`.
+And add this:
 
+```tsx
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  }
+  
+};
+
+export default nextConfig;
+
+```
+
+### d. Rendering Strategy (SSR, CSR, or Static)
 **Option to Disable SSR Entirely**
 
 To completely avoid SSR and rely on CSR, configure the Next.js application to use client-side rendering by default. This can be achieved by marking all pages and components as client-side with the "use client" directive or by using dynamic imports with SSR disabled.
+
+### e. This is how you change a font
+
+Don't put anything in globals.css for changing fonts
+```tsx
+import { Inter } from 'next/font/google'
+ 
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ['latin'] })
+ 
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <main className={inter.className}>
+      <Component {...pageProps} />
+    </main>
+  )
+}
+```
+
 
 **Example: Client-Side Only Page**
 

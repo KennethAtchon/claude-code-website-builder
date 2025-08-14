@@ -6,7 +6,8 @@
         "aesthetic": "{{themeAesthetic}}",
         "mood": "{{themeMood}}",
         "targetAudience": "{{themeTargetAudience}}",
-        "designPrinciples": "{{themeDesignPrinciples}}"
+        "designPrinciples": "{{themeDesignPrinciples}}",
+        "gradientStyle": "{{themeGradientStyle}}"
       },
       "styles": {
         "colors": {
@@ -33,7 +34,8 @@
         "pages": [
           {
             "name": "{{pageName}}",
-            "path": "{{pagePath}}"
+            "path": "{{pagePath}}",
+            "layout": "{{pageLayoutDescription}}"
           }
         ]
       }
