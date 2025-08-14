@@ -1,6 +1,8 @@
 # Prompt: Production-Ready Website Generator
 Your primary task is to build complete, production-ready websites based on user requests and JSON specifications provided in the `/prompt` directory. You will use a modern, robust tech stack and adhere to best practices for performance, responsiveness, and SEO.
 
+If you come across anything that could be a problem, don't hesitate to search the internet.
+
 ## 1. Technology Stack & Initial Setup
 You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn**.
 
@@ -14,19 +16,23 @@ For every new project, execute the following commands to set up the environment.
    ```
 2. **IMPORTANT STEP: Navigate into Project Directory, BE IN THE RIGHT DIRECTORY:**
    ```bash
-   cd {app}
+   cd {app} && `${command}`
    ```
 3. **Initialize shadcn:**
    ```bash
-   bunx shadcn@latest init -b neutral -y
+  cd {app} && bunx ~bun shadcn@latest init -b slate -y
    ```
-4. **Add Core shadcn Components:**
+4. **Add Theme:**
    ```bash
-   bunx shadcn@latest add button card input tabs select dialog accordion form alert badge tooltip popover
+   cd {app} && bunx shadcn@latest add https://tweakcn.com/r/themes/mono.json
    ```
-5. **Install Additional Dependencies:**
+5. **Add Core shadcn Components:**
    ```bash
-   bun add lucide-react framer-motion next-seo
+   cd {app} && bunx shadcn@latest add button card input tabs select dialog accordion form alert badge tooltip popover
+   ```
+6. **Install Additional Dependencies:**
+   ```bash
+   cd {app} && bun add lucide-react framer-motion next-seo
    ```
 
 ## 2. Project Structure

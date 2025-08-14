@@ -1,0 +1,63 @@
+{
+  "website": {
+    "name": "Premier Home Renovations",
+    "theme": {
+      "name": "Modern Craftsman",
+      "aesthetic": "Clean, professional, and trustworthy with warm undertones",
+      "mood": "Confident, reliable, and inspiring",
+      "targetAudience": "Homeowners aged 30-65 looking for quality home improvement services",
+      "designPrinciples": "Showcase quality craftsmanship, build trust through testimonials, emphasize transformation",
+      "gradientStyle": "Subtle earth-tone gradients from warm beige to deep charcoal"
+    },
+    "styles": {
+      "colors": {
+        "primary": "#2C5530",
+        "secondary": "#8B4513",
+        "accent": "#D4AF37",
+        "background": "#FAFAFA",
+        "text": "#333333"
+      },
+      "typography": {
+        "primaryFont": {
+          "name": "Roboto",
+          "weights": "400,500,700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "Playfair Display",
+          "weights": "400,600",
+          "source": "Google Fonts"
+        }
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Hero section with before/after slider, services overview, testimonials carousel, and call-to-action"
+        },
+        {
+          "name": "Services",
+          "path": "/services",
+          "layout": "Service categories grid with icons, detailed descriptions, and pricing guides"
+        },
+        {
+          "name": "Portfolio",
+          "path": "/portfolio",
+          "layout": "Project gallery with before/after comparisons, filterable by room type"
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "layout": "Company story, team profiles, certifications, and process overview"
+        },
+        {
+          "name": "Contact",
+          "path": "/contact",
+          "layout": "Contact form, service area map, office location, and free estimate request"
+        }
+      ]
+    }
+  }
+}

@@ -15,7 +15,17 @@
           "secondary": "{{secondaryColor}}",
           "accent": "{{accentColor}}",
           "background": "{{backgroundColor}}",
-          "text": "{{textColor}}"
+          "text": "{{textColor}}",
+          "lightShades": [
+            "{{lightColor1}}",
+            "{{lightColor2}}",
+            "{{lightColor3}}"
+          ],
+          "darkShades": [
+            "{{darkColor1}}",
+            "{{darkColor2}}",
+            "{{darkColor3}}"
+          ]
         },
         "typography": {
           "primaryFont": {
@@ -28,6 +38,22 @@
             "weights": "{{secondaryFontWeights}}",
             "source": "{{secondaryFontSource}}"
           }
+        },
+        "backgroundImages": {
+          "hero": {
+            "url": "{{heroBackgroundImageUrl}}",
+            "description": "{{heroBackgroundDescription}}",
+            "parallaxEffect": "{{heroParallaxEffect}}"
+          },
+          "sections": [
+            {
+              "sectionName": "{{sectionName}}",
+              "url": "{{sectionBackgroundImageUrl}}",
+              "description": "{{sectionBackgroundDescription}}",
+              "parallaxEffect": "{{sectionParallaxEffect}}",
+              "contrastEnsured": true
+            }
+          ]
         }
       },
       "structure": {
@@ -37,7 +63,35 @@
             "path": "{{pagePath}}",
             "layout": "{{pageLayoutDescription}}"
           }
-        ]
+        ],
+        "forms": {
+          "quoteForm": {
+            "type": "simple-quote",
+            "fields": [
+              "{{quoteFormField1}}",
+              "{{quoteFormField2}}",
+              "{{quoteFormField3}}"
+            ],
+            "purpose": "For businesses that apply for quotes",
+            "submitAction": "{{quoteFormSubmitAction}}"
+          },
+          "contactForm": {
+            "type": "contact-us",
+            "fields": [
+              "{{contactFormField1}}",
+              "{{contactFormField2}}",
+              "{{contactFormField3}}"
+            ],
+            "purpose": "General contact form",
+            "submitAction": "{{contactFormSubmitAction}}"
+          }
+        },
+        "layouts": {
+          "scrollEffects": "{{scrollEffectsDescription}}",
+          "backgroundImageReveals": "{{backgroundImageRevealDescription}}",
+          "ctaContrast": "{{ctaContrastDescription}}"
+        }
       }
-    }
+    },
+    "PromptHints": "This gives guidance to any AI creating an example or just putting data in this prompt. This is going to help you enhance the final json. You need to use more background images and layouts. We need atleast two types of forms, free simple quotes forms (for businesses that apply), and contact us form. More creative font choices. Also incorporate like still background images but you can see different parts of it as you scroll. Ensure background images have a clear contrast with CTAs. Maybe use https://websitestylekit.com/, pick your main color and source the subcolors from this website (3 light, 3 dark)."
   }
