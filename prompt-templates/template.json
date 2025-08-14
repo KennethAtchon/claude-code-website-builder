@@ -1,0 +1,41 @@
+{
+    "website": {
+      "name": "{{websiteName}}",
+      "theme": {
+        "name": "{{themeName}}",
+        "aesthetic": "{{themeAesthetic}}",
+        "mood": "{{themeMood}}",
+        "targetAudience": "{{themeTargetAudience}}",
+        "designPrinciples": "{{themeDesignPrinciples}}"
+      },
+      "styles": {
+        "colors": {
+          "primary": "{{primaryColor}}",
+          "secondary": "{{secondaryColor}}",
+          "accent": "{{accentColor}}",
+          "background": "{{backgroundColor}}",
+          "text": "{{textColor}}"
+        },
+        "typography": {
+          "primaryFont": {
+            "name": "{{primaryFontName}}",
+            "weights": "{{primaryFontWeights}}",
+            "source": "{{primaryFontSource}}"
+          },
+          "secondaryFont": {
+            "name": "{{secondaryFontName}}",
+            "weights": "{{secondaryFontWeights}}",
+            "source": "{{secondaryFontSource}}"
+          }
+        }
+      },
+      "structure": {
+        "pages": [
+          {
+            "name": "{{pageName}}",
+            "path": "{{pagePath}}"
+          }
+        ]
+      }
+    }
+  }

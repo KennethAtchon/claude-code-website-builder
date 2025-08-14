@@ -8,7 +8,7 @@ Your primary task is to build complete, production-ready websites based on user 
 
 ## 1\. Technology Stack & Initial Setup
 
-You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn**.
+You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn/ui**.
 
 ### Setup Commands
 
