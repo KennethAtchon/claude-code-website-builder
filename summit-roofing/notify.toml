@@ -1,0 +1,31 @@
+[notify]
+# Configuration for file system notifications
+# This file can be used by file watchers and development tools
+
+# Watch patterns
+watch = [
+    "src/**/*",
+    "public/**/*",
+    "*.config.*",
+    "package.json"
+]
+
+# Ignore patterns
+ignore = [
+    "node_modules/**/*",
+    ".next/**/*",
+    ".git/**/*",
+    "*.log",
+    "*.tmp"
+]
+
+# Notification settings
+[notify.settings]
+# Debounce delay in milliseconds
+debounce = 100
+
+# Maximum number of events to batch
+batch_size = 50
+
+# Enable verbose logging
+verbose = false
