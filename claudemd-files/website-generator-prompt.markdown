@@ -204,47 +204,6 @@ The template provides a streamlined color palette array with 8 colors:
 - `Light 1, 2, 3`: Progressive light shades for backgrounds and subtle elements
 - `Dark 1, 2, 3`: Progressive dark shades for text, borders, and accents
 
-**Auto-Generating Color Palette:**
-If only a primary color is provided, use the color palette generator to create the complete 8-color palette:
-
-```bash
-# Run this command to generate the full color palette from a primary color
-node ../color-palette-generator.js "#13EBF6"
-```
-
-The script will output a JSON array with all 8 colors that you can then use in your CSS variables. The generator creates harmonious variations while maintaining proper contrast ratios.
-
-**Recommended Primary Colors:**
-Choose from these professional, brand-friendly colors that work well across all industries:
-
-```javascript
-// Top 20 Primary Colors for Professional Websites
-const recommendedColors = [
-  "#4361EE", // Modern Blue - Tech, SaaS, Finance
-  "#22C55E", // Success Green - Health, Eco, Growth
-  "#EF4444", // Action Red - Food, Entertainment, Alerts
-  "#8B5CF6", // Creative Purple - Design, Art, Luxury
-  "#F59E0B", // Energy Orange - Sports, Energy, Youth
-  "#06B6D4", // Trust Cyan - Medical, Clean Tech
-  "#EC4899", // Bold Pink - Beauty, Fashion, Creative
-  "#10B981", // Nature Green - Organic, Environment
-  "#3B82F6", // Professional Blue - Corporate, Law
-  "#F97316", // Warm Orange - Hospitality, Food
-  "#8B5A2B", // Earth Brown - Crafts, Organic, Rustic
-  "#DC2626", // Strong Red - Emergency, Important
-  "#7C3AED", // Deep Purple - Luxury, Premium
-  "#059669", // Fresh Green - Fresh, Natural, Health
-  "#0EA5E9", // Sky Blue - Travel, Freedom, Open
-  "#E11D48", // Rose Red - Love, Passion, Beauty
-  "#7C2D12", // Coffee Brown - Coffee, Warmth, Comfort
-  "#1E40AF", // Navy Blue - Professional, Trust, Stable
-  "#9333EA", // Vibrant Purple - Innovation, Creative
-  "#0D9488"  // Teal - Balance, Calm, Professional
-];
-```
-
-Each color has been tested to ensure the generator produces professional, accessible color palettes suitable for modern web design.
-
 **Implementation in globals.css:**
 ```css
 /* src/app/globals.css */
@@ -424,3 +383,48 @@ All generated websites must be fully optimized for Search Engine Optimization (S
   * Generate a `sitemap.xml` and `robots.txt`.
   * Ensure all images have descriptive `alt` tags.
   * Prioritize fast load times (LCP, FCP) and interactivity (FID). For CSR, ensure client-side JavaScript bundles are optimized and use `next/script` for deferred script loading if needed.
+
+## 5. Parallax Effects & Background Image Reveals
+Use `framer-motion` for parallax scrolling effects from the template's `backgroundImages` section.
+
+```tsx
+// src/components/ParallaxSection.tsx
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ReactNode, useRef } from "react";
+
+interface ParallaxSectionProps {
+  children: ReactNode;
+  backgroundUrl: string;
+  speed?: "slow" | "medium" | "fast";
+}
+
+export default function ParallaxSection({ children, backgroundUrl, speed = "medium" }: ParallaxSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const speeds = { slow: [-50, 50], medium: [-100, 100], fast: [-200, 200] };
+  const y = useTransform(scrollYProgress, [0, 1], speeds[speed]);
+
+  return (
+    <div ref={ref} className="relative h-screen overflow-hidden">
+      <motion.div
+        style={{ 
+          y,
+          backgroundImage: `url(${backgroundUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+        className="absolute inset-0 h-[120%] -top-[10%]"
+      />
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="relative z-10 h-full flex items-center justify-center">
+        {children}
+      </div>
+    </div>
+  );
+}
+```

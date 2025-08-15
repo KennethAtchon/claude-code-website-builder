@@ -1,0 +1,133 @@
+{
+  "website": {
+    "name": "Summit Roofing Solutions",
+    "theme": {
+      "name": "Professional Trust",
+      "aesthetic": "Clean, professional, trustworthy",
+      "mood": "Confident, reliable, approachable",
+      "targetAudience": "Homeowners and commercial property owners needing roofing services",
+      "designPrinciples": "Clean lines, strong contrast, easy navigation, mobile-first design",
+      "gradientStyle": "Subtle gradients from blue to gray tones"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#1E40AF"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#081745"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#FFFFFF"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#f2f2f3"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#d0d3dd"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#13214e"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#182e76"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#364881"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": "400,500,600,700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "Roboto",
+          "weights": "300,400,500",
+          "source": "Google Fonts"
+        }
+      },
+      "backgroundImages": {
+        "hero": {
+          "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+          "description": "Professional roofer working on residential roof installation",
+          "parallaxEffect": "subtle scroll parallax"
+        },
+        "sections": [
+          {
+            "sectionName": "services",
+            "url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+            "description": "Modern house with professional roofing work",
+            "parallaxEffect": "fixed background attachment",
+            "contrastEnsured": true
+          }
+        ]
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Hero section with CTA, services overview, testimonials, and contact form"
+        },
+        {
+          "name": "Services",
+          "path": "/services",
+          "layout": "Detailed service listings with pricing and descriptions"
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "layout": "Company history, team members, certifications and licenses"
+        },
+        {
+          "name": "Contact",
+          "path": "/contact",
+          "layout": "Contact form, location map, business hours, and emergency contact"
+        }
+      ],
+      "forms": {
+        "quoteForm": {
+          "type": "simple-quote",
+          "fields": [
+            "Full Name",
+            "Phone Number",
+            "Property Address",
+            "Roof Type",
+            "Project Description",
+            "Preferred Contact Time"
+          ],
+          "purpose": "For homeowners requesting roofing quotes",
+          "submitAction": "Send email notification to office and SMS to customer"
+        },
+        "contactForm": {
+          "type": "contact-us",
+          "fields": [
+            "Name",
+            "Email",
+            "Phone",
+            "Service Interest",
+            "Message"
+          ],
+          "purpose": "General contact form",
+          "submitAction": "Email submission to info@summitroofing.com"
+        }
+      },
+      "layouts": {
+        "scrollEffects": "Smooth scroll animations with fade-in effects for service cards and testimonials",
+        "backgroundImageReveals": "Hero image with overlay text that reveals on scroll, parallax background in services section",
+        "ctaContrast": "High contrast blue CTA buttons against light backgrounds, emergency contact banner in red for urgent repairs"
+      }
+    }
+  }
+}

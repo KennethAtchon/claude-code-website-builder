@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-light-1: var(--light-1);
+  --color-light-2: var(--light-2);
+  --color-light-3: var(--light-3);
+  --color-dark-1: var(--dark-1);
+  --color-dark-2: var(--dark-2);
+  --color-dark-3: var(--dark-3);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #13214e;
+  --primary: #1E40AF;
+  --primary-foreground: #FFFFFF;
+  --muted: #f2f2f3;
+  --muted-foreground: #182e76;
+  --light-1: #FFFFFF;
+  --light-2: #f2f2f3;
+  --light-3: #d0d3dd;
+  --dark-1: #13214e;
+  --dark-2: #182e76;
+  --dark-3: #364881;
+  --border: #d0d3dd;
+  --input: #d0d3dd;
+  --ring: #1E40AF;
+  --card: #FFFFFF;
+  --card-foreground: #13214e;
+  --popover: #FFFFFF;
+  --popover-foreground: #13214e;
+  --secondary: #f2f2f3;
+  --secondary-foreground: #13214e;
+  --accent: #f2f2f3;
+  --accent-foreground: #13214e;
+  --destructive: #dc2626;
+  --destructive-foreground: #FFFFFF;
+}
+
+.dark {
+  --background: #13214e;
+  --foreground: #FFFFFF;
+  --primary: #1E40AF;
+  --primary-foreground: #13214e;
+  --muted: #182e76;
+  --muted-foreground: #f2f2f3;
+  --border: #182e76;
+  --input: #182e76;
+  --ring: #1E40AF;
+  --card: #182e76;
+  --card-foreground: #FFFFFF;
+  --popover: #182e76;
+  --popover-foreground: #FFFFFF;
+  --secondary: #182e76;
+  --secondary-foreground: #FFFFFF;
+  --accent: #364881;
+  --accent-foreground: #FFFFFF;
+  --destructive: #dc2626;
+  --destructive-foreground: #FFFFFF;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

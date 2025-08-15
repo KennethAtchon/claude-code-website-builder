@@ -24,7 +24,7 @@ For every new project, execute the following commands to set up the environment.
    ```
 4. **Add Theme:**
    ```bash
-   cd {app} && bunx shadcn@latest add https://tweakcn.com/r/themes/mono.json
+   cd {app} && bunx shadcn@latest add https://tweakcn.com/r/themes/mono.json -y
    ```
 5. **Add Core shadcn Components:**
    ```bash
@@ -194,7 +194,101 @@ export default nextConfig;
 
 To completely avoid SSR and rely on CSR, configure the Next.js application to use client-side rendering by default. This can be achieved by marking all pages and components as client-side with the "use client" directive or by using dynamic imports with SSR disabled.
 
-### e. This is how you change a font
+### e. Color System Implementation
+Extract and implement colors from the JSON template's `styles.colors` array. Use Tailwind CSS v4's modern `@theme inline` approach with a simplified 8-color palette.
+
+**Reading Colors from Template:**
+The template provides a streamlined color palette array with 8 colors:
+- `Primary`: Main brand color for buttons, links, and key elements
+- `Primary Dark`: Darker variant for hover states and depth
+- `Light 1, 2, 3`: Progressive light shades for backgrounds and subtle elements
+- `Dark 1, 2, 3`: Progressive dark shades for text, borders, and accents
+
+**Implementation in globals.css:**
+```css
+/* src/app/globals.css */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-light-1: var(--light-1);
+  --color-light-2: var(--light-2);
+  --color-light-3: var(--light-3);
+  --color-dark-1: var(--dark-1);
+  --color-dark-2: var(--dark-2);
+  --color-dark-3: var(--dark-3);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: {{lightColor1}};
+  --foreground: {{darkColor1}};
+  --primary: {{primaryColor}};
+  --primary-foreground: {{lightColor1}};
+  --muted: {{lightColor2}};
+  --muted-foreground: {{darkColor2}};
+  --light-1: {{lightColor1}};
+  --light-2: {{lightColor2}};
+  --light-3: {{lightColor3}};
+  --dark-1: {{darkColor1}};
+  --dark-2: {{darkColor2}};
+  --dark-3: {{darkColor3}};
+  --border: {{lightColor3}};
+  --input: {{lightColor3}};
+  --ring: {{primaryColor}};
+}
+
+.dark {
+  --background: {{darkColor1}};
+  --foreground: {{lightColor1}};
+  --primary: {{primaryColor}};
+  --primary-foreground: {{darkColor1}};
+  --muted: {{darkColor2}};
+  --muted-foreground: {{lightColor2}};
+  --border: {{darkColor2}};
+  --input: {{darkColor2}};
+  --ring: {{primaryColor}};
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+```
+
+**Usage in Components:**
+```tsx
+// Primary actions using brand color
+<Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+  Primary Action
+</Button>
+```
+
+**Color Mixing Guidelines:**
+Create visual interest through strategic contrast mixing:
+- **Dark backgrounds with light text**: `bg-dark-1 text-light-1`, `bg-dark-2 text-light-2`
+- **Light backgrounds with dark text**: `bg-light-2 text-dark-1`, `bg-light-3 text-dark-2`
+- **Primary accent combinations**: `bg-primary text-light-1`, `text-primary bg-light-2`
+- **Cross-contrast mixing**: `bg-light-1 text-dark-3`, `bg-dark-3 text-light-2`
+- **Gradient-like progressions**: Mix adjacent shades like `bg-light-2 border-light-3 text-dark-1`
+- **Depth through layering**: Use different dark/light levels for cards, overlays, and sections
+- Always test contrast ratios for accessibility, but don't limit creativity
+
+### f. Font Implementation
 
 Don't put anything in globals.css for changing fonts
 ```tsx
@@ -289,3 +383,48 @@ All generated websites must be fully optimized for Search Engine Optimization (S
   * Generate a `sitemap.xml` and `robots.txt`.
   * Ensure all images have descriptive `alt` tags.
   * Prioritize fast load times (LCP, FCP) and interactivity (FID). For CSR, ensure client-side JavaScript bundles are optimized and use `next/script` for deferred script loading if needed.
+
+## 5. Parallax Effects & Background Image Reveals
+Use `framer-motion` for parallax scrolling effects from the template's `backgroundImages` section.
+
+```tsx
+// src/components/ParallaxSection.tsx
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ReactNode, useRef } from "react";
+
+interface ParallaxSectionProps {
+  children: ReactNode;
+  backgroundUrl: string;
+  speed?: "slow" | "medium" | "fast";
+}
+
+export default function ParallaxSection({ children, backgroundUrl, speed = "medium" }: ParallaxSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const speeds = { slow: [-50, 50], medium: [-100, 100], fast: [-200, 200] };
+  const y = useTransform(scrollYProgress, [0, 1], speeds[speed]);
+
+  return (
+    <div ref={ref} className="relative h-screen overflow-hidden">
+      <motion.div
+        style={{ 
+          y,
+          backgroundImage: `url(${backgroundUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+        className="absolute inset-0 h-[120%] -top-[10%]"
+      />
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="relative z-10 h-full flex items-center justify-center">
+        {children}
+      </div>
+    </div>
+  );
+}
+```

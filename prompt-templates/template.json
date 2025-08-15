@@ -10,6 +10,30 @@
         "gradientStyle": "{{themeGradientStyle}}"
       },
       "styles": {
+        "recommendedColors": [
+          "#4361EE",
+          "#22C55E",
+          "#EF4444",
+          "#8B5CF6",
+          "#F59E0B",
+          "#06B6D4",
+          "#EC4899",
+          "#10B981",
+          "#3B82F6",
+          "#F97316",
+          "#8B5A2B",
+          "#DC2626",
+          "#7C3AED",
+          "#059669",
+          "#0EA5E9",
+          "#E11D48",
+          "#7C2D12",
+          "#1E40AF",
+          "#9333EA",
+          "#0D9488"
+        ],
+        "colorPaletteScript": "node ../color-palette-generator.js \"{{primaryColor}}\"",
+        "colorPaletteScriptDescription": "USE THE SCRIPT, DONT FILL IN - This script generates a complete 8-color palette from a single primary color. It outputs a JSON array with harmonious variations (Primary, Primary Dark, Light 1-3, Dark 1-3) while maintaining proper contrast ratios for accessibility. Use this when only a primary color is provided to automatically generate the full color scheme.",
         "colors": [
           {
             "name": "Primary",
@@ -110,5 +134,5 @@
         }
       }
     },
-    "PromptHints": "This gives guidance to any AI creating an example or just putting data in this prompt. This is going to help you enhance the final json. You need to use more background images and layouts. We need atleast two types of forms, free simple quotes forms (for businesses that apply), and contact us form. More creative font choices. Also incorporate like a still background images but you can see different parts of it as you scroll."
+    "cleanup": "When this script is copied over to an example. Remove text that isn't necessary to give the AI full context to build the website (recommendedColors, colorPaletteScript, etc)."
   }
