@@ -22,17 +22,13 @@ For every new project, execute the following commands to set up the environment.
    ```
 3. **Initialize shadcn:**
    ```bash
-  cd {app} && bunx ~bun shadcn@latest init -b slate -y
+  cd {app} && bunx ~bun shadcn@latest init -b neutral -y
    ```
-4. **Add Theme:**
+4. **Add Core shadcn Components, please utilize them:**
    ```bash
-   cd {app} && bunx shadcn@latest add https://tweakcn.com/r/themes/mono.json
+   cd {app} && bunx shadcn@latest add --all
    ```
-5. **Add Core shadcn Components:**
-   ```bash
-   cd {app} && bunx shadcn@latest add button card input tabs select dialog accordion form alert badge tooltip popover
-   ```
-6. **Install Additional Dependencies:**
+5. **Install Additional Dependencies:**
    ```bash
    cd {app} && bun add lucide-react framer-motion
    ```
@@ -67,36 +63,6 @@ my-nextjs-app/
 
 ### a. Responsive Design
 All components and layouts must be fully responsive across all screen sizes (mobile, tablet, desktop). Use Tailwind CSS's responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`) to apply styles conditionally.
-
-**Example: Responsive Card Component**
-
-```tsx
-// src/components/ResponsiveCard.tsx
-"use client";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
-interface ResponsiveCardProps {
-  title: string;
-  description: string;
-}
-
-export default function ResponsiveCard({ title, description }: ResponsiveCardProps) {
-  return (
-    <Card className="w-full max-w-sm mx-auto md:max-w-md lg:max-w-lg hover:shadow-lg transition-shadow duration-300">
-      <CardHeader>
-        <CardTitle className="text-lg md:text-xl lg:text-2xl">{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-sm md:text-base lg:text-lg text-gray-700">{description}</p>
-      </CardContent>
-      <CardFooter>
-        <Button className="w-full md:w-auto">Action</Button>
-      </CardFooter>
-    </Card>
-  );
-}
-```
 
 ### b. Animation & Interactions
 Use `framer-motion` for smooth, performant animations. Animate elements as they enter the viewport to create an engaging user experience, but ensure animations are optimized by running them only once.
@@ -209,70 +175,16 @@ The template provides a streamlined color palette array with 8 colors:
 - `Light 1, 2, 3`: Progressive light shades for backgrounds and subtle elements
 - `Dark 1, 2, 3`: Progressive dark shades for text, borders, and accents
 
+Replace whatevers currently in globals.css vars with the below vars and set the right colors
 **Implementation in globals.css:**
 ```css
 /* src/app/globals.css */
-@import "tailwindcss";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-light-1: var(--light-1);
-  --color-light-2: var(--light-2);
-  --color-light-3: var(--light-3);
-  --color-dark-1: var(--dark-1);
-  --color-dark-2: var(--dark-2);
-  --color-dark-3: var(--dark-3);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-}
-
-:root {
-  --background: {{lightColor1}};
-  --foreground: {{darkColor1}};
-  --primary: {{primaryColor}};
-  --primary-foreground: {{lightColor1}};
-  --muted: {{lightColor2}};
-  --muted-foreground: {{darkColor2}};
-  --light-1: {{lightColor1}};
-  --light-2: {{lightColor2}};
-  --light-3: {{lightColor3}};
-  --dark-1: {{darkColor1}};
-  --dark-2: {{darkColor2}};
-  --dark-3: {{darkColor3}};
-  --border: {{lightColor3}};
-  --input: {{lightColor3}};
-  --ring: {{primaryColor}};
-}
-
-.dark {
-  --background: {{darkColor1}};
-  --foreground: {{lightColor1}};
-  --primary: {{primaryColor}};
-  --primary-foreground: {{darkColor1}};
-  --muted: {{darkColor2}};
-  --muted-foreground: {{lightColor2}};
-  --border: {{darkColor2}};
-  --input: {{darkColor2}};
-  --ring: {{primaryColor}};
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+var(--light-1);
+var(--light-2);
+var(--light-3);
+var(--dark-1);
+var(--dark-2);
+var(--dark-3);
 ```
 
 **Usage in Components:**
@@ -312,49 +224,8 @@ export default function MyApp({ Component, pageProps }) {
 ```
 
 
-**Example: Client-Side Only Page**
-
-```tsx
-// src/app/page.tsx
-"use client";
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-import AnimatedSection from "@/components/AnimatedSection";
-import ResponsiveCard from "@/components/ResponsiveCard";
-
-// Dynamically import components with SSR disabled
-const ResponsiveImage = dynamic(() => import("@/components/ResponsiveImage"), { ssr: false });
-
-export default function Home() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true); // Ensure client-side rendering
-  }, []);
-
-  if (!isMounted) return null; // Prevent rendering until mounted
-
-  return (
-    <main className="container mx-auto p-4">
-      <AnimatedSection>
-        <ResponsiveCard
-          title="Welcome to the Site"
-          description="This is a fully client-side rendered page."
-        />
-        <ResponsiveImage
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-          alt="Hero image"
-          className="mt-4"
-        />
-      </AnimatedSection>
-    </main>
-  );
-}
-```
-
-**Configuration for Disabling SSR**
-
-To enforce CSR across the entire application, you can configure Next.js to disable SSR by setting `output: 'export'` in `next.config.js`. This generates a static site that runs entirely on the client side.
+**Client-Side**
+put "use-client" on all pages.
 
 **Example: Next.js Configuration for Static Export**
 
@@ -433,7 +304,7 @@ export default function ParallaxSection({ children, backgroundUrl, speed = "medi
     <div ref={ref} className="relative h-screen overflow-hidden">
       <motion.div
         style={{ 
-          y,\\\\\
+          y,
           backgroundImage: `url(${backgroundUrl})`,
           backgroundSize: "cover",
           backgroundPosition: "center"

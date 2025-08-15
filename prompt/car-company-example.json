@@ -1,0 +1,147 @@
+{
+  "website": {
+    "name": "Velocity Motors",
+    "theme": {
+      "name": "Premium Automotive Excellence",
+      "aesthetic": "Sleek, modern, and luxurious with bold geometric elements",
+      "mood": "Sophisticated, powerful, and aspirational",
+      "targetAudience": "Affluent car enthusiasts and luxury vehicle buyers aged 30-55",
+      "designPrinciples": "Clean lines, premium materials, performance-focused imagery, and trust-building elements",
+      "gradientStyle": "Dynamic angular gradients that evoke speed and motion"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#DC2626"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#991B1B"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#F9FAFB"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#F3F4F6"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#E5E7EB"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#374151"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#1F2937"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#111827"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": "300,400,500,600,700,800",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "Poppins",
+          "weights": "400,500,600,700",
+          "source": "Google Fonts"
+        }
+      },
+      "animations": {
+        "heroAnimations": "Smooth fade-in with subtle upward motion and staggered element reveals",
+        "pageTransitions": "Seamless slide transitions with opacity changes",
+        "hoverEffects": "Subtle scale transforms and color transitions on interactive elements",
+        "loadingAnimations": "Elegant skeleton loaders and progressive image reveals"
+      },
+      "backgroundImages": {
+        "hero": {
+          "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+          "description": "Sleek sports car on a modern highway at sunset",
+          "parallaxEffect": "Medium speed parallax with depth blur effect",
+          "overlayStyle": "Dark gradient overlay (black to transparent) for text readability"
+        },
+        "sections": [
+          {
+            "sectionName": "About Us",
+            "url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7",
+            "description": "Luxury car showroom with premium lighting",
+            "parallaxEffect": "Slow parallax for elegant movement",
+            "overlayStyle": "Subtle dark overlay with 40% opacity",
+            "contrastEnsured": true
+          },
+          {
+            "sectionName": "Our Fleet",
+            "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
+            "description": "Collection of luxury vehicles in dramatic lighting",
+            "parallaxEffect": "Fast parallax for dynamic energy",
+            "overlayStyle": "Gradient overlay from bottom to top",
+            "contrastEnsured": true
+          }
+        ]
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Homepage",
+          "path": "/",
+          "layout": "Hero section with dynamic car showcase, featured models grid, about section, testimonials, and premium contact form"
+        },
+        {
+          "name": "Vehicle Lineup",
+          "path": "/vehicles",
+          "layout": "Interactive vehicle gallery with filtering, detailed specifications, and comparison tools"
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "layout": "Company story, heritage timeline, team profiles, and manufacturing excellence showcase"
+        },
+        {
+          "name": "Contact",
+          "path": "/contact",
+          "layout": "Premium contact form, showroom locations with maps, and service scheduling"
+        }
+      ],
+      "interactiveElements": {
+        "videoBackgrounds": "Subtle looping videos of cars in motion for hero sections",
+        "3dElements": "Interactive 360-degree car viewers and rotating logo animations",
+        "particleEffects": "Subtle floating particles that suggest speed and luxury",
+        "morphingShapes": "Dynamic geometric shapes that transform based on scroll position"
+      },
+      "forms": {
+        "leadCaptureForm": {
+          "type": "premium-lead-capture",
+          "style": "Elegant glassmorphism design with floating labels and smooth focus animations",
+          "fields": [
+            "Full Name",
+            "Email Address",
+            "Phone Number",
+            "Preferred Vehicle Type",
+            "Budget Range",
+            "Message/Inquiry"
+          ],
+          "purpose": "Capture qualified leads for test drives and vehicle inquiries",
+          "submitAction": "Send email notification and redirect to thank you page with next steps",
+          "animations": "Smooth field focus states, success animations, and error handling with gentle shake effects"
+        }
+      },
+      "layouts": {
+        "scrollTriggerEffects": "Elements reveal with fade-in and slide-up animations triggered at 20% viewport entry",
+        "backgroundVideoReveals": "Hero video backgrounds that start playing when section becomes visible",
+        "glassmorphismElements": "Frosted glass effect cards for testimonials and feature highlights",
+        "neonAccents": "Subtle red accent lines and borders that pulse gently on key CTAs",
+        "ctaExperience": "Premium buttons with micro-interactions, including hover states that suggest forward motion and progress"
+      }
+    }
+  }
+}

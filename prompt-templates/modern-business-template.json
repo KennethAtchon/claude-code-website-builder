@@ -1,0 +1,147 @@
+{
+  "website": {
+    "name": "{{websiteName}}",
+    "theme": {
+      "name": "{{themeName}}",
+      "aesthetic": "{{themeAesthetic}}",
+      "mood": "{{themeMood}}",
+      "targetAudience": "{{themeTargetAudience}}",
+      "designPrinciples": "{{themeDesignPrinciples}}",
+      "gradientStyle": "{{themeGradientStyle}}"
+    },
+    "styles": {
+      "recommendedColors": [
+        "#FF6B35",
+        "#F7931E",
+        "#FFD23F",
+        "#06FFA5",
+        "#118AB2",
+        "#073B4C",
+        "#EF476F",
+        "#FFD166",
+        "#06D6A0",
+        "#118AB2",
+        "#073B4C",
+        "#8B5CF6",
+        "#EC4899",
+        "#F59E0B",
+        "#10B981",
+        "#3B82F6",
+        "#EF4444",
+        "#8B5A2B",
+        "#7C3AED",
+        "#06B6D4"
+      ],
+      "colorPaletteScript": "node ../color-palette-generator.js \"{{primaryColor}}\"",
+      "colorPaletteScriptDescription": "USE THE SCRIPT, DONT FILL IN - This script generates a complete 8-color palette from a single primary color. It outputs a JSON array with harmonious variations (Primary, Primary Dark, Light 1-3, Dark 1-3) while maintaining proper contrast ratios for accessibility. Use this when only a primary color is provided to automatically generate the full color scheme.",
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "{{primaryColor}}"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "{{primaryDarkColor}}"
+        },
+        {
+          "name": "Light 1",
+          "hex": "{{lightColor1}}"
+        },
+        {
+          "name": "Light 2",
+          "hex": "{{lightColor2}}"
+        },
+        {
+          "name": "Light 3",
+          "hex": "{{lightColor3}}"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "{{darkColor1}}"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "{{darkColor2}}"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "{{darkColor3}}"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "{{primaryFontName}}",
+          "weights": "{{primaryFontWeights}}",
+          "source": "{{primaryFontSource}}"
+        },
+        "secondaryFont": {
+          "name": "{{secondaryFontName}}",
+          "weights": "{{secondaryFontWeights}}",
+          "source": "{{secondaryFontSource}}"
+        }
+      },
+      "animations": {
+        "heroAnimations": "{{heroAnimationStyle}}",
+        "pageTransitions": "{{pageTransitionStyle}}",
+        "hoverEffects": "{{hoverEffectStyle}}",
+        "loadingAnimations": "{{loadingAnimationStyle}}"
+      },
+      "backgroundImages": {
+        "hero": {
+          "url": "{{heroBackgroundImageUrl}}",
+          "description": "{{heroBackgroundDescription}}",
+          "parallaxEffect": "{{heroParallaxEffect}}",
+          "overlayStyle": "{{heroOverlayStyle}}"
+        },
+        "sections": [
+          {
+            "sectionName": "{{sectionName}}",
+            "url": "{{sectionBackgroundImageUrl}}",
+            "description": "{{sectionBackgroundDescription}}",
+            "parallaxEffect": "{{sectionParallaxEffect}}",
+            "overlayStyle": "{{sectionOverlayStyle}}",
+            "contrastEnsured": true
+          }
+        ]
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "{{pageName}}",
+          "path": "{{pagePath}}",
+          "layout": "{{pageLayoutDescription}}"
+        }
+      ],
+      "interactiveElements": {
+        "videoBackgrounds": "{{videoBackgroundStyle}}",
+        "3dElements": "{{threeDElementStyle}}",
+        "particleEffects": "{{particleEffectStyle}}",
+        "morphingShapes": "{{morphingShapeStyle}}"
+      },
+      "forms": {
+        "leadCaptureForm": {
+          "type": "premium-lead-capture",
+          "style": "{{formDesignStyle}}",
+          "fields": [
+            "{{leadFormField1}}",
+            "{{leadFormField2}}",
+            "{{leadFormField3}}",
+            "{{leadFormField4}}"
+          ],
+          "purpose": "{{formPurpose}}",
+          "submitAction": "{{formSubmitAction}}",
+          "animations": "{{formAnimationStyle}}"
+        }
+      },
+      "layouts": {
+        "scrollTriggerEffects": "{{scrollTriggerDescription}}",
+        "backgroundVideoReveals": "{{backgroundVideoRevealDescription}}",
+        "glassmorphismElements": "{{glassmorphismDescription}}",
+        "neonAccents": "{{neonAccentDescription}}",
+        "ctaExperience": "{{ctaExperienceDescription}}"
+      }
+    }
+  },
+  "cleanup": "When this script is copied over to an example. Remove text that isn't necessary to give the AI full context to build the website (recommendedColors, colorPaletteScript, etc)."
+}
