@@ -1,10 +1,27 @@
-"use client";
-import { NextSeo } from "next-seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/AnimatedSection";
 import { ArrowRight, Check, Clock, Shield, Award } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Roofing Services - Summit Roofing Solutions",
+  description: "Comprehensive roofing services including installation, repair, replacement, and emergency services. Licensed and insured professionals serving your community.",
+  openGraph: {
+    title: "Professional Roofing Services - Summit Roofing Solutions",
+    description: "Expert roofing services for residential and commercial properties. From repairs to complete installations.",
+    url: "https://summitroofingsolutions.com/services",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+        width: 1200,
+        height: 630,
+        alt: "Professional roofing services",
+      },
+    ],
+  },
+};
 
 export default function ServicesPage() {
   const services = [
@@ -122,25 +139,6 @@ export default function ServicesPage() {
   ];
 
   return (
-    <>
-      <NextSeo
-        title="Roofing Services - Summit Roofing Solutions"
-        description="Comprehensive roofing services including installation, repair, replacement, and emergency services. Licensed and insured professionals serving your community."
-        canonical="https://summitroofingsolutions.com/services"
-        openGraph={{
-          title: "Professional Roofing Services - Summit Roofing Solutions",
-          description: "Expert roofing services for residential and commercial properties. From repairs to complete installations.",
-          url: "https://summitroofingsolutions.com/services",
-          images: [
-            {
-              url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
-              width: 1200,
-              height: 630,
-              alt: "Professional roofing services",
-            },
-          ],
-        }}
-      />
       <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary to-dark-2 text-white py-20">
@@ -342,6 +340,5 @@ export default function ServicesPage() {
         </div>
       </section>
       </div>
-    </>
   );
 }

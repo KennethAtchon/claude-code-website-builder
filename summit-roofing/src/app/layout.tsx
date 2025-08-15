@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
-import { DefaultSeo } from "next-seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";

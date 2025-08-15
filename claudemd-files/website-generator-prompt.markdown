@@ -1,6 +1,8 @@
 # Prompt: Production-Ready Website Generator
 Your primary task is to build complete, production-ready websites based on user requests and JSON specifications provided in the `/prompt` directory. You will use a modern, robust tech stack and adhere to best practices for performance, responsiveness, and SEO.
 
+## ⚠️ CRITICAL: Use Next.js metadata API only, never `next-seo` (causes build errors with static exports)
+
 If you come across anything that could be a problem, don't hesitate to search the internet.
 
 ## 1. Technology Stack & Initial Setup
@@ -32,7 +34,7 @@ For every new project, execute the following commands to set up the environment.
    ```
 6. **Install Additional Dependencies:**
    ```bash
-   cd {app} && bun add lucide-react framer-motion next-seo
+   cd {app} && bun add lucide-react framer-motion
    ```
 
 ## 2. Project Structure
@@ -189,10 +191,13 @@ export default nextConfig;
 
 ```
 
-### d. Rendering Strategy (SSR, CSR, or Static)
-**Option to Disable SSR Entirely**
+### d. Static Export Compatibility
 
-To completely avoid SSR and rely on CSR, configure the Next.js application to use client-side rendering by default. This can be achieved by marking all pages and components as client-side with the "use client" directive or by using dynamic imports with SSR disabled.
+**Key Rules:**
+- Pages with SEO need server components (no "use client")
+- Use `metadata` export for SEO, never `next-seo`
+- Keep animations in separate client components
+- Always run `bun run build` to test
 
 ### e. Color System Implementation
 Extract and implement colors from the JSON template's `styles.colors` array. Use Tailwind CSS v4's modern `@theme inline` approach with a simplified 8-color palette.
@@ -376,13 +381,28 @@ bun run start
 ```
 Verify that no SSR-related console errors appear and that the site renders correctly on the client side.
 
-## 4. Final Requirement: SEO Optimization
-All generated websites must be fully optimized for Search Engine Optimization (SEO).
-  * **Use `next-seo`** for managing meta tags, titles, descriptions, and Open Graph data.
-  * Ensure semantic HTML (e.g., `<main>`, `<section>`, `<nav>`, `<h1>`, `<h2>`).
-  * Generate a `sitemap.xml` and `robots.txt`.
-  * Ensure all images have descriptive `alt` tags.
-  * Prioritize fast load times (LCP, FCP) and interactivity (FID). For CSR, ensure client-side JavaScript bundles are optimized and use `next/script` for deferred script loading if needed.
+
+## 4. SEO Optimization
+Use Next.js built-in metadata API only (never `next-seo`):
+
+```tsx
+// Each page.tsx (server component)
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Title - Site Name",
+  description: "Page description",
+  openGraph: {
+    title: "Page Title - Site Name", 
+    description: "Page description",
+  },
+};
+```
+
+Additional requirements:
+* Semantic HTML (`<main>`, `<section>`, `<h1>`, etc.)
+* Descriptive `alt` tags on images
+* Generate `robots.ts` and `sitemap.ts` files
 
 ## 5. Parallax Effects & Background Image Reveals
 Use `framer-motion` for parallax scrolling effects from the template's `backgroundImages` section.
@@ -413,7 +433,7 @@ export default function ParallaxSection({ children, backgroundUrl, speed = "medi
     <div ref={ref} className="relative h-screen overflow-hidden">
       <motion.div
         style={{ 
-          y,
+          y,\\\\\
           backgroundImage: `url(${backgroundUrl})`,
           backgroundSize: "cover",
           backgroundPosition: "center"
