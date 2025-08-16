@@ -70,10 +70,10 @@ function generateColorPalette(primaryHex) {
   // Primary Dark: Similar to websitestylekit.com algorithm
   const primaryDark = hslToHex(h, Math.min(s + 8, 90), Math.max(l - 25, 6));
   
-  // Light variations to match websitestylekit output
-  const light1 = "#FFFFFF";
-  const light2 = hslToHex(h, Math.max(s - 80, 2), 95);
-  const light3 = hslToHex(h, Math.max(s - 55, 8), 84);
+  // Light variations with subtle tinting based on primary hue
+  const light1 = hslToHex(h, Math.max(s - 85, 3), 98);
+  const light2 = hslToHex(h, Math.max(s - 70, 8), 92);
+  const light3 = hslToHex(h, Math.max(s - 55, 15), 85);
   
   // Dark variations to match websitestylekit output  
   const dark1 = hslToHex(h, Math.max(s - 10, 35), 19);
