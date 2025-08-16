@@ -22,11 +22,11 @@ For every new project, execute the following commands to set up the environment.
    ```
 3. **Initialize shadcn:**
    ```bash
-  cd {app} && bunx ~bun shadcn@latest init -b neutral -y
+  cd {app} && bunx shadcn@latest init -b neutral -y
    ```
 4. **Add Core shadcn Components, please utilize them:**
    ```bash
-   cd {app} && bunx shadcn@latest add --all
+   cd {app} && bunx --bun shadcn@latest add --all
    ```
 5. **Install Additional Dependencies:**
    ```bash

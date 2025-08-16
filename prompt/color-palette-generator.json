@@ -1,0 +1,108 @@
+{
+  "website": {
+    "name": "ColorCraft",
+    "theme": {
+      "name": "Modern Tech Tool",
+      "aesthetic": "Clean, gradient-rich, functional",
+      "mood": "Professional, accessible, instant",
+      "targetAudience": "Designers, developers, creative professionals",
+      "designPrinciples": "Clean functionality with bold gradient accents, intuitive interface, and immediate results",
+      "gradientStyle": "Multi-directional gradients with vibrant color transitions and subtle mesh overlays"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#6366F1"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#0b0fca"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#FFFFFF"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#f2f2f3"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#cbcbe2"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#0d0e54"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#0f127f"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#2b2d8d"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": "400,500,600,700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "JetBrains Mono",
+          "weights": "400,500",
+          "source": "Google Fonts"
+        }
+      },
+      "backgroundImages": {
+        "hero": {
+          "url": "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+          "description": "Abstract gradient mesh with tech patterns",
+          "parallaxEffect": "slow"
+        },
+        "sections": [
+          {
+            "sectionName": "generator",
+            "url": "https://images.unsplash.com/photo-1534723452862-4c874018d66d",
+            "description": "Subtle geometric patterns with gradient overlay",
+            "parallaxEffect": "medium",
+            "contrastEnsured": true
+          }
+        ]
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Single-page functional tool - immediate color generator interface",
+          "sections": [
+            {
+              "name": "Color Generator",
+              "type": "full-page-tool",
+              "content": "Full viewport color palette generator: Large interactive color wheel/picker at center, live 8-color palette display below with hex codes, copy buttons for each color, brief inline explanations (algorithm info, usage tips), export dropdown for CSS/JSON/Adobe formats",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+                "video": ""
+              },
+              "cta": {
+                "label": "Copy All",
+                "link": "#",
+                "button(s)": "Individual copy buttons per color, bulk copy all, export format dropdown"
+              }
+            }
+          ]
+        }
+      ],
+      "forms": {},
+      "layouts": {
+        "scrollEffects": "Subtle parallax on hero, smooth scroll to generator section",
+        "backgroundImageReveals": "Hero section with animated gradient mesh, generator section with clean background",
+        "extra": "Focus on the color wheel/picker as the main interactive element. Real-time palette updates as user selects colors. Clean, distraction-free interface that puts the tool front and center."
+      }
+    }
+  }
+}
