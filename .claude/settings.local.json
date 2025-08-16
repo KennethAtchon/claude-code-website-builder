@@ -34,7 +34,10 @@
       "WebSearch(*)",
       "TodoWrite(*)",
       "NotebookEdit(*)",
-      "ExitPlanMode(*)"
+      "ExitPlanMode(*)",
+      "Fetch(*)",
+      "Fetch",
+      "WebSearch"
     ],
     "deny": []
   },

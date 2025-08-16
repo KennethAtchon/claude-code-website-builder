@@ -1,0 +1,137 @@
+{
+  "website": {
+    "name": "Premier Auto Works",
+    "theme": {
+      "name": "Professional Automotive",
+      "aesthetic": "Clean, modern, and professional with automotive industry appeal",
+      "mood": "Trustworthy, reliable, expert, and customer-focused",
+      "targetAudience": "Vehicle owners seeking quality repair services, families, professionals, and fleet managers",
+      "designPrinciples": "Clear navigation, prominent service display, trust signals, easy contact access, and professional imagery",
+      "gradientStyle": "Subtle gradients from dark to light for depth and modern appeal"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#DC2626"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#760d0d"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#FFFFFF"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#f3f2f2"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#ddcfcf"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#4f1212"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#771717"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#833535"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": "400,500,600,700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "Inter",
+          "weights": "300,400,500",
+          "source": "Google Fonts"
+        }
+      },
+      "backgroundImages": {
+        "hero": {
+          "url": "https://images.unsplash.com/photo-1486754735734-325b5831c3ad",
+          "description": "Professional auto mechanic working under the hood of a car in a clean, modern garage",
+          "parallaxEffect": "medium"
+        },
+        "sections": [
+          {
+            "sectionName": "services",
+            "url": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e",
+            "description": "Modern auto repair garage with organized tools and clean workspace",
+            "parallaxEffect": "slow",
+            "contrastEnsured": true
+          },
+          {
+            "sectionName": "about",
+            "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+            "description": "Team of professional mechanics in clean uniforms standing in front of garage",
+            "parallaxEffect": "medium",
+            "contrastEnsured": true
+          }
+        ]
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Hero section with services overview, about preview, testimonials, and contact CTA"
+        },
+        {
+          "name": "Services",
+          "path": "/services",
+          "layout": "Comprehensive list of automotive services with descriptions and pricing guides"
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "layout": "Company history, team introduction, certifications, and facility tour"
+        },
+        {
+          "name": "Contact",
+          "path": "/contact",
+          "layout": "Contact form, location map, hours, phone numbers, and appointment booking"
+        }
+      ],
+      "forms": {
+        "quoteForm": {
+          "type": "service-quote",
+          "fields": [
+            "Vehicle Make & Model",
+            "Service Needed",
+            "Contact Information",
+            "Preferred Appointment Date"
+          ],
+          "purpose": "For customers requesting service quotes and appointments",
+          "submitAction": "Email quote request to shop with customer details"
+        },
+        "contactForm": {
+          "type": "contact-us",
+          "fields": [
+            "Name",
+            "Email",
+            "Phone",
+            "Message"
+          ],
+          "purpose": "General inquiries and customer communication",
+          "submitAction": "Send message to shop management for follow-up"
+        }
+      },
+      "layouts": {
+        "scrollEffects": "Smooth parallax scrolling on hero and service sections with fade-in animations for content blocks",
+        "backgroundImageReveals": "Hero background with mechanic working, services section with garage interior, about section with team photo",
+        "ctaContrast": "High contrast red buttons on light backgrounds, white text on dark red for maximum visibility and action"
+      }
+    }
+  }
+}

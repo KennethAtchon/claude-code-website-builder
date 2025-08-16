@@ -271,7 +271,6 @@ export const metadata: Metadata = {
 ```
 
 Additional requirements:
-* Semantic HTML (`<main>`, `<section>`, `<h1>`, etc.)
 * Descriptive `alt` tags on images
 * Generate `robots.ts` and `sitemap.ts` files
 
