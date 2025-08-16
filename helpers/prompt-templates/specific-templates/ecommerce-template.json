@@ -1,0 +1,310 @@
+{
+    "website": {
+      "name": "{{websiteName}}",
+      "type": "e-commerce",
+      "description": "{{websiteDescription}}",
+      "industry": "{{websiteIndustry}}",
+      "theme": {
+        "name": "{{themeName}}",
+        "aesthetic": "{{themeAesthetic}}",
+        "mood": "{{themeMood}}",
+        "targetAudience": "{{themeTargetAudience}}",
+        "designPrinciples": "{{themeDesignPrinciples}}",
+        "gradientStyle": "{{themeGradientStyle}}"
+      },
+      "styles": {
+        "pickRandomlyFromRecommendedColors": [
+          "#4361EE",
+          "#22C55E",
+          "#EF4444",
+          "#8B5CF6",
+          "#F59E0B",
+          "#06B6D4",
+          "#EC4899",
+          "#10B981",
+          "#3B82F6",
+          "#F97316",
+          "#8B5A2B",
+          "#DC2626",
+          "#7C3AED",
+          "#059669",
+          "#0EA5E9",
+          "#E11D48",
+          "#7C2D12",
+          "#1E40AF",
+          "#9333EA",
+          "#0D9488"
+        ],
+        "colorPaletteScript": "node ../color-palette-generator.js \"{{primaryColor}}\"",
+        "colorPaletteScriptDescription": "USE THE SCRIPT, DONT FILL IN - This script generates a complete 8-color palette from a single primary color. It outputs a JSON array with harmonious variations (Primary, Primary Dark, Light 1-3, Dark 1-3) while maintaining proper contrast ratios for accessibility. Use this when only a primary color is provided to automatically generate the full color scheme.",
+        "colors": [
+          {
+            "name": "Primary",
+            "hex": "{{primaryColor}}"
+          },
+          {
+            "name": "Primary Dark",
+            "hex": "{{primaryDarkColor}}"
+          },
+          {
+            "name": "Light 1",
+            "hex": "{{lightColor1}}"
+          },
+          {
+            "name": "Light 2",
+            "hex": "{{lightColor2}}"
+          },
+          {
+            "name": "Light 3",
+            "hex": "{{lightColor3}}"
+          },
+          {
+            "name": "Dark 1",
+            "hex": "{{darkColor1}}"
+          },
+          {
+            "name": "Dark 2",
+            "hex": "{{darkColor2}}"
+          },
+          {
+            "name": "Dark 3",
+            "hex": "{{darkColor3}}"
+          }
+        ],
+        "typography": {
+          "primaryFont": {
+            "name": "{{primaryFontName}}",
+            "weights": "{{primaryFontWeights}}",
+            "source": "{{primaryFontSource}}"
+          },
+          "secondaryFont": {
+            "name": "{{secondaryFontName}}",
+            "weights": "{{secondaryFontWeights}}",
+            "source": "{{secondaryFontSource}}"
+          }
+        }
+      },
+      "structure": {
+        "pages": [
+          {
+            "name": "Home",
+            "path": "/",
+            "layout": "E-commerce homepage with hero, featured products, categories, and promotions",
+            "sections": [
+              {
+                "name": "Hero Banner",
+                "type": "ecommerce-hero",
+                "content": "Main promotional banner with featured products or sales",
+                "media": {
+                  "image": "{{heroImageUrl}}",
+                  "video": "{{heroVideoUrl}}"
+                },
+                "cta": {
+                  "label": "Shop Now",
+                  "link": "/products"
+                }
+              },
+              {
+                "name": "Featured Products",
+                "type": "product-showcase",
+                "content": "Grid of bestselling or featured products",
+                "media": {
+                  "image": "{{featuredProductsImageUrl}}"
+                },
+                "cta": {
+                  "label": "View Product",
+                  "link": "/product/[slug]"
+                }
+              },
+              {
+                "name": "Product Categories",
+                "type": "category-grid",
+                "content": "Visual grid of main product categories",
+                "media": {
+                  "image": "{{categoriesImageUrl}}"
+                },
+                "cta": {
+                  "label": "Browse Category",
+                  "link": "/category/[slug]"
+                }
+              },
+              {
+                "name": "Special Offers",
+                "type": "promotions-section",
+                "content": "Current sales, discounts, and special promotions",
+                "media": {
+                  "image": "{{promotionsImageUrl}}"
+                },
+                "cta": {
+                  "label": "Shop Sale",
+                  "link": "/sale"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Products",
+            "path": "/products",
+            "layout": "Product catalog with filtering, sorting, and search",
+            "sections": [
+              {
+                "name": "Product Grid",
+                "type": "product-catalog",
+                "content": "Complete product listing with filters and search",
+                "media": {
+                  "image": "{{productCatalogImageUrl}}"
+                },
+                "cta": {
+                  "label": "View Details",
+                  "link": "/product/[slug]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Product Details",
+            "path": "/product/[slug]",
+            "layout": "Individual product page with gallery, details, and purchase options",
+            "sections": [
+              {
+                "name": "Product Details",
+                "type": "product-page",
+                "content": "Product images, description, pricing, and add to cart",
+                "media": {
+                  "image": "{{productDetailsImageUrl}}"
+                },
+                "cta": {
+                  "label": "Add to Cart",
+                  "link": "#add-to-cart"
+                }
+              },
+              {
+                "name": "Related Products",
+                "type": "related-products",
+                "content": "Suggestions for similar or complementary products",
+                "media": {
+                  "image": "{{relatedProductsImageUrl}}"
+                },
+                "cta": {
+                  "label": "View Product",
+                  "link": "/product/[related-slug]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Cart",
+            "path": "/cart",
+            "layout": "Shopping cart with item management and checkout process",
+            "sections": [
+              {
+                "name": "Cart Items",
+                "type": "shopping-cart",
+                "content": "List of items in cart with quantity controls and totals",
+                "media": {
+                  "image": "{{cartImageUrl}}"
+                },
+                "cta": {
+                  "label": "Proceed to Checkout",
+                  "link": "/checkout"
+                }
+              }
+            ]
+          },
+          {
+            "name": "About",
+            "path": "/about",
+            "layout": "Brand story, mission, and company information",
+            "sections": [
+              {
+                "name": "Brand Story",
+                "type": "brand-story",
+                "content": "Company history, values, and what makes products special",
+                "media": {
+                  "image": "{{brandStoryImageUrl}}"
+                },
+                "cta": {
+                  "label": "Shop Our Products",
+                  "link": "/products"
+                }
+              }
+            ]
+          }
+        ],
+        "layouts": {
+          "layoutStyle": "E-commerce optimized with clear product presentation and easy navigation",
+          "navigationStyle": "Header with logo, search bar, account menu, and shopping cart icon",
+          "extra": "Include mega menu for categories, sticky cart icon, product quick-view modals, and mobile-optimized checkout flow"
+        },
+        "forms": [
+          {
+            "name": "Newsletter Signup",
+            "type": "marketing-subscription",
+            "fields": [
+              "email",
+              "product-interests"
+            ],
+            "purpose": "Marketing and promotional communications",
+            "submitAction": "Add to email marketing with preferences"
+          },
+          {
+            "name": "Contact Form",
+            "type": "customer-support",
+            "fields": [
+              "name",
+              "email",
+              "order-number",
+              "inquiry-type",
+              "message"
+            ],
+            "purpose": "Customer support and general inquiries",
+            "submitAction": "Send to customer service team"
+          },
+          {
+            "name": "Product Review",
+            "type": "product-feedback",
+            "fields": [
+              "name",
+              "email",
+              "rating",
+              "review-title",
+              "review-text",
+              "would-recommend"
+            ],
+            "purpose": "Collect customer reviews and ratings",
+            "submitAction": "Save to review system with moderation"
+          }
+        ]
+      }
+    },
+    "templateInfo": {
+      "version": "2.0",
+      "type": "e-commerce",
+      "description": "Specialized template for online stores and e-commerce businesses. Optimized for product sales, customer conversion, and shopping experience.",
+      "supportedWebsiteTypes": [
+        "online-store",
+        "retail-shop",
+        "fashion-store",
+        "electronics-store",
+        "marketplace",
+        "digital-products",
+        "subscription-commerce",
+        "wholesale-business",
+        "handmade-crafts",
+        "dropshipping-store"
+      ],
+      "cleanup": "This e-commerce template includes shopping cart functionality, product catalogs, and customer management. Integrate with payment processors and inventory management systems for the specific store.",
+      "features": [
+        "Product catalog with search and filtering",
+        "Shopping cart and checkout process",
+        "Product detail pages with galleries",
+        "Customer reviews and ratings",
+        "Category and brand organization",
+        "Promotional banners and sales",
+        "Newsletter signup for marketing",
+        "Customer account management",
+        "Mobile-optimized shopping experience",
+        "Payment integration ready"
+      ]
+    }
+  }

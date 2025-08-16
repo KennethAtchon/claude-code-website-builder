@@ -1,0 +1,277 @@
+{
+    "website": {
+      "name": "{{websiteName}}",
+      "type": "business",
+      "description": "{{websiteDescription}}",
+      "industry": "{{websiteIndustry}}",
+      "theme": {
+        "name": "{{themeName}}",
+        "aesthetic": "{{themeAesthetic}}",
+        "mood": "{{themeMood}}",
+        "targetAudience": "{{themeTargetAudience}}",
+        "designPrinciples": "{{themeDesignPrinciples}}",
+        "gradientStyle": "{{themeGradientStyle}}"
+      },
+      "styles": {
+        "pickRandomlyFromRecommendedColors": [
+          "#4361EE",
+          "#22C55E",
+          "#EF4444",
+          "#8B5CF6",
+          "#F59E0B",
+          "#06B6D4",
+          "#EC4899",
+          "#10B981",
+          "#3B82F6",
+          "#F97316",
+          "#8B5A2B",
+          "#DC2626",
+          "#7C3AED",
+          "#059669",
+          "#0EA5E9",
+          "#E11D48",
+          "#7C2D12",
+          "#1E40AF",
+          "#9333EA",
+          "#0D9488"
+        ],
+        "colorPaletteScript": "node ../color-palette-generator.js \"{{primaryColor}}\"",
+        "colorPaletteScriptDescription": "USE THE SCRIPT, DONT FILL IN - This script generates a complete 8-color palette from a single primary color. It outputs a JSON array with harmonious variations (Primary, Primary Dark, Light 1-3, Dark 1-3) while maintaining proper contrast ratios for accessibility. Use this when only a primary color is provided to automatically generate the full color scheme.",
+        "colors": [
+          {
+            "name": "Primary",
+            "hex": "{{primaryColor}}"
+          },
+          {
+            "name": "Primary Dark",
+            "hex": "{{primaryDarkColor}}"
+          },
+          {
+            "name": "Light 1",
+            "hex": "{{lightColor1}}"
+          },
+          {
+            "name": "Light 2",
+            "hex": "{{lightColor2}}"
+          },
+          {
+            "name": "Light 3",
+            "hex": "{{lightColor3}}"
+          },
+          {
+            "name": "Dark 1",
+            "hex": "{{darkColor1}}"
+          },
+          {
+            "name": "Dark 2",
+            "hex": "{{darkColor2}}"
+          },
+          {
+            "name": "Dark 3",
+            "hex": "{{darkColor3}}"
+          }
+        ],
+        "typography": {
+          "primaryFont": {
+            "name": "{{primaryFontName}}",
+            "weights": "{{primaryFontWeights}}",
+            "source": "{{primaryFontSource}}"
+          },
+          "secondaryFont": {
+            "name": "{{secondaryFontName}}",
+            "weights": "{{secondaryFontWeights}}",
+            "source": "{{secondaryFontSource}}"
+          }
+        }
+      },
+      "structure": {
+        "pages": [
+          {
+            "name": "Home",
+            "path": "/",
+            "layout": "Landing page with hero, services, about, testimonials, contact",
+            "sections": [
+              {
+                "name": "Hero Section",
+                "type": "hero",
+                "content": "Compelling headline, value proposition, and primary CTA",
+                "media": {
+                  "image": "{{heroImageUrl}}",
+                  "video": "{{heroVideoUrl}}"
+                },
+                "cta": {
+                  "label": "{{primaryCtaLabel}}",
+                  "link": "{{primaryCtaLink}}"
+                }
+              },
+              {
+                "name": "Services",
+                "type": "services-grid",
+                "content": "Grid of services with icons, titles, and descriptions",
+                "media": {
+                  "image": "{{servicesImageUrl}}"
+                },
+                "cta": {
+                  "label": "Learn More",
+                  "link": "/services"
+                }
+              },
+              {
+                "name": "About Us",
+                "type": "about-intro",
+                "content": "Company story, mission, and team introduction",
+                "media": {
+                  "image": "{{aboutImageUrl}}"
+                },
+                "cta": {
+                  "label": "Read Our Story",
+                  "link": "/about"
+                }
+              },
+              {
+                "name": "Testimonials",
+                "type": "testimonial-carousel",
+                "content": "Customer testimonials and reviews",
+                "media": {
+                  "image": "{{testimonialImageUrl}}"
+                },
+                "cta": {
+                  "label": "View All Reviews",
+                  "link": "/testimonials"
+                }
+              },
+              {
+                "name": "Contact CTA",
+                "type": "contact-section",
+                "content": "Contact information and quote request",
+                "media": {
+                  "image": "{{contactImageUrl}}"
+                },
+                "cta": {
+                  "label": "Get Quote",
+                  "link": "/contact"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Services",
+            "path": "/services",
+            "layout": "Detailed services page with pricing",
+            "sections": [
+              {
+                "name": "Services Hero",
+                "type": "page-hero",
+                "content": "Services overview and value proposition",
+                "media": {
+                  "image": "{{servicesHeroImageUrl}}"
+                },
+                "cta": {
+                  "label": "Request Quote",
+                  "link": "/contact"
+                }
+              }
+            ]
+          },
+          {
+            "name": "About",
+            "path": "/about",
+            "layout": "Company story, team, and values",
+            "sections": [
+              {
+                "name": "Company Story",
+                "type": "story-section",
+                "content": "Detailed company history and mission",
+                "media": {
+                  "image": "{{companyStoryImageUrl}}"
+                },
+                "cta": {
+                  "label": "Meet Our Team",
+                  "link": "#team"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Contact",
+            "path": "/contact",
+            "layout": "Contact form, location, and business hours",
+            "sections": [
+              {
+                "name": "Contact Form",
+                "type": "contact-form",
+                "content": "Contact form with quote request fields",
+                "media": {
+                  "image": "{{contactFormImageUrl}}"
+                },
+                "cta": {
+                  "label": "Send Message",
+                  "link": "#submit"
+                }
+              }
+            ]
+          }
+        ],
+        "layouts": {
+          "layoutStyle": "Professional business layout with clear navigation",
+          "navigationStyle": "Header with logo, main nav, and contact button",
+          "extra": "Include footer with contact info, social links, and business hours"
+        },
+        "forms": [
+          {
+            "name": "Quote Request",
+            "type": "business-quote",
+            "fields": [
+              "name",
+              "email",
+              "phone",
+              "service-needed",
+              "project-details",
+              "budget-range",
+              "timeline"
+            ],
+            "purpose": "Lead generation and quote requests",
+            "submitAction": "Send to business email and CRM"
+          },
+          {
+            "name": "Contact Form",
+            "type": "general-contact",
+            "fields": [
+              "name",
+              "email",
+              "subject",
+              "message"
+            ],
+            "purpose": "General inquiries and customer support",
+            "submitAction": "Send to customer service email"
+          }
+        ]
+      }
+    },
+    "templateInfo": {
+      "version": "2.0",
+      "type": "business",
+      "description": "Specialized template for business websites including service companies, consultants, agencies, and professional services. Optimized for lead generation and customer conversion.",
+      "supportedWebsiteTypes": [
+        "service-business",
+        "consulting",
+        "agency",
+        "professional-services",
+        "local-business",
+        "contractors",
+        "healthcare",
+        "legal",
+        "real-estate",
+        "financial-services"
+      ],
+      "cleanup": "This business template includes lead generation forms, service showcases, and professional layouts. Customize service offerings, contact information, and testimonials for the specific business.",
+      "features": [
+        "Lead generation forms",
+        "Service/product showcases",
+        "Customer testimonials",
+        "Professional team pages",
+        "Contact and location info",
+        "Quote request system"
+      ]
+    }
+  }

@@ -10,7 +10,7 @@
         "gradientStyle": "{{themeGradientStyle}}"
       },
       "styles": {
-        "recommendedColors": [
+        "pickRandomlyFromRecommendedColors": [
           "#4361EE",
           "#22C55E",
           "#EF4444",

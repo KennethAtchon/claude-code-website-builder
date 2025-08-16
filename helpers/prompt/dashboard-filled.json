@@ -1,0 +1,260 @@
+{
+  "website": {
+    "name": "DataFlow Dashboard",
+    "type": "dashboard",
+    "description": "A comprehensive analytics dashboard for tracking key performance metrics, managing data visualization, and monitoring business insights in real-time",
+    "industry": "Software & Analytics",
+    "theme": {
+      "name": "Professional Analytics",
+      "aesthetic": "Clean, modern, data-driven design with emphasis on readability and functionality",
+      "mood": "Professional, trustworthy, efficient, and user-focused",
+      "targetAudience": "Business analysts, data scientists, executives, and team managers",
+      "designPrinciples": "Clarity over complexity, information hierarchy, accessible contrast, consistent spacing",
+      "gradientStyle": "Subtle gradients for depth, primary focus on solid colors for data clarity"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#4361EE"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#3730A3"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#F8FAFC"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#F1F5F9"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#E2E8F0"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#334155"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#1E293B"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#0F172A"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": "400,500,600,700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "JetBrains Mono",
+          "weights": "400,500,600",
+          "source": "Google Fonts"
+        }
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Dashboard Home",
+          "path": "/",
+          "layout": "Main dashboard layout with sidebar navigation, top header with user profile, and grid-based content area",
+          "sections": [
+            {
+              "name": "Dashboard Header",
+              "type": "header",
+              "content": "Top navigation bar with logo, search functionality, notifications, and user profile dropdown",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+                "video": null
+              },
+              "cta": {
+                "label": "View Profile",
+                "link": "/profile"
+              }
+            },
+            {
+              "name": "Key Metrics Overview",
+              "type": "metrics-grid",
+              "content": "4-card grid displaying total revenue, active users, conversion rate, and growth percentage with trend indicators",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+                "video": null
+              },
+              "cta": {
+                "label": "View Details",
+                "link": "/analytics"
+              }
+            },
+            {
+              "name": "Revenue Chart",
+              "type": "chart-section",
+              "content": "Interactive line chart showing revenue trends over the last 12 months with filtering options",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+                "video": null
+              },
+              "cta": {
+                "label": "Export Data",
+                "link": "/export"
+              }
+            },
+            {
+              "name": "Recent Activity",
+              "type": "activity-feed",
+              "content": "Live feed of recent user actions, system updates, and important notifications",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+                "video": null
+              },
+              "cta": {
+                "label": "View All",
+                "link": "/activity"
+              }
+            },
+            {
+              "name": "Quick Actions",
+              "type": "action-panel",
+              "content": "Panel with frequently used actions like creating reports, adding users, and system settings",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1556075798-4825dfaaf498",
+                "video": null
+              },
+              "cta": {
+                "label": "Create Report",
+                "link": "/reports/new"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Analytics",
+          "path": "/analytics",
+          "layout": "Detailed analytics page with advanced charts, filters, and data tables",
+          "sections": [
+            {
+              "name": "Analytics Dashboard",
+              "type": "analytics-grid",
+              "content": "Comprehensive analytics view with multiple chart types, date range selectors, and export functionality",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+                "video": null
+              },
+              "cta": {
+                "label": "Generate Report",
+                "link": "/reports"
+              }
+            },
+            {
+              "name": "Performance Metrics",
+              "type": "metrics-detailed",
+              "content": "Detailed performance indicators with comparisons, benchmarks, and trend analysis",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+                "video": null
+              },
+              "cta": {
+                "label": "View Insights",
+                "link": "/insights"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Reports",
+          "path": "/reports",
+          "layout": "Reports management page with list view, filters, and report generation tools",
+          "sections": [
+            {
+              "name": "Report Management",
+              "type": "reports-list",
+              "content": "Table view of all reports with filters, search, and batch actions for report management",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+                "video": null
+              },
+              "cta": {
+                "label": "Create New Report",
+                "link": "/reports/new"
+              }
+            },
+            {
+              "name": "Report Templates",
+              "type": "template-gallery",
+              "content": "Gallery of pre-built report templates for quick report generation",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1586953208448-b95a79798f07",
+                "video": null
+              },
+              "cta": {
+                "label": "Use Template",
+                "link": "/reports/templates"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Settings",
+          "path": "/settings",
+          "layout": "Settings page with tabbed navigation for different configuration areas",
+          "sections": [
+            {
+              "name": "User Settings",
+              "type": "settings-form",
+              "content": "User profile management, notification preferences, and account security settings",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+                "video": null
+              },
+              "cta": {
+                "label": "Save Changes",
+                "link": "/settings/save"
+              }
+            },
+            {
+              "name": "System Configuration",
+              "type": "admin-panel",
+              "content": "System-wide settings, integrations, and administrative controls",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1556075798-4825dfaaf498",
+                "video": null
+              },
+              "cta": {
+                "label": "Apply Settings",
+                "link": "/settings/system"
+              }
+            }
+          ]
+        }
+      ],
+      "layouts": {
+        "layoutStyle": "Sidebar navigation with collapsible menu, top header bar, and responsive grid content areas",
+        "navigationStyle": "Left sidebar with hierarchical menu structure, breadcrumb navigation, and quick access toolbar",
+        "extra": "Dark mode toggle, responsive design for mobile/tablet, keyboard shortcuts, and accessibility features"
+      }
+    }
+  },
+  "templateInfo": {
+    "version": "2.0",
+    "type": "dashboard",
+    "description": "Professional dashboard template optimized for data visualization, analytics, and business intelligence applications",
+    "supportedWebsiteTypes": [
+      "dashboard",
+      "analytics",
+      "business-intelligence",
+      "admin-panel",
+      "data-visualization",
+      "reporting",
+      "monitoring",
+      "saas-platform"
+    ],
+    "cleanup": "This template provides a comprehensive dashboard structure. Customize the metrics, charts, and data sources based on your specific business needs and remove any unnecessary sections."
+  }
+}

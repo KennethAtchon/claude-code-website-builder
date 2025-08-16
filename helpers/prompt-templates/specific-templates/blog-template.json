@@ -1,0 +1,295 @@
+{
+    "website": {
+      "name": "{{websiteName}}",
+      "type": "blog",
+      "description": "{{websiteDescription}}",
+      "industry": "{{websiteIndustry}}",
+      "theme": {
+        "name": "{{themeName}}",
+        "aesthetic": "{{themeAesthetic}}",
+        "mood": "{{themeMood}}",
+        "targetAudience": "{{themeTargetAudience}}",
+        "designPrinciples": "{{themeDesignPrinciples}}",
+        "gradientStyle": "{{themeGradientStyle}}"
+      },
+      "styles": {
+        "pickRandomlyFromRecommendedColors": [
+          "#4361EE",
+          "#22C55E",
+          "#EF4444",
+          "#8B5CF6",
+          "#F59E0B",
+          "#06B6D4",
+          "#EC4899",
+          "#10B981",
+          "#3B82F6",
+          "#F97316",
+          "#8B5A2B",
+          "#DC2626",
+          "#7C3AED",
+          "#059669",
+          "#0EA5E9",
+          "#E11D48",
+          "#7C2D12",
+          "#1E40AF",
+          "#9333EA",
+          "#0D9488"
+        ],
+        "colorPaletteScript": "node ../color-palette-generator.js \"{{primaryColor}}\"",
+        "colorPaletteScriptDescription": "USE THE SCRIPT, DONT FILL IN - This script generates a complete 8-color palette from a single primary color. It outputs a JSON array with harmonious variations (Primary, Primary Dark, Light 1-3, Dark 1-3) while maintaining proper contrast ratios for accessibility. Use this when only a primary color is provided to automatically generate the full color scheme.",
+        "colors": [
+          {
+            "name": "Primary",
+            "hex": "{{primaryColor}}"
+          },
+          {
+            "name": "Primary Dark",
+            "hex": "{{primaryDarkColor}}"
+          },
+          {
+            "name": "Light 1",
+            "hex": "{{lightColor1}}"
+          },
+          {
+            "name": "Light 2",
+            "hex": "{{lightColor2}}"
+          },
+          {
+            "name": "Light 3",
+            "hex": "{{lightColor3}}"
+          },
+          {
+            "name": "Dark 1",
+            "hex": "{{darkColor1}}"
+          },
+          {
+            "name": "Dark 2",
+            "hex": "{{darkColor2}}"
+          },
+          {
+            "name": "Dark 3",
+            "hex": "{{darkColor3}}"
+          }
+        ],
+        "typography": {
+          "primaryFont": {
+            "name": "{{primaryFontName}}",
+            "weights": "{{primaryFontWeights}}",
+            "source": "{{primaryFontSource}}"
+          },
+          "secondaryFont": {
+            "name": "{{secondaryFontName}}",
+            "weights": "{{secondaryFontWeights}}",
+            "source": "{{secondaryFontSource}}"
+          }
+        }
+      },
+      "structure": {
+        "pages": [
+          {
+            "name": "Home",
+            "path": "/",
+            "layout": "Blog homepage with featured posts, recent articles, and author intro",
+            "sections": [
+              {
+                "name": "Blog Header",
+                "type": "blog-hero",
+                "content": "Blog title, tagline, and author introduction",
+                "media": {
+                  "image": "{{blogHeaderImageUrl}}"
+                },
+                "cta": {
+                  "label": "Subscribe to Newsletter",
+                  "link": "#newsletter"
+                }
+              },
+              {
+                "name": "Featured Posts",
+                "type": "featured-articles",
+                "content": "Highlighted blog posts with excerpts and featured images",
+                "media": {
+                  "image": "{{featuredPostsImageUrl}}"
+                },
+                "cta": {
+                  "label": "Read Full Article",
+                  "link": "/blog/[slug]"
+                }
+              },
+              {
+                "name": "Recent Posts",
+                "type": "blog-grid",
+                "content": "Grid of recent blog posts with pagination",
+                "media": {
+                  "image": "{{recentPostsImageUrl}}"
+                },
+                "cta": {
+                  "label": "View All Posts",
+                  "link": "/blog"
+                }
+              },
+              {
+                "name": "Categories",
+                "type": "category-list",
+                "content": "Blog categories and tags for easy navigation",
+                "media": {
+                  "image": "{{categoriesImageUrl}}"
+                },
+                "cta": {
+                  "label": "Browse Category",
+                  "link": "/category/[slug]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Blog Archive",
+            "path": "/blog",
+            "layout": "Complete list of all blog posts with search and filtering",
+            "sections": [
+              {
+                "name": "Blog Archive",
+                "type": "post-archive",
+                "content": "Paginated list of all blog posts with search functionality",
+                "media": {
+                  "image": "{{blogArchiveImageUrl}}"
+                },
+                "cta": {
+                  "label": "Read Post",
+                  "link": "/blog/[slug]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "About",
+            "path": "/about",
+            "layout": "Author bio, writing journey, and blog purpose",
+            "sections": [
+              {
+                "name": "Author Bio",
+                "type": "author-profile",
+                "content": "Personal background, expertise, and why you started blogging",
+                "media": {
+                  "image": "{{authorBioImageUrl}}"
+                },
+                "cta": {
+                  "label": "Follow on Social",
+                  "link": "{{socialMediaUrl}}"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Contact",
+            "path": "/contact",
+            "layout": "Contact form for collaboration, guest posts, and inquiries",
+            "sections": [
+              {
+                "name": "Contact Form",
+                "type": "blogger-contact",
+                "content": "Form for reader inquiries, collaboration, and feedback",
+                "media": {
+                  "image": "{{contactImageUrl}}"
+                },
+                "cta": {
+                  "label": "Send Message",
+                  "link": "#submit"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Individual Post",
+            "path": "/blog/[slug]",
+            "layout": "Single blog post with content, comments, and related posts",
+            "sections": [
+              {
+                "name": "Post Content",
+                "type": "article-content",
+                "content": "Full blog post with rich formatting, images, and author info",
+                "media": {
+                  "image": "{{postContentImageUrl}}"
+                },
+                "cta": {
+                  "label": "Share Article",
+                  "link": "#share"
+                }
+              },
+              {
+                "name": "Related Posts",
+                "type": "related-articles",
+                "content": "Suggestions for similar or related blog posts",
+                "media": {
+                  "image": "{{relatedPostsImageUrl}}"
+                },
+                "cta": {
+                  "label": "Read Next",
+                  "link": "/blog/[related-slug]"
+                }
+              }
+            ]
+          }
+        ],
+        "layouts": {
+          "layoutStyle": "Clean, readable design focused on content consumption and easy navigation",
+          "navigationStyle": "Blog header with search, categories, and social links",
+          "extra": "Include sidebar with recent posts, categories, newsletter signup, and social media integration. Optimize for reading experience with proper typography."
+        },
+        "forms": [
+          {
+            "name": "Newsletter Signup",
+            "type": "email-subscription",
+            "fields": [
+              "email",
+              "name",
+              "interests"
+            ],
+            "purpose": "Build email list and engage readers",
+            "submitAction": "Add to email marketing platform"
+          },
+          {
+            "name": "Contact Form",
+            "type": "blogger-inquiry",
+            "fields": [
+              "name",
+              "email",
+              "subject",
+              "inquiry-type",
+              "message"
+            ],
+            "purpose": "Handle collaboration requests, guest posts, and general inquiries",
+            "submitAction": "Send to blogger email"
+          }
+        ]
+      }
+    },
+    "templateInfo": {
+      "version": "2.0",
+      "type": "blog",
+      "description": "Specialized template for bloggers, content creators, and publications. Optimized for content consumption, reader engagement, and content discovery.",
+      "supportedWebsiteTypes": [
+        "personal-blog",
+        "professional-blog",
+        "company-blog",
+        "news-site",
+        "magazine-style",
+        "niche-blog",
+        "tutorial-blog",
+        "lifestyle-blog",
+        "tech-blog",
+        "content-publication"
+      ],
+      "cleanup": "This blog template focuses on content presentation and reader engagement. Customize categories, author information, and content types for the specific blog niche.",
+      "features": [
+        "Blog post archive and pagination",
+        "Category and tag organization",
+        "Search functionality",
+        "Newsletter subscription",
+        "Social media integration",
+        "Related posts suggestions",
+        "Author bio and profile",
+        "Comment system ready",
+        "SEO-optimized structure"
+      ]
+    }
+  }

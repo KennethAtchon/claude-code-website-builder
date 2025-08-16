@@ -1,0 +1,267 @@
+{
+    "website": {
+      "name": "{{websiteName}}",
+      "type": "portfolio",
+      "description": "{{websiteDescription}}",
+      "industry": "{{websiteIndustry}}",
+      "theme": {
+        "name": "{{themeName}}",
+        "aesthetic": "{{themeAesthetic}}",
+        "mood": "{{themeMood}}",
+        "targetAudience": "{{themeTargetAudience}}",
+        "designPrinciples": "{{themeDesignPrinciples}}",
+        "gradientStyle": "{{themeGradientStyle}}"
+      },
+      "styles": {
+        "pickRandomlyFromRecommendedColors": [
+          "#4361EE",
+          "#22C55E",
+          "#EF4444",
+          "#8B5CF6",
+          "#F59E0B",
+          "#06B6D4",
+          "#EC4899",
+          "#10B981",
+          "#3B82F6",
+          "#F97316",
+          "#8B5A2B",
+          "#DC2626",
+          "#7C3AED",
+          "#059669",
+          "#0EA5E9",
+          "#E11D48",
+          "#7C2D12",
+          "#1E40AF",
+          "#9333EA",
+          "#0D9488"
+        ],
+        "colorPaletteScript": "node ../color-palette-generator.js \"{{primaryColor}}\"",
+        "colorPaletteScriptDescription": "USE THE SCRIPT, DONT FILL IN - This script generates a complete 8-color palette from a single primary color. It outputs a JSON array with harmonious variations (Primary, Primary Dark, Light 1-3, Dark 1-3) while maintaining proper contrast ratios for accessibility. Use this when only a primary color is provided to automatically generate the full color scheme.",
+        "colors": [
+          {
+            "name": "Primary",
+            "hex": "{{primaryColor}}"
+          },
+          {
+            "name": "Primary Dark",
+            "hex": "{{primaryDarkColor}}"
+          },
+          {
+            "name": "Light 1",
+            "hex": "{{lightColor1}}"
+          },
+          {
+            "name": "Light 2",
+            "hex": "{{lightColor2}}"
+          },
+          {
+            "name": "Light 3",
+            "hex": "{{lightColor3}}"
+          },
+          {
+            "name": "Dark 1",
+            "hex": "{{darkColor1}}"
+          },
+          {
+            "name": "Dark 2",
+            "hex": "{{darkColor2}}"
+          },
+          {
+            "name": "Dark 3",
+            "hex": "{{darkColor3}}"
+          }
+        ],
+        "typography": {
+          "primaryFont": {
+            "name": "{{primaryFontName}}",
+            "weights": "{{primaryFontWeights}}",
+            "source": "{{primaryFontSource}}"
+          },
+          "secondaryFont": {
+            "name": "{{secondaryFontName}}",
+            "weights": "{{secondaryFontWeights}}",
+            "source": "{{secondaryFontSource}}"
+          }
+        }
+      },
+      "structure": {
+        "pages": [
+          {
+            "name": "Home",
+            "path": "/",
+            "layout": "Creative portfolio homepage with hero, featured work, and about preview",
+            "sections": [
+              {
+                "name": "Hero Section",
+                "type": "creative-hero",
+                "content": "Personal brand statement, professional title, and visual impact",
+                "media": {
+                  "image": "{{portfolioHeroImageUrl}}",
+                  "video": "{{portfolioHeroVideoUrl}}"
+                },
+                "cta": {
+                  "label": "View My Work",
+                  "link": "/portfolio"
+                }
+              },
+              {
+                "name": "Featured Projects",
+                "type": "project-showcase",
+                "content": "Highlight of best 3-4 projects with visual previews",
+                "media": {
+                  "image": "{{featuredProjectsImageUrl}}"
+                },
+                "cta": {
+                  "label": "See All Projects",
+                  "link": "/portfolio"
+                }
+              },
+              {
+                "name": "About Preview",
+                "type": "about-intro",
+                "content": "Brief personal/professional introduction and skills",
+                "media": {
+                  "image": "{{aboutPreviewImageUrl}}"
+                },
+                "cta": {
+                  "label": "Learn More About Me",
+                  "link": "/about"
+                }
+              },
+              {
+                "name": "Skills & Services",
+                "type": "skills-grid",
+                "content": "Key skills, services offered, or areas of expertise",
+                "media": {
+                  "image": "{{skillsImageUrl}}"
+                },
+                "cta": {
+                  "label": "Work With Me",
+                  "link": "/contact"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Portfolio",
+            "path": "/portfolio",
+            "layout": "Project gallery with filtering and detailed project pages",
+            "sections": [
+              {
+                "name": "Portfolio Gallery",
+                "type": "project-grid",
+                "content": "Grid of all projects with categories and filtering",
+                "media": {
+                  "image": "{{portfolioGalleryImageUrl}}"
+                },
+                "cta": {
+                  "label": "View Project Details",
+                  "link": "/portfolio/[project]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "About",
+            "path": "/about",
+            "layout": "Personal story, experience, and professional journey",
+            "sections": [
+              {
+                "name": "Personal Story",
+                "type": "biography-section",
+                "content": "Professional background, experience, and personal approach",
+                "media": {
+                  "image": "{{personalStoryImageUrl}}"
+                },
+                "cta": {
+                  "label": "Download Resume",
+                  "link": "{{resumeDownloadUrl}}"
+                }
+              },
+              {
+                "name": "Experience Timeline",
+                "type": "timeline",
+                "content": "Career progression and key achievements",
+                "media": {
+                  "image": "{{experienceImageUrl}}"
+                },
+                "cta": {
+                  "label": "See My Work",
+                  "link": "/portfolio"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Contact",
+            "path": "/contact",
+            "layout": "Contact form and social links for collaboration opportunities",
+            "sections": [
+              {
+                "name": "Contact Form",
+                "type": "collaboration-form",
+                "content": "Project inquiry form with details about collaboration",
+                "media": {
+                  "image": "{{contactImageUrl}}"
+                },
+                "cta": {
+                  "label": "Send Message",
+                  "link": "#submit"
+                }
+              }
+            ]
+          }
+        ],
+        "layouts": {
+          "layoutStyle": "Creative and visually-focused design with emphasis on showcasing work",
+          "navigationStyle": "Minimal navigation with personal logo/name and clean menu",
+          "extra": "Image-heavy design with smooth transitions, project filtering, and mobile-optimized gallery views"
+        },
+        "forms": [
+          {
+            "name": "Project Inquiry",
+            "type": "collaboration-request",
+            "fields": [
+              "name",
+              "email",
+              "company",
+              "project-type",
+              "project-description",
+              "budget-range",
+              "timeline",
+              "inspiration-references"
+            ],
+            "purpose": "Capture collaboration and project opportunities",
+            "submitAction": "Send to personal email with project details"
+          }
+        ]
+      }
+    },
+    "templateInfo": {
+      "version": "2.0",
+      "type": "portfolio",
+      "description": "Specialized template for creative professionals, freelancers, and artists to showcase their work and attract clients. Optimized for visual presentation and project showcasing.",
+      "supportedWebsiteTypes": [
+        "designer-portfolio",
+        "photographer-portfolio",
+        "developer-portfolio",
+        "artist-portfolio",
+        "freelancer-showcase",
+        "creative-professional",
+        "architect-portfolio",
+        "writer-portfolio",
+        "filmmaker-portfolio",
+        "musician-portfolio"
+      ],
+      "cleanup": "This portfolio template focuses on visual presentation and project showcasing. Customize project galleries, personal branding, and contact forms for the specific creative field.",
+      "features": [
+        "Project gallery with filtering",
+        "Visual-first design approach",
+        "Project detail pages",
+        "Personal branding focus",
+        "Client collaboration forms",
+        "Resume/CV integration",
+        "Social media integration"
+      ]
+    }
+  }
