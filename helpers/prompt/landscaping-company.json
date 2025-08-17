@@ -1,0 +1,340 @@
+{
+  "website": {
+    "name": "GreenScape Landscaping",
+    "theme": {
+      "name": "Natural Growth",
+      "aesthetic": "Modern nature-inspired with earthy elegance",
+      "mood": "Professional, trustworthy, and connected to nature",
+      "targetAudience": "Homeowners and businesses seeking premium landscaping services",
+      "designPrinciples": "Clean lines with organic curves, abundance of greenery imagery, trust-building testimonials",
+      "gradientStyle": "Subtle earth-to-sky gradients with natural color transitions"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#22C55E"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#16A34A"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#F0FDF4"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#DCFCE7"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#BBF7D0"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#14532D"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#166534"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#15803D"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": "400,500,600,700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "Playfair Display",
+          "weights": "400,500,600",
+          "source": "Google Fonts"
+        }
+      },
+      "backgroundImages": {
+        "hero": {
+          "url": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+          "description": "Lush green garden with professional landscaping showcasing manicured lawns and beautiful plant arrangements",
+          "parallaxEffect": "medium"
+        },
+        "sections": [
+          {
+            "sectionName": "Services",
+            "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+            "description": "Landscaper working on garden design with tools and plants",
+            "parallaxEffect": "slow",
+            "contrastEnsured": true
+          },
+          {
+            "sectionName": "About",
+            "url": "https://images.unsplash.com/photo-1574482620881-2bc9d0fcfe4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+            "description": "Team of professional landscapers working together on a project",
+            "parallaxEffect": "fast",
+            "contrastEnsured": true
+          }
+        ]
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Hero section with CTA, services overview, testimonials, and contact section",
+          "sections": [
+            {
+              "name": "Hero",
+              "type": "hero-banner",
+              "content": "Transform your outdoor space into a beautiful oasis. Professional landscaping services for residential and commercial properties.",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Get Free Quote",
+                "link": "/quote",
+                "button(s)": "Primary CTA button and secondary 'View Portfolio' button"
+              }
+            },
+            {
+              "name": "Services",
+              "type": "services-grid",
+              "content": "Comprehensive landscaping services including lawn care, garden design, hardscaping, irrigation systems, and seasonal maintenance",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Learn More",
+                "link": "/services",
+                "button(s)": "Service-specific CTA buttons for each service category"
+              }
+            },
+            {
+              "name": "About",
+              "type": "about-company",
+              "content": "25+ years of professional landscaping experience serving the community with quality workmanship and customer satisfaction guarantee",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1574482620881-2bc9d0fcfe4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Our Story",
+                "link": "/about",
+                "button(s)": "Learn more about our team and values"
+              }
+            },
+            {
+              "name": "Testimonials",
+              "type": "testimonials-carousel",
+              "content": "Customer reviews and before/after project showcases highlighting quality work and customer satisfaction",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Portfolio",
+                "link": "/portfolio",
+                "button(s)": "Gallery CTA and contact buttons"
+              }
+            },
+            {
+              "name": "Contact",
+              "type": "contact-section",
+              "content": "Contact information, service areas, and quote request form with business hours and emergency services",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1434394354979-a235cd36269d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Contact Us",
+                "link": "/contact",
+                "button(s)": "Call now, email, and quote request buttons"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "path": "/services",
+          "layout": "Detailed service descriptions with pricing information and service process overview",
+          "sections": [
+            {
+              "name": "Lawn Care",
+              "type": "service-detail",
+              "content": "Complete lawn maintenance including mowing, fertilization, weed control, and seasonal cleanup services",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Get Lawn Care Quote",
+                "link": "/quote",
+                "button(s)": "Service-specific quote request"
+              }
+            },
+            {
+              "name": "Garden Design",
+              "type": "service-detail",
+              "content": "Custom garden design and installation with native plants, color schemes, and seasonal planning",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Design Consultation",
+                "link": "/quote",
+                "button(s)": "Schedule design consultation"
+              }
+            },
+            {
+              "name": "Hardscaping",
+              "type": "service-detail",
+              "content": "Patios, walkways, retaining walls, and outdoor living spaces using quality materials and craftsmanship",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Hardscape Quote",
+                "link": "/quote",
+                "button(s)": "Request hardscaping estimate"
+              }
+            }
+          ]
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "layout": "Company story, team profiles, certifications, and values with mission statement",
+          "sections": [
+            {
+              "name": "Our Story",
+              "type": "company-history",
+              "content": "Founded in 1998, GreenScape Landscaping has been transforming outdoor spaces with professional expertise and environmental consciousness",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1574482620881-2bc9d0fcfe4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Meet Our Team",
+                "link": "#team",
+                "button(s)": "Learn about our certified professionals"
+              }
+            },
+            {
+              "name": "Team",
+              "type": "team-profiles",
+              "content": "Certified landscape professionals with extensive training and commitment to sustainable practices",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Start Your Project",
+                "link": "/quote",
+                "button(s)": "Work with our team"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Portfolio",
+          "path": "/portfolio",
+          "layout": "Project gallery with before/after photos and project details",
+          "sections": [
+            {
+              "name": "Residential Projects",
+              "type": "project-gallery",
+              "content": "Showcase of completed residential landscaping projects with before and after transformations",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Details",
+                "link": "#project",
+                "button(s)": "Project detail modals"
+              }
+            },
+            {
+              "name": "Commercial Projects",
+              "type": "project-gallery",
+              "content": "Commercial landscaping installations for businesses, offices, and public spaces",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Commercial Services",
+                "link": "/services",
+                "button(s)": "Learn about commercial capabilities"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Contact",
+          "path": "/contact",
+          "layout": "Contact form, location map, business hours, and service area information",
+          "sections": [
+            {
+              "name": "Get In Touch",
+              "type": "contact-info",
+              "content": "Phone: (555) 123-4567, Email: info@greenscapelandscaping.com, Address: 123 Garden Way, Green Valley, ST 12345",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1434394354979-a235cd36269d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+                "video": ""
+              },
+              "cta": {
+                "label": "Call Now",
+                "link": "tel:5551234567",
+                "button(s)": "Phone, email, and directions buttons"
+              }
+            }
+          ]
+        }
+      ],
+      "forms": {
+        "quoteForm": {
+          "type": "simple-quote",
+          "fields": [
+            "Full Name",
+            "Phone Number",
+            "Email Address",
+            "Property Address",
+            "Property Size (sq ft)",
+            "Service Type (dropdown)",
+            "Project Description",
+            "Preferred Contact Method",
+            "Timeline for Project"
+          ],
+          "purpose": "For customers requesting landscaping service quotes",
+          "submitAction": "Send quote request to business email and add to CRM system"
+        },
+        "contactForm": {
+          "type": "contact-us",
+          "fields": [
+            "Name",
+            "Email",
+            "Phone",
+            "Subject",
+            "Message"
+          ],
+          "purpose": "General contact form for inquiries",
+          "submitAction": "Send inquiry to business email with auto-response confirmation"
+        }
+      },
+      "layouts": {
+        "scrollEffects": "Parallax backgrounds on hero and service sections, fade-in animations for content blocks, smooth scrolling navigation",
+        "backgroundImageReveals": "Hero section with landscaped garden reveal, services section with work-in-progress reveal on scroll",
+        "extra": "Image-text alternating sections for services, testimonial cards with customer photos, before/after comparison sliders for portfolio"
+      }
+    }
+  }
+}
