@@ -274,7 +274,13 @@ Additional requirements:
 * Descriptive `alt` tags on images
 * Generate `robots.ts` and `sitemap.ts` files
 
-## 5. Parallax Effects & Background Image Reveals
+## 5. Production
+
+We are using netlify for prod right now, so include a netlify.toml file with every new project.
+
+## 6. OTHER/EXTRA
+
+### Parallax Effects & Background Image Reveals
 Use `framer-motion` for parallax scrolling effects from the template's `backgroundImages` section.
 
 ```tsx
