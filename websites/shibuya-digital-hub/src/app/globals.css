@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-noto-sans-jp);
+  --font-mono: var(--font-jetbrains-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  
+  /* Template Color System - Japanese Dense Style */
+  --primary: #E11D48;
+  --primary-dark: #BE123C;
+  --light-1: #FFF1F2;
+  --light-2: #FFE4E6;
+  --light-3: #FECDD3;
+  --dark-1: #881337;
+  --dark-2: #4C0519;
+  --dark-3: #1F172A;
+  
+  /* Shadcn Theme Colors using template palette */
+  --background: var(--light-1);
+  --foreground: var(--dark-3);
+  --card: var(--light-2);
+  --card-foreground: var(--dark-2);
+  --popover: var(--light-1);
+  --popover-foreground: var(--dark-3);
+  --primary-foreground: var(--light-1);
+  --secondary: var(--light-3);
+  --secondary-foreground: var(--dark-1);
+  --muted: var(--light-2);
+  --muted-foreground: var(--dark-1);
+  --accent: var(--light-3);
+  --accent-foreground: var(--dark-2);
+  --destructive: #dc2626;
+  --border: var(--light-3);
+  --input: var(--light-2);
+  --ring: var(--primary);
+  --chart-1: var(--primary);
+  --chart-2: var(--primary-dark);
+  --chart-3: var(--dark-1);
+  --chart-4: var(--dark-2);
+  --chart-5: var(--light-3);
+  --sidebar: var(--light-1);
+  --sidebar-foreground: var(--dark-2);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--light-1);
+  --sidebar-accent: var(--light-2);
+  --sidebar-accent-foreground: var(--dark-1);
+  --sidebar-border: var(--light-3);
+  --sidebar-ring: var(--primary);
+}
+
+.dark {
+  /* Dark mode using template's dark colors */
+  --background: var(--dark-3);
+  --foreground: var(--light-1);
+  --card: var(--dark-2);
+  --card-foreground: var(--light-2);
+  --popover: var(--dark-2);
+  --popover-foreground: var(--light-1);
+  --primary-foreground: var(--dark-3);
+  --secondary: var(--dark-1);
+  --secondary-foreground: var(--light-2);
+  --muted: var(--dark-2);
+  --muted-foreground: var(--light-3);
+  --accent: var(--dark-1);
+  --accent-foreground: var(--light-1);
+  --destructive: #ef4444;
+  --border: var(--dark-1);
+  --input: var(--dark-2);
+  --ring: var(--primary);
+  --chart-1: var(--primary);
+  --chart-2: var(--primary-dark);
+  --chart-3: var(--light-3);
+  --chart-4: var(--light-2);
+  --chart-5: var(--dark-1);
+  --sidebar: var(--dark-3);
+  --sidebar-foreground: var(--light-2);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--dark-3);
+  --sidebar-accent: var(--dark-2);
+  --sidebar-accent-foreground: var(--light-1);
+  --sidebar-border: var(--dark-1);
+  --sidebar-ring: var(--primary);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

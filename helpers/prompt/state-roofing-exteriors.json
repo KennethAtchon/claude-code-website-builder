@@ -1,0 +1,127 @@
+{
+  "projectName": "state-roofing-exteriors",
+  "siteName": "State Roofing & Exteriors",
+  "tagline": "Home Improvement Contractor: Seattle, WA",
+  "businessInfo": {
+    "name": "State Roofing & Exteriors",
+    "location": "Seattle, WA",
+    "phone": "(360) 794-7164",
+    "services": ["Roofing", "Siding", "Windows", "Decking", "Gutters"],
+    "experience": "50+ years serving the Pacific Northwest"
+  },
+  "styles": {
+    "colors": [
+      "#8B1A1A",
+      "#A52A2A", 
+      "#F5F5F5",
+      "#FFFFFF",
+      "#E8E8E8",
+      "#2C2C2C",
+      "#4A4A4A",
+      "#666666"
+    ],
+    "fonts": {
+      "primary": "Inter",
+      "fallback": "Arial, sans-serif"
+    }
+  },
+  "layout": {
+    "header": {
+      "topBar": {
+        "links": ["Warranty", "Career", "Financing", "Promotions", "Review Us"],
+        "backgroundColor": "#8B1A1A",
+        "textColor": "#FFFFFF"
+      },
+      "mainNav": {
+        "logo": {
+          "text": "STATE ROOFING & EXTERIORS",
+          "style": "white text with red badge design"
+        },
+        "navigation": [
+          {"text": "HOME", "href": "/"},
+          {"text": "ABOUT US", "href": "/about", "hasDropdown": true},
+          {"text": "ROOFING", "href": "/roofing", "hasDropdown": true},
+          {"text": "SIDING", "href": "/siding", "hasDropdown": true},
+          {"text": "WINDOWS", "href": "/windows", "hasDropdown": true},
+          {"text": "DECKING", "href": "/decking", "hasDropdown": true},
+          {"text": "GUTTERS", "href": "/gutters"},
+          {"text": "BLOG", "href": "/blog"},
+          {"text": "CONTACT", "href": "/contact", "hasDropdown": true}
+        ],
+        "ctaButton": {
+          "text": "CALL NOW",
+          "subtext": "(360) 794-7164",
+          "style": "white background with dark text"
+        }
+      }
+    },
+    "hero": {
+      "backgroundImage": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=800",
+      "overlay": "dark gradient",
+      "content": {
+        "headline": "HOME IMPROVEMENT CONTRACTOR:",
+        "subheadline": "SEATTLE, WA",
+        "textColor": "#FFFFFF",
+        "position": "left-aligned"
+      },
+      "contactForm": {
+        "backgroundColor": "#8B1A1A",
+        "fields": [
+          {"type": "text", "placeholder": "Name *", "required": true},
+          {"type": "email", "placeholder": "Email *", "required": true},
+          {"type": "text", "placeholder": "Zip Code *", "required": true},
+          {"type": "text", "placeholder": "I'm interested in", "required": false},
+          {"type": "textarea", "placeholder": "How did you hear about us?", "required": false}
+        ],
+        "submitButton": {
+          "text": "SCHEDULE A FREE ESTIMATE",
+          "style": "dark button with white text"
+        },
+        "privacyText": "We respect your privacy. Your information will only be used to address your inquiry and improve our services. We do not sell or share your details with third parties."
+      }
+    },
+    "mainContent": {
+      "sections": [
+        {
+          "type": "content",
+          "headline": "YOUR HOME IMPROVEMENT CONTRACTOR IN SEATTLE, WA",
+          "content": "For a trusted and skilled home improvement contractor in Seattle, WA, turn to State Roofing. With over 50 years of experience serving the Pacific Northwest, our Seattle team is equipped to handle all your roofing, siding, decking, and window needs. We're dedicated to delivering top-tier craftsmanship and exceptional customer service on every project. At State Roofing, we ensure your home gets the attention it deserves.",
+          "backgroundColor": "#FFFFFF",
+          "textColor": "#2C2C2C"
+        }
+      ]
+    },
+    "chatWidget": {
+      "position": "bottom-right",
+      "style": "red circular button with chat icon",
+      "text": "Hi there, how can we help? Send us a text."
+    }
+  },
+  "features": [
+    "Responsive design for all devices",
+    "Contact form with validation",
+    "Dropdown navigation menus",
+    "Hero section with background image and overlay",
+    "Professional color scheme with red accent",
+    "Chat widget integration",
+    "SEO-optimized structure",
+    "Call-to-action buttons",
+    "Mobile-friendly navigation"
+  ],
+  "pages": [
+    {"name": "Home", "path": "/"},
+    {"name": "About Us", "path": "/about"},
+    {"name": "Roofing", "path": "/roofing"},
+    {"name": "Siding", "path": "/siding"},
+    {"name": "Windows", "path": "/windows"},
+    {"name": "Decking", "path": "/decking"},
+    {"name": "Gutters", "path": "/gutters"},
+    {"name": "Blog", "path": "/blog"},
+    {"name": "Contact", "path": "/contact"}
+  ],
+  "seo": {
+    "title": "State Roofing & Exteriors - Home Improvement Contractor Seattle, WA",
+    "description": "Trusted home improvement contractor in Seattle, WA with 50+ years experience. Expert roofing, siding, windows, decking & gutters. Free estimates available.",
+    "keywords": ["roofing contractor Seattle", "home improvement Seattle", "siding installation", "window replacement", "decking contractor"]
+  }
+}

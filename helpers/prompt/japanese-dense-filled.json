@@ -1,0 +1,327 @@
+{
+  "website": {
+    "name": "Shibuya Digital Hub",
+    "type": "technology portal",
+    "description": "Dense information portal featuring technology news, reviews, tutorials, and community discussions with maximum content visibility per screen",
+    "industry": "technology media",
+    "theme": {
+      "name": "Dense Japanese Web",
+      "aesthetic": "Information-dense Japanese portal style with compact layouts, sidebar widgets, and maximum content per viewport",
+      "mood": "Efficient, organized, information-rich",
+      "targetAudience": "Tech enthusiasts, developers, digital natives who prefer high information density",
+      "designPrinciples": "Maximize content-to-pixel ratio, efficient space usage, hierarchical information architecture, compact visual elements",
+      "gradientStyle": "Subtle gradients on backgrounds and cards to create depth without wasting space"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#E11D48"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#BE123C"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#FFF1F2"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#FFE4E6"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#FECDD3"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#881337"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#4C0519"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#1F172A"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Noto Sans JP",
+          "weights": "300,400,500,700",
+          "source": "Google Fonts"
+        },
+        "secondaryFont": {
+          "name": "JetBrains Mono",
+          "weights": "400,500,600",
+          "source": "Google Fonts"
+        }
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Homepage",
+          "path": "/",
+          "layout": "Dense 3-column layout with main content, sidebar widgets, and secondary sidebar for ads/links",
+          "sections": [
+            {
+              "name": "Compact Header",
+              "type": "navigation",
+              "content": "Minimal height header with logo, horizontal nav menu, search bar, user account dropdown, and language toggle. Height: 60px max",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176",
+                "video": ""
+              },
+              "cta": {
+                "label": "Sign In",
+                "link": "/login"
+              }
+            },
+            {
+              "name": "Breaking News Ticker",
+              "type": "ticker",
+              "content": "Horizontal scrolling news ticker with latest tech updates, 30px height, auto-scrolling with pause on hover",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Read More",
+                "link": "/news"
+              }
+            },
+            {
+              "name": "Featured Articles Grid",
+              "type": "grid",
+              "content": "3x2 grid of featured articles with thumbnails, headlines, author, date, and excerpt. Compact card design with minimal padding",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+                "video": ""
+              },
+              "cta": {
+                "label": "Read Article",
+                "link": "/articles"
+              }
+            },
+            {
+              "name": "Live Activity Feed",
+              "type": "feed",
+              "content": "Real-time feed of user comments, new posts, trending topics. Compact list format with avatars, timestamps, and interaction counts",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+                "video": ""
+              },
+              "cta": {
+                "label": "Join Discussion",
+                "link": "/community"
+              }
+            },
+            {
+              "name": "Technology Categories",
+              "type": "category-grid",
+              "content": "Dense 4x3 grid of technology categories with icons, article counts, and trending indicators. AI, Web Dev, Mobile, Gaming, Hardware, etc.",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f",
+                "video": ""
+              },
+              "cta": {
+                "label": "Browse Category",
+                "link": "/categories"
+              }
+            },
+            {
+              "name": "Trending Tools Widget",
+              "type": "sidebar-widget",
+              "content": "Compact list of trending development tools, frameworks, and services with ratings and quick stats",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+                "video": ""
+              },
+              "cta": {
+                "label": "Explore Tool",
+                "link": "/tools"
+              }
+            },
+            {
+              "name": "Code Snippets Sidebar",
+              "type": "sidebar-widget",
+              "content": "Rotating code snippets with syntax highlighting, copy button, and language tags. Updated daily",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "View All Snippets",
+                "link": "/snippets"
+              }
+            },
+            {
+              "name": "Community Stats",
+              "type": "stats-widget",
+              "content": "Live statistics: active users, daily posts, total articles, trending hashtags. Compact dashboard style",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Join Community",
+                "link": "/signup"
+              }
+            },
+            {
+              "name": "Quick Links Menu",
+              "type": "sidebar-widget",
+              "content": "Dense vertical menu with icons: Documentation, Tutorials, Downloads, API Reference, GitHub Repos, Discord",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Quick Access",
+                "link": "/quicklinks"
+              }
+            },
+            {
+              "name": "Recent Reviews",
+              "type": "review-list",
+              "content": "Compact list of latest tech product reviews with star ratings, summary, and reviewer info. 5-6 items visible",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Read Review",
+                "link": "/reviews"
+              }
+            },
+            {
+              "name": "Event Calendar Widget",
+              "type": "calendar-widget",
+              "content": "Mini calendar showing upcoming tech events, webinars, and conferences. Clickable dates with event previews",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Events",
+                "link": "/events"
+              }
+            },
+            {
+              "name": "Job Board Ticker",
+              "type": "job-ticker",
+              "content": "Horizontal scrolling job listings from top tech companies. Company logo, position, location, salary range",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Apply Now",
+                "link": "/jobs"
+              }
+            },
+            {
+              "name": "Footer Sitemap",
+              "type": "footer",
+              "content": "Dense 5-column footer with complete sitemap, social links, newsletter signup, and company info. Maximum link density",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Subscribe",
+                "link": "/newsletter"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Articles",
+          "path": "/articles",
+          "layout": "Article list with filtering sidebar, pagination, and related content recommendations",
+          "sections": [
+            {
+              "name": "Article List",
+              "type": "article-grid",
+              "content": "Dense grid of articles with thumbnails, titles, excerpts, tags, author info, and engagement metrics",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c",
+                "video": ""
+              },
+              "cta": {
+                "label": "Read More",
+                "link": "/article/{id}"
+              }
+            },
+            {
+              "name": "Filter Sidebar",
+              "type": "filter-panel",
+              "content": "Compact filtering options: categories, tags, date range, author, difficulty level, reading time",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Apply Filters",
+                "link": "#"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Community",
+          "path": "/community",
+          "layout": "Forum-style layout with discussion threads, user profiles, and activity feeds",
+          "sections": [
+            {
+              "name": "Discussion Threads",
+              "type": "forum",
+              "content": "Dense list of discussion threads with reply counts, last activity, user avatars, and vote scores",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+                "video": ""
+              },
+              "cta": {
+                "label": "Join Discussion",
+                "link": "/thread/{id}"
+              }
+            },
+            {
+              "name": "User Leaderboard",
+              "type": "leaderboard",
+              "content": "Top contributors ranked by karma, posts, helpful answers, and community involvement",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Profile",
+                "link": "/user/{id}"
+              }
+            }
+          ]
+        }
+      ],
+      "layouts": {
+        "layoutStyle": "Dense Japanese portal style with minimal whitespace, compact widgets, and maximum content visibility per screen",
+        "navigationStyle": "Horizontal main nav with dropdown menus, breadcrumb navigation, and sticky sidebar navigation for deep content",
+        "extra": "Implement sticky headers, collapsible sidebar widgets, infinite scroll for feeds, and responsive breakpoints that maintain content density on mobile"
+      }
+    }
+  },
+  "templateInfo": {
+    "version": "2.0",
+    "type": "japanese-dense",
+    "description": "Japanese-style information portal template optimized for maximum content-to-pixel ratio with compact layouts, sidebar widgets, and efficient space utilization",
+    "supportedWebsiteTypes": [
+      "technology portal",
+      "news aggregator", 
+      "community forum",
+      "content hub",
+      "information directory"
+    ]
+  }
+}
