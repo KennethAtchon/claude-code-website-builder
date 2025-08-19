@@ -22,11 +22,11 @@ For every new project, execute the following commands to set up the environment.
    ```
 3. **Initialize shadcn:**
    ```bash
-  cd {app} && bunx ~bun shadcn@latest init -b neutral -y
+   cd {app} && bunx shadcn@latest init -b neutral -y
    ```
 4. **Add Core shadcn Components, please utilize them:**
    ```bash
-   cd {app} && bunx shadcn@latest add --all
+   cd {app} && bunx --bun shadcn@latest add --all
    ```
 5. **Install Additional Dependencies:**
    ```bash
@@ -271,11 +271,16 @@ export const metadata: Metadata = {
 ```
 
 Additional requirements:
-* Semantic HTML (`<main>`, `<section>`, `<h1>`, etc.)
 * Descriptive `alt` tags on images
 * Generate `robots.ts` and `sitemap.ts` files
 
-## 5. Parallax Effects & Background Image Reveals
+## 5. Production
+
+We are using netlify for prod right now, so include a netlify.toml file with every new project.
+
+## 6. OTHER/EXTRA
+
+### Parallax Effects & Background Image Reveals
 Use `framer-motion` for parallax scrolling effects from the template's `backgroundImages` section.
 
 ```tsx

@@ -138,15 +138,42 @@ export default function Services() {
                 }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="relative h-96 rounded-lg overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
+                  {index === 0 ? (
+                    // Overlapping images for Lawn Care service - matching example style
+                    <div className="relative h-96">
+                      {/* Main background image */}
+                      <div className="absolute top-0 left-0 w-3/5 h-3/5 rounded-lg overflow-hidden shadow-lg">
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 60vw, 30vw"
+                        />
+                      </div>
+                      {/* Overlapping image - same size */}
+                      <div className="absolute bottom-0 right-0 w-3/5 h-3/5 rounded-lg overflow-hidden shadow-xl z-10">
+                        <Image
+                          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+                          alt="Professional lawn maintenance"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 60vw, 30vw"
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    // Single image for other services
+                    <div className="relative h-96 rounded-lg overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  )}
                 </div>
                 
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
@@ -225,7 +252,7 @@ export default function Services() {
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
               <Link href="/contact">Get Free Quote</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-dark-1">
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-dark-1 bg-transparent">
               <Link href="tel:5551234567">Call (555) 123-4567</Link>
             </Button>
           </div>

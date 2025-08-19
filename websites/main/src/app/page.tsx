@@ -91,7 +91,7 @@ export default function Home() {
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
               <Link href="/contact">Get Free Quote</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-dark-1">
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-dark-1 bg-transparent">
               <Link href="/portfolio">View Portfolio</Link>
             </Button>
           </div>
@@ -130,7 +130,7 @@ export default function Home() {
       {/* About Section */}
       <ParallaxSection
         backgroundUrl="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-        speed="slow"
+        speed="medium"
         className="py-20"
       >
         <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-8">

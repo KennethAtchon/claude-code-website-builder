@@ -12,7 +12,7 @@ interface ParallaxSectionProps {
 export default function ParallaxSection({ 
   children, 
   backgroundUrl, 
-  speed = "medium",
+  speed = "fast",
   className = ""
 }: ParallaxSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ export default function ParallaxSection({
     offset: ["start end", "end start"]
   });
 
-  const speeds = { slow: [-30, 30], medium: [-50, 50], fast: [-70, 70] };
+  const speeds ={ slow: [-50, 50], medium: [-100, 100], fast: [-200, 200] };
   const y = useTransform(scrollYProgress, [0, 1], speeds[speed]);
 
   // Preload image
