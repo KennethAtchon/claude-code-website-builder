@@ -1,0 +1,447 @@
+{
+  "project_name": "roof_solutions_charlotte_website",
+  "business_type": "roofing_contractor", 
+  "business_name": "Roof Solutions Charlotte",
+  "tagline": "Charlotte's Premier 24/7 Roof Repair Specialists Since 1980",
+  "description": "Professional roof repair and emergency roofing services in Charlotte, NC. Family-owned business since 1980 with trained and certified roofing professionals. We offer free inspections and guarantee our work with free labor on any additional repairs needed to ensure customer satisfaction. Specializing in leak repair, storm damage, and preventing costly ceiling damage, structural problems, electrical issues, and black mold.",
+
+  "brand": {
+    "primary_color": "#D32F2F",
+    "secondary_color": "#711212", 
+    "accent_color": "#4b1616",
+    "logo_text": "ROOF SOLUTIONS",
+    "logo_subtitle": "Charlotte",
+    "font_style": "bold_professional",
+    "use_gradient": false,
+    "brand_personality": "trustworthy_reliable_emergency_focused"
+  },
+
+  "images": {
+    "source_folder": "content/",
+    "copy_to_public": true,
+    "hero_background": "2021-018-11.jpg",
+    "company_truck_primary": "2021-11-30.jpg",
+    "company_truck_secondary": "2021-11-025.jpg", 
+    "work_in_progress": "2021-048-11.jpg",
+    "company_truck_warehouse": "25530.jpeg",
+    "roof_damage_repair": "719464.jpeg",
+    "team_photo": "Screenshot_20210115-172759~2.png",
+    "additional_work_1": "unnaamed.jpg",
+    "additional_work_2": "unnamed.jpg"
+  },
+
+  "contact_info": {
+    "phone": "(704) 668-0707",
+    "phone_display": "704-668-0707",
+    "phone_emergency": "1-877-272-4408",
+    "email": "info@roofsolutionscharlotte.com",
+    "email_emergency": "emergency@roofsolutionscharlotte.com",
+    "address": {
+      "street": "6611 Haddonfield Pl",
+      "city": "Charlotte", 
+      "state": "NC",
+      "zip": "28277",
+      "country": "USA",
+      "full_address": "6611 Haddonfield Pl, Charlotte, NC 28277"
+    },
+    "service_areas": [
+      "Charlotte, NC",
+      "Concord, NC", 
+      "Gastonia, NC",
+      "Rock Hill, SC",
+      "Matthews, NC",
+      "Mint Hill, NC",
+      "Huntersville, NC",
+      "Cornelius, NC",
+      "Davidson, NC",
+      "Pineville, NC"
+    ],
+    "social_media": {
+      "facebook": "https://facebook.com/roofsolutionscharlotte",
+      "instagram": "https://instagram.com/roofsolutionscharlotte",
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "google_business": "https://g.page/roof-solutions-charlotte"
+    },
+    "hours": {
+      "monday": "Open 24 hours",
+      "tuesday": "Open 24 hours", 
+      "wednesday": "Open 24 hours",
+      "thursday": "Open 24 hours",
+      "friday": "Open 24 hours",
+      "saturday": "Open 24 hours",
+      "sunday": "Open 24 hours"
+    },
+    "availability": {
+      "emergency_response": "24/7/365",
+      "response_time": "4 hours or less",
+      "inspection_time": "Same day available"
+    }
+  },
+
+  "website_structure": {
+    "pages": [
+      "home",
+      "about",
+      "services",
+      "portfolio",
+      "testimonials",
+      "contact",
+      "emergency-services"
+    ],
+    "sections": {
+      "hero": {
+        "enabled": true,
+        "style": "parallax_with_video",
+        "background_type": "roofing_work_image",
+        "cta_primary": "Get Free Inspection",
+        "cta_secondary": "Call (704) 668-0707"
+      },
+      "about": {
+        "enabled": true,
+        "story": "Family-owned roofing company serving Charlotte since 1980 with certified professionals and guaranteed workmanship",
+        "mission": "To provide the best roof repair service in Charlotte with emergency response and customer satisfaction guarantee",
+        "values": ["Quality Workmanship", "24/7 Emergency Service", "Customer Satisfaction"],
+        "team_section": true
+      },
+      "services": {
+        "enabled": true,
+        "display_style": "detailed_cards_with_pricing",
+        "services_list": [
+          {
+            "name": "Emergency Roof Repair",
+            "description": "24/7 emergency roof repair service to prevent costly ceiling damage, structural problems, electrical issues, and black mold. Our certified professionals respond within 4 hours with emergency tarping and immediate leak repair.",
+            "price": "Free Emergency Inspection",
+            "icon": "zap",
+            "image": "work_in_progress",
+            "features": ["24/7/365 Availability", "4-Hour Response Time", "Emergency Tarping", "Immediate Leak Repair", "Storm Damage Assessment"],
+            "badge": "EMERGENCY SERVICE"
+          },
+          {
+            "name": "Free Roof Inspections", 
+            "description": "Comprehensive roof inspections with detailed photo documentation and written reports. We identify potential problems before they become major costly issues, helping you maintain your roof's integrity.",
+            "price": "100% FREE",
+            "icon": "search",
+            "image": "roof_damage_repair", 
+            "features": ["Detailed Written Report", "Photo Documentation", "Repair Recommendations", "Insurance Claim Support", "No Hidden Fees"],
+            "badge": "FREE SERVICE"
+          },
+          {
+            "name": "Complete Roof Replacement",
+            "description": "Full roof replacement using premium materials with certified installation by trained professionals. All work comes with comprehensive warranties and our satisfaction guarantee.",
+            "price": "Free Quote & Consultation",
+            "icon": "home",
+            "image": "company_truck_primary",
+            "features": ["Licensed & Insured", "Premium Materials", "Workmanship Guarantee", "Free Labor Warranty", "Insurance Assistance"],
+            "badge": "PREMIUM SERVICE"
+          },
+          {
+            "name": "Storm Damage Repair",
+            "description": "Specialized storm damage assessment and repair services. We work directly with insurance companies to ensure full coverage and proper restoration of your roof.",
+            "price": "Insurance Claim Assistance",
+            "icon": "cloud-rain",
+            "image": "additional_work_1",
+            "features": ["Insurance Claims Assistance", "Emergency Board-Up", "Hail Damage Repair", "Wind Damage Assessment", "Full Documentation"],
+            "badge": "INSURANCE WORK"
+          },
+          {
+            "name": "Commercial Roofing",
+            "description": "Professional commercial roofing services for businesses, warehouses, and industrial facilities. Minimal disruption to your operations with flexible scheduling.",
+            "price": "Commercial Quote Available",
+            "icon": "building",
+            "image": "company_truck_warehouse",
+            "features": ["Flexible Scheduling", "Minimal Disruption", "Commercial Materials", "Large Project Experience", "Maintenance Programs"],
+            "badge": "COMMERCIAL"
+          },
+          {
+            "name": "Roof Maintenance",
+            "description": "Preventive maintenance programs to extend your roof's lifespan and prevent costly repairs. Regular inspections and minor repairs keep your roof in optimal condition.",
+            "price": "Maintenance Plans Available",
+            "icon": "tool",
+            "image": "additional_work_2",
+            "features": ["Preventive Maintenance", "Regular Inspections", "Gutter Cleaning", "Minor Repairs", "Annual Programs"],
+            "badge": "PREVENTIVE"
+          }
+        ]
+      },
+      "portfolio": {
+        "enabled": true,
+        "gallery_style": "masonry_grid",
+        "categories": ["Residential Roofing", "Commercial Roofing", "Emergency Repairs"],
+        "showcase_count": "12"
+      },
+      "testimonials": {
+        "enabled": true,
+        "display_style": "featured_carousel_with_photos",
+        "testimonials_list": [
+          {
+            "name": "Sarah Johnson",
+            "title": "Homeowner",
+            "company": "South Charlotte",
+            "location": "Charlotte, NC",
+            "content": "Roof Solutions saved our home! During last month's severe storm, they responded within 2 hours and had our major leak completely fixed the same day. The team was professional, cleaned up everything, and the price was very fair. I can't recommend them enough!",
+            "rating": "5",
+            "service": "Emergency Roof Repair",
+            "verified": true
+          },
+          {
+            "name": "Mike Chen",
+            "title": "Property Manager", 
+            "company": "Crown Property Management",
+            "location": "Matthews, NC",
+            "content": "We manage over 50 commercial properties and Roof Solutions is our exclusive roofing contractor. Their 24/7 availability, quality workmanship, and fair pricing make them invaluable. They've never let us down in 3 years of partnership.",
+            "rating": "5",
+            "service": "Commercial Roofing",
+            "verified": true
+          },
+          {
+            "name": "Jennifer Martinez",
+            "title": "Restaurant Owner",
+            "company": "La Cocina Mexican Grill",
+            "location": "Concord, NC",
+            "content": "Had a major leak during lunch rush that was damaging our kitchen equipment. Roof Solutions had someone here in 90 minutes and fixed it without disrupting our service. Saved us thousands in equipment damage!",
+            "rating": "5",
+            "service": "Emergency Commercial Repair",
+            "verified": true
+          },
+          {
+            "name": "Robert & Linda Williams",
+            "title": "Homeowners",
+            "company": "Retired",
+            "location": "Huntersville, NC",
+            "content": "After 35 years, our roof needed complete replacement. Roof Solutions handled everything - insurance claims, permits, and installation. The crew was respectful, professional, and completed the job in 3 days. Beautiful work!",
+            "rating": "5",
+            "service": "Roof Replacement",
+            "verified": true
+          },
+          {
+            "name": "David Park",
+            "title": "IT Director",
+            "company": "Tech Solutions Inc",
+            "location": "Rock Hill, SC",
+            "content": "Free inspection identified problems we didn't even know we had. They could have charged us thousands but only recommended the repairs we actually needed. Honest, reliable service - exactly what you want in a contractor.",
+            "rating": "5",
+            "service": "Free Inspection",
+            "verified": true
+          },
+          {
+            "name": "Ashley Thompson",
+            "title": "Single Mom",
+            "company": "Teacher",
+            "location": "Mint Hill, NC",
+            "content": "Storm damage had me panicked about costs, but Roof Solutions worked directly with my insurance company and made the process stress-free. They even helped me understand what was covered. Above and beyond service!",
+            "rating": "5",
+            "service": "Insurance Claims",
+            "verified": true
+          }
+        ]
+      },
+      "contact": {
+        "enabled": true,
+        "form_fields": ["name", "email", "phone", "service", "emergency", "message"],
+        "include_map": true,
+        "booking_system": false
+      }
+    }
+  },
+
+  "design_preferences": {
+    "style": "professional_modern",
+    "layout": "full_width_sections",
+    "animations": "subtle",
+    "mobile_first": true,
+    "accessibility": true,
+    "color_scheme": "red_white_dark",
+    "image_style": "high_contrast_professional"
+  },
+
+  "features": {
+    "blog": false,
+    "ecommerce": false,
+    "booking": false,
+    "multilingual": false,
+    "search": false,
+    "newsletter": true,
+    "live_chat": false,
+    "analytics": true
+  },
+
+  "seo": {
+    "meta_title": "Roof Solutions Charlotte - 24/7 Emergency Roof Repair | Free Inspections Since 1980",
+    "meta_description": "Professional roof repair in Charlotte, NC. 24/7 emergency service, free inspections, and guaranteed workmanship since 1980. Licensed & insured roofing contractor serving Charlotte metro. Call (704) 668-0707.",
+    "keywords": [
+      "roof repair charlotte nc",
+      "emergency roofing charlotte", 
+      "charlotte roofer",
+      "roof inspection charlotte",
+      "roofing contractor charlotte nc",
+      "storm damage repair charlotte",
+      "roof replacement charlotte",
+      "commercial roofing charlotte",
+      "leak repair charlotte",
+      "24 hour roofer charlotte",
+      "matthews roofer",
+      "concord roofing",
+      "huntersville roofer",
+      "rock hill roofing"
+    ],
+    "local_seo": true,
+    "schema_markup": true,
+    "google_business_keywords": [
+      "roof repair near me",
+      "emergency roofer near me", 
+      "roofing contractor near me",
+      "roof inspection near me"
+    ]
+  },
+
+  "content_strategy": {
+    "tone": "professional_trustworthy",
+    "target_audience": "homeowners_and_property_managers",
+    "key_messages": ["24/7 Emergency Response", "Free Inspections", "Guaranteed Workmanship"],
+    "call_to_actions": ["Get Free Inspection", "Call for Emergency Service"],
+    "content_themes": ["Emergency Response", "Quality Workmanship"]
+  },
+
+  "industry_specific": {
+    "professional_services": {
+      "case_studies": false,
+      "consultation_booking": true,
+      "resource_library": false
+    }
+  },
+
+  "technical_requirements": {
+    "framework": "nextjs",
+    "styling": "tailwindcss",
+    "ui_library": "shadcn/ui",
+    "animations": "framer-motion",
+    "forms": "react-hook-form",
+    "cms": "none",
+    "hosting": "netlify",
+    "performance_optimization": true,
+    "seo_optimization": true
+  },
+
+  "launch_checklist": [
+    "responsive_design_tested",
+    "cross_browser_compatibility",
+    "performance_optimized",
+    "seo_implemented",
+    "analytics_configured",
+    "forms_tested",
+    "contact_info_verified",
+    "ssl_certificate",
+    "backup_system",
+    "maintenance_plan"
+  ],
+
+  "styles": {
+    "colors": [
+      {"name": "Primary", "hex": "#D32F2F"},
+      {"name": "Primary Dark", "hex": "#711212"},
+      {"name": "Light 1", "hex": "#fafafa"},
+      {"name": "Light 2", "hex": "#ece9e9"},
+      {"name": "Light 3", "hex": "#ded3d3"},
+      {"name": "Dark 1", "hex": "#4b1616"},
+      {"name": "Dark 2", "hex": "#721d1d"},
+      {"name": "Dark 3", "hex": "#7c3c3c"}
+    ]
+  },
+
+  "content_sections": {
+    "hero": {
+      "headline": "Emergency Roof Repair in Charlotte",
+      "subheadline": "24/7 Professional Service • Free Inspections • 4-Hour Response Time",
+      "background_image": "hero_background",
+      "cta_primary": {
+        "text": "Get Free Emergency Inspection",
+        "action": "phone",
+        "urgency": true
+      },
+      "cta_secondary": {
+        "text": "Call (704) 668-0707 Now",
+        "action": "call",
+        "style": "outline"
+      },
+      "trust_indicators": [
+        "Serving Charlotte Since 1980",
+        "Licensed & Insured",
+        "Satisfaction Guaranteed"
+      ]
+    },
+    "emergency_banner": {
+      "enabled": true,
+      "text": "🚨 EMERGENCY? We respond in 4 hours or less!",
+      "phone": "(704) 668-0707",
+      "style": "sticky_top"
+    },
+    "why_choose_us": {
+      "headline": "Why Charlotte Trusts Roof Solutions",
+      "points": [
+        {
+          "title": "40+ Years Experience",
+          "description": "Family-owned business serving Charlotte since 1980",
+          "icon": "calendar"
+        },
+        {
+          "title": "24/7 Emergency Response", 
+          "description": "Available around the clock for roof emergencies",
+          "icon": "clock"
+        },
+        {
+          "title": "Free Inspections",
+          "description": "No-cost, no-obligation roof inspections",
+          "icon": "gift"
+        },
+        {
+          "title": "Satisfaction Guarantee",
+          "description": "Free labor on additional repairs if needed",
+          "icon": "shield-check"
+        }
+      ]
+    },
+    "service_areas": {
+      "headline": "Serving Greater Charlotte Area",
+      "description": "Professional roofing services throughout Charlotte metro and surrounding communities",
+      "areas": [
+        "Charlotte", "Matthews", "Mint Hill", "Concord", "Huntersville", 
+        "Cornelius", "Davidson", "Pineville", "Gastonia", "Rock Hill"
+      ]
+    }
+  },
+
+  "conversion_optimization": {
+    "primary_goal": "phone_calls",
+    "secondary_goal": "form_submissions", 
+    "urgency_messaging": {
+      "roof_damage": "Don't wait - roof leaks cause expensive damage fast!",
+      "emergency_response": "Available 24/7 - Call now for immediate help",
+      "free_inspection": "Limited time: Free inspections for new customers"
+    },
+    "trust_signals": [
+      "40+ years in business",
+      "Licensed & insured",
+      "BBB accredited", 
+      "Local family-owned",
+      "Satisfaction guarantee"
+    ]
+  },
+
+  "technical_specifications": {
+    "performance_targets": {
+      "page_load_speed": "< 3 seconds",
+      "lighthouse_score": "> 90",
+      "mobile_optimization": "perfect",
+      "accessibility": "WCAG 2.1 AA"
+    },
+    "integrations": {
+      "google_analytics": true,
+      "google_tag_manager": true,
+      "google_my_business": true,
+      "facebook_pixel": false,
+      "call_tracking": true
+    }
+  }
+}
