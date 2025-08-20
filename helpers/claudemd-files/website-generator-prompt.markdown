@@ -248,10 +248,10 @@ module.exports = nextConfig;
 After configuring for CSR, test the application by running:
 ```bash
 bun run build
-bun run start
 ```
 Verify that no SSR-related console errors appear and that the site renders correctly on the client side.
 
+Don't run `bun run dev`
 
 ## 4. SEO Optimization
 Use Next.js built-in metadata API only (never `next-seo`):
@@ -259,6 +259,8 @@ Use Next.js built-in metadata API only (never `next-seo`):
 ```tsx
 // Each page.tsx (server component)
 import { Metadata } from "next";
+
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: "Page Title - Site Name",
@@ -277,50 +279,3 @@ Additional requirements:
 ## 5. Production
 
 We are using netlify for prod right now, so include a netlify.toml file with every new project.
-
-## 6. OTHER/EXTRA
-
-### Parallax Effects & Background Image Reveals
-Use `framer-motion` for parallax scrolling effects from the template's `backgroundImages` section.
-
-```tsx
-// src/components/ParallaxSection.tsx
-"use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ReactNode, useRef } from "react";
-
-interface ParallaxSectionProps {
-  children: ReactNode;
-  backgroundUrl: string;
-  speed?: "slow" | "medium" | "fast";
-}
-
-export default function ParallaxSection({ children, backgroundUrl, speed = "medium" }: ParallaxSectionProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-
-  const speeds = { slow: [-50, 50], medium: [-100, 100], fast: [-200, 200] };
-  const y = useTransform(scrollYProgress, [0, 1], speeds[speed]);
-
-  return (
-    <div ref={ref} className="relative h-screen overflow-hidden">
-      <motion.div
-        style={{ 
-          y,
-          backgroundImage: `url(${backgroundUrl})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-        className="absolute inset-0 h-[120%] -top-[10%]"
-      />
-      <div className="absolute inset-0 bg-black/30" />
-      <div className="relative z-10 h-full flex items-center justify-center">
-        {children}
-      </div>
-    </div>
-  );
-}
-```

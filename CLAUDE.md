@@ -205,21 +205,40 @@ Create visual interest through strategic contrast mixing:
 - **Depth through layering**: Use different dark/light levels for cards, overlays, and sections
 - Always test contrast ratios for accessibility, but don't limit creativity
 
-### f. Font Implementation
+### f. Font Implementation **ATTENTION**
 
 Don't put anything in globals.css for changing fonts
 ```tsx
-import { Inter } from 'next/font/google'
- 
-// If loading a variable font, you don't need to specify the font weight
-const inter = Inter({ subsets: ['latin'] })
- 
-export default function MyApp({ Component, pageProps }) {
+import type { Metadata } from "next";
+import { Lato, Source_Serif_Pro } from "next/font/google";
+import "./globals.css";
+
+const lato = Lato({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '700', '900'],
+})
+
+const sourceSerifPro = Source_Serif_Pro({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '600', '700'],
+})
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <main className={inter.className}>
-      <Component {...pageProps} />
-    </main>
-  )
+    <html lang="en">
+      <body
+        className={`${lato.className} ${sourceSerifPro.className} antialiased`}
+      >
+        {children}
+      </body>
+    </html>
+  );
 }
 ```
 
@@ -278,3 +297,22 @@ Additional requirements:
 ## 5. Production
 
 We are using netlify for prod right now, so include a netlify.toml file with every new project.
+
+## 6. Extra 
+
+### Parallax
+
+```tsx
+<div className="relative h-screen flex items-center justify-center overflow-hidden">
+  <div 
+    className="absolute inset-0 bg-cover bg-center bg-fixed"
+    style={{
+      backgroundImage: `url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b')`
+    }}
+  />
+  <AnimatedSection className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+    <h1 className="text-5xl md:text-7xl font-bold mb-6">Your Title</h1>
+  </AnimatedSection>
+</div>
+```
+

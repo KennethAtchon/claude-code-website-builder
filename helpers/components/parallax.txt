@@ -1,0 +1,26 @@
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80')`
+        }}
+      />
+        <AnimatedSection className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+          <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6">
+            Transform Your 
+            <span className="text-primary"> Outdoor Space</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-light-2">
+            Professional landscaping services for residential and commercial properties. 
+            Creating beautiful, sustainable outdoor environments with 25+ years of experience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
+              <Link href="/contact">Get Free Quote</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-dark-1 bg-transparent">
+              <Link href="/portfolio">View Portfolio</Link>
+            </Button>
+          </div>
+        </AnimatedSection>
+      </div>

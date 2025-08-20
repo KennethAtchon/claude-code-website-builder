@@ -73,12 +73,14 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <ParallaxSection
-        backgroundUrl="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-        speed="medium"
-        className="h-screen flex items-center justify-center"
-      >
-        <AnimatedSection className="text-center text-white px-4 max-w-4xl mx-auto">
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80')`
+        }}
+      />
+        <AnimatedSection className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6">
             Transform Your 
             <span className="text-primary"> Outdoor Space</span>
@@ -96,7 +98,8 @@ export default function Home() {
             </Button>
           </div>
         </AnimatedSection>
-      </ParallaxSection>
+      </div>
+
 
       {/* Services Section */}
       <AnimatedSection className="py-20 bg-light-1">
@@ -128,12 +131,14 @@ export default function Home() {
       </AnimatedSection>
 
       {/* About Section */}
-      <ParallaxSection
-        backgroundUrl="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-        speed="medium"
-        className="py-20"
-      >
-        <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative py-20 flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+          }}
+        />
+        <AnimatedSection className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">
               25+ Years of Excellence
@@ -160,7 +165,7 @@ export default function Home() {
             </Button>
           </div>
         </AnimatedSection>
-      </ParallaxSection>
+      </div>
 
       {/* Testimonials Section */}
       <AnimatedSection className="py-20 bg-light-2">
