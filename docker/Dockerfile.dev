@@ -1,0 +1,18 @@
+# Development Dockerfile
+FROM node:18-alpine
+
+# Install Bun
+RUN npm install -g bun
+
+# Set working directory
+WORKDIR /app
+
+# The website source will be mounted as a volume
+# We don't need to copy anything during build
+# Just install bun and set up the environment
+
+# Expose port
+EXPOSE 3000
+
+# Start development server
+CMD ["bun", "run", "dev"]

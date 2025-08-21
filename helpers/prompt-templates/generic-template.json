@@ -74,13 +74,11 @@
         "typography": {
           "primaryFont": {
             "name": "{{primaryFontName}}",
-            "weights": "{{primaryFontWeights}}",
-            "source": "{{primaryFontSource}}"
+            "weights": "{{primaryFontWeights}}"
           },
           "secondaryFont": {
             "name": "{{secondaryFontName}}",
-            "weights": "{{secondaryFontWeights}}",
-            "source": "{{secondaryFontSource}}"
+            "weights": "{{secondaryFontWeights}}"
           }
         }
       },

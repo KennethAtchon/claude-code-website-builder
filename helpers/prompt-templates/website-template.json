@@ -44,86 +44,159 @@
 
   "website_structure": {
     "pages": [
-      "home",
-      "about",
-      "services",
-      "portfolio",
-      "testimonials",
-      "contact",
-      "{{additional_pages}}"
-    ],
-    "sections": {
-      "hero": {
-        "enabled": true,
-        "style": "{{hero_style}}",
-        "background_type": "{{hero_background}}",
-        "cta_primary": "{{primary_cta}}",
-        "cta_secondary": "{{secondary_cta}}"
-      },
-      "about": {
-        "enabled": true,
-        "story": "{{company_story}}",
-        "mission": "{{company_mission}}",
-        "values": ["{{value_1}}", "{{value_2}}", "{{value_3}}"],
-        "team_section": "{{include_team}}"
-      },
-      "services": {
-        "enabled": true,
-        "display_style": "{{services_layout}}",
-        "services_list": [
+      {
+        "page_name": "home",
+        "sections": [
           {
-            "name": "{{service_1_name}}",
-            "description": "{{service_1_description}}",
-            "price": "{{service_1_price}}",
-            "features": ["{{service_1_feature_1}}", "{{service_1_feature_2}}"]
+            "type": "hero",
+            "style": "{{home_hero_style}}"
           },
           {
-            "name": "{{service_2_name}}",
-            "description": "{{service_2_description}}",
-            "price": "{{service_2_price}}",
-            "features": ["{{service_2_feature_1}}", "{{service_2_feature_2}}"]
+            "type": "services_overview",
+            "style": "{{home_services_style}}"
           },
           {
-            "name": "{{service_3_name}}",
-            "description": "{{service_3_description}}",
-            "price": "{{service_3_price}}",
-            "features": ["{{service_3_feature_1}}", "{{service_3_feature_2}}"]
+            "type": "about_preview",
+            "style": "{{home_about_style}}"
+          },
+          {
+            "type": "testimonials_preview",
+            "style": "{{home_testimonials_style}}"
+          },
+          {
+            "type": "cta",
+            "style": "{{home_cta_style}}"
           }
         ]
       },
-      "portfolio": {
-        "enabled": "{{include_portfolio}}",
-        "gallery_style": "{{gallery_layout}}",
-        "categories": ["{{portfolio_category_1}}", "{{portfolio_category_2}}"],
-        "showcase_count": "{{portfolio_items_count}}"
-      },
-      "testimonials": {
-        "enabled": true,
-        "display_style": "{{testimonials_layout}}",
-        "testimonials_list": [
+      {
+        "page_name": "about",
+        "sections": [
           {
-            "name": "{{testimonial_1_name}}",
-            "title": "{{testimonial_1_title}}",
-            "company": "{{testimonial_1_company}}",
-            "content": "{{testimonial_1_content}}",
-            "rating": "{{testimonial_1_rating}}"
+            "type": "hero",
+            "style": "{{about_hero_style}}"
           },
           {
-            "name": "{{testimonial_2_name}}",
-            "title": "{{testimonial_2_title}}",
-            "company": "{{testimonial_2_company}}",
-            "content": "{{testimonial_2_content}}",
-            "rating": "{{testimonial_2_rating}}"
+            "type": "company_story",
+            "style": "{{about_story_style}}"
+          },
+          {
+            "type": "mission_values",
+            "style": "{{about_mission_style}}"
+          },
+          {
+            "type": "team",
+            "style": "{{about_team_style}}"
+          },
+          {
+            "type": "cta",
+            "style": "{{about_cta_style}}"
           }
         ]
       },
-      "contact": {
-        "enabled": true,
-        "form_fields": ["name", "email", "phone", "service", "message"],
-        "include_map": "{{include_google_map}}",
-        "booking_system": "{{include_booking}}"
+      {
+        "page_name": "services",
+        "sections": [
+          {
+            "type": "hero",
+            "style": "{{services_hero_style}}"
+          },
+          {
+            "type": "services_grid",
+            "style": "{{services_grid_style}}"
+          },
+          {
+            "type": "process",
+            "style": "{{services_process_style}}"
+          },
+          {
+            "type": "testimonials_preview",
+            "style": "{{services_testimonials_style}}"
+          },
+          {
+            "type": "cta",
+            "style": "{{services_cta_style}}"
+          }
+        ]
+      },
+      {
+        "page_name": "portfolio",
+        "sections": [
+          {
+            "type": "hero",
+            "style": "{{portfolio_hero_style}}"
+          },
+          {
+            "type": "portfolio_gallery",
+            "style": "{{portfolio_gallery_style}}"
+          },
+          {
+            "type": "case_studies",
+            "style": "{{portfolio_case_studies_style}}"
+          },
+          {
+            "type": "cta",
+            "style": "{{portfolio_cta_style}}"
+          }
+        ]
+      },
+      {
+        "page_name": "testimonials",
+        "sections": [
+          {
+            "type": "hero",
+            "style": "{{testimonials_hero_style}}"
+          },
+          {
+            "type": "testimonials_grid",
+            "style": "{{testimonials_grid_style}}"
+          },
+          {
+            "type": "stats",
+            "style": "{{testimonials_stats_style}}"
+          },
+          {
+            "type": "cta",
+            "style": "{{testimonials_cta_style}}"
+          }
+        ]
+      },
+      {
+        "page_name": "contact",
+        "sections": [
+          {
+            "type": "hero",
+            "style": "{{contact_hero_style}}"
+          },
+          {
+            "type": "contact_form",
+            "style": "{{contact_form_style}}"
+          },
+          {
+            "type": "contact_info",
+            "style": "{{contact_info_style}}"
+          },
+          {
+            "type": "map",
+            "style": "{{contact_map_style}}"
+          },
+          {
+            "type": "hours",
+            "style": "{{contact_hours_style}}"
+          }
+        ]
+      },
+      {
+        "page_name": "{{additional_page_name}}",
+        "sections": [
+          {
+            "type": "{{additional_section_type}}",
+            "style": "{{additional_section_style}}"
+          }
+        ]
       }
-    }
+    ],
+    "section_definitions": {}
   },
 
   "design_preferences": {

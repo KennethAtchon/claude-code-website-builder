@@ -1,0 +1,293 @@
+{
+  "website": {
+    "name": "Atlas Freight Solutions",
+    "type": "business",
+    "description": "Premier long-haul trucking and logistics company providing reliable freight transportation across North America with 24/7 dispatch and real-time tracking",
+    "industry": "Transportation & Logistics",
+    "theme": {
+      "name": "Professional Logistics",
+      "aesthetic": "Bold, trustworthy, and industrial with clean modern lines",
+      "mood": "Reliable, professional, and efficient",
+      "targetAudience": "Businesses needing freight shipping, supply chain managers, logistics coordinators",
+      "designPrinciples": "Clean typography, strong contrast, trust-building elements, mobile-first responsive design",
+      "gradientStyle": "Subtle gradients from primary to darker variants for depth"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#22C55E"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#16A34A"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#F0FDF4"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#DCFCE7"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#BBF7D0"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#374151"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#1F2937"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#111827"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": ["400", "500", "600", "700", "800"]
+        },
+        "secondaryFont": {
+          "name": "Roboto Slab",
+          "weights": ["400", "500", "700"]
+        }
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Hero section with truck imagery, service highlights, trust indicators, and call-to-action",
+          "sections": [
+            {
+              "name": "Hero Section",
+              "type": "hero",
+              "content": "Compelling headline about reliable freight transportation with hero image of modern semi-truck on highway",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1586521995568-39abaa0c2311",
+                "video": ""
+              },
+              "cta": {
+                "label": "Get Quote Now",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "Services Overview",
+              "type": "services-grid",
+              "content": "Grid showcasing Long-Haul Trucking, Expedited Shipping, LTL/FTL options, and Specialized Transport",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13",
+                "video": ""
+              },
+              "cta": {
+                "label": "View All Services",
+                "link": "/services"
+              }
+            },
+            {
+              "name": "Why Choose Us",
+              "type": "features",
+              "content": "Trust indicators: 99.9% on-time delivery, 25+ years experience, real-time tracking, 24/7 dispatch",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088",
+                "video": ""
+              },
+              "cta": {
+                "label": "Learn More",
+                "link": "/about"
+              }
+            },
+            {
+              "name": "Coverage Map",
+              "type": "interactive-map",
+              "content": "Visual map showing service coverage across US and Canada with major routes highlighted",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Check Coverage",
+                "link": "/coverage"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "path": "/services",
+          "layout": "Detailed service breakdown with pricing information and capabilities",
+          "sections": [
+            {
+              "name": "Long-Haul Trucking",
+              "type": "service-detail",
+              "content": "Coast-to-coast freight transportation with dedicated drivers and modern fleet",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1553729459-efe14ef6055d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Request Quote",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "Expedited Shipping",
+              "type": "service-detail", 
+              "content": "Rush deliveries with guaranteed time-sensitive transport and priority handling",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1586521995568-39abaa0c2311",
+                "video": ""
+              },
+              "cta": {
+                "label": "Emergency Transport",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "LTL & FTL Options",
+              "type": "service-detail",
+              "content": "Flexible shipping solutions for both partial and full truckload requirements",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13",
+                "video": ""
+              },
+              "cta": {
+                "label": "Compare Options",
+                "link": "/contact"
+              }
+            }
+          ]
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "layout": "Company story, team leadership, fleet information, and safety certifications",
+          "sections": [
+            {
+              "name": "Company Story",
+              "type": "about-hero",
+              "content": "25+ years of reliable freight transportation, family-owned business values, industry expertise",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088",
+                "video": ""
+              },
+              "cta": {
+                "label": "Meet Our Team",
+                "link": "#team"
+              }
+            },
+            {
+              "name": "Fleet & Equipment",
+              "type": "fleet-showcase",
+              "content": "Modern Peterbilt and Kenworth tractors, specialized trailers, GPS tracking, maintenance records",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1553729459-efe14ef6055d",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Fleet",
+                "link": "#fleet"
+              }
+            },
+            {
+              "name": "Safety & Certifications",
+              "type": "certifications",
+              "content": "DOT compliance, safety ratings, driver training programs, insurance coverage details",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Safety Record",
+                "link": "/safety"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Contact",
+          "path": "/contact",
+          "layout": "Quote request form, dispatch contact info, office locations, and tracking portal",
+          "sections": [
+            {
+              "name": "Get Quote",
+              "type": "contact-form",
+              "content": "Freight quote form with pickup/delivery locations, cargo details, timeline requirements",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13",
+                "video": ""
+              },
+              "cta": {
+                "label": "Submit Quote Request",
+                "link": "#quote-form"
+              }
+            },
+            {
+              "name": "24/7 Dispatch",
+              "type": "contact-info",
+              "content": "Emergency dispatch hotline, load coordination, driver communication, tracking support",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1586521995568-39abaa0c2311",
+                "video": ""
+              },
+              "cta": {
+                "label": "Call Dispatch",
+                "link": "tel:+18005551234"
+              }
+            },
+            {
+              "name": "Office Locations",
+              "type": "locations",
+              "content": "Headquarters in Denver, regional offices in Atlanta, Chicago, Dallas with full contact details",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Find Location",
+                "link": "#locations"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Tracking",
+          "path": "/tracking",
+          "layout": "Real-time load tracking portal with shipment status and delivery updates",
+          "sections": [
+            {
+              "name": "Track Shipment",
+              "type": "tracking-portal",
+              "content": "Enter tracking number or PRO number to get real-time location and delivery status",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088",
+                "video": ""
+              },
+              "cta": {
+                "label": "Track Now",
+                "link": "#tracking-form"
+              }
+            }
+          ]
+        }
+      ],
+      "layouts": {
+        "layoutStyle": "Clean, professional layout with prominent CTAs, trust indicators, and mobile-responsive design",
+        "navigationStyle": "Horizontal navigation with clear service categories, prominent phone number, and quote button",
+        "extra": "Sticky header with contact info, footer with certifications and accreditations, testimonials integration"
+      }
+    }
+  },
+  "templateInfo": {
+    "version": "2.0",
+    "type": "trucking-filled",
+    "description": "Complete website specification for Atlas Freight Solutions - a professional trucking and logistics company website with all placeholders filled and ready for development"
+  }
+}
