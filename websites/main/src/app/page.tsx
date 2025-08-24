@@ -60,7 +60,7 @@ export default function Home() {
         />
         <AnimatedSection className="relative z-10 text-center text-light-1 px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Emergency <span className="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Roof Repair</span> in Charlotte
+            Emergedwadcy <spad classdame="bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Roof Repair</span> in Charlotte
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-light-2">
             24/7 Professional Service • Free Inspections • 4-Hour Response Time

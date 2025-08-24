@@ -1,62 +1,80 @@
-# Prompt: Production-Ready Website Generator
-Your primary task is to build complete, production-ready websites based on user requests and JSON specifications provided in the `/prompt` directory. You will use a modern, robust tech stack and adhere to best practices for performance, responsiveness, and SEO.
+# Prompt: Production-Ready Static Website Generator
+Your primary task is to build complete, production-ready **STATIC** websites based on user requests and JSON specifications provided in the `/prompt` directory. You will use a modern, robust tech stack optimized for static generation and adhere to best practices for performance, responsiveness, and SEO.
 
-## ⚠️ CRITICAL: Use Next.js metadata API only, never `next-seo` (causes build errors with static exports)
+## ⚠️ CRITICAL: Everything must be static - no server-side features, no API routes, no dynamic rendering
 
 If you come across anything that could be a problem, don't hesitate to search the internet.
 
 ## 1. Technology Stack & Initial Setup
-You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn**.
+You will use **Next.js** with **TypeScript**, **Tailwind CSS**, and **shadcn** - configured for **STATIC EXPORT ONLY**.
 
 ### Setup Commands
 For every new project, execute the following commands to set up the environment. Replace `{app}` with the project's name.
-
 
 1. **Create Next.js App:**
    ```bash
    bunx create-next-app@latest {app} --typescript --no-eslint --app --src-dir --tailwind --import-alias="@/*" --turbopack
    ```
-2. **IMPORTANT STEP: Navigate into Project Directory, BE IN THE RIGHT DIRECTORY:**
+2. **IMPORTANT STEP: Navigate into Project Directory:**
    ```bash
-   cd {app} && `${command}`
+   cd {app}
    ```
-3. **Initialize shadcn:**
+3. **Configure for Static Export (CRITICAL - Do this immediately):**
+   ```bash
+   cd {app} && echo 'import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  images: {
+    unoptimized: true,
+  },
+};
+
+export default nextConfig;' > next.config.ts
+   ```
+4. **Initialize shadcn:**
    ```bash
    cd {app} && bunx shadcn@latest init -b neutral -y
    ```
-4. **Add Core shadcn Components, please utilize them:**
+5. **Add Core shadcn Components:**
    ```bash
    cd {app} && bunx --bun shadcn@latest add --all
    ```
-5. **Install Additional Dependencies:**
+6. **Install Additional Dependencies:**
    ```bash
    cd {app} && bun add lucide-react framer-motion
    ```
 
-## 2. Project Structure
-Adhere to the following project structure. This organization separates concerns and promotes maintainability.
+## 2. Static Project Structure
+Adhere to the following project structure optimized for static generation. **NO API ROUTES ALLOWED**.
 
 ```jsx
-my-nextjs-app/
+my-static-app/
 ├── src/
 │   ├── app/
-│   │   ├── api/                  # API routes
-│   │   │   └── hello/
-│   │   │       └── route.ts
-│   │   ├── layout.tsx            # Root layout
+│   │   ├── layout.tsx            # Root layout (server component)
 │   │   ├── globals.css
-│   │   ├── page.tsx              # Root page (homepage)
-│   │   └── dashboard/            # Example of a nested route
-│   │       ├── layout.tsx
-│   │       └── page.tsx
-│   ├── components/               # Reusable components (UI, custom logic)
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   └── Button.tsx
+│   │   ├── page.tsx              # Root page (server component with metadata)
+│   │   ├── about/                # Static routes only
+│   │   │   └── page.tsx          # Server component with metadata
+│   │   ├── services/
+│   │   │   └── page.tsx          # Server component with metadata
+│   │   └── contact/
+│   │       └── page.tsx          # Server component with metadata
+│   ├── components/               # Reusable components
+│   │   ├── ui/                   # shadcn components
+│   │   ├── animations/           # Client components for animations
+│   │   │   └── AnimatedSection.tsx
+│   │   ├── Header.tsx            # Server component
+│   │   ├── Footer.tsx            # Server component
+│   │   └── sections/             # Page sections
 │   └── public/                   # Static assets
 │       ├── favicon.ico
-│       └── images/
-└── ... (config files)
+│       ├── images/
+│       └── robots.txt
+└── netlify.toml                  # Static hosting config
 ```
 
 ## 3. Core Development Principles
@@ -157,13 +175,45 @@ export default nextConfig;
 
 ```
 
-### d. Static Export Compatibility
+### d. Static Export Optimization
 
-**Key Rules:**
-- Pages with SEO need server components (no "use client")
-- Use `metadata` export for SEO, never `next-seo`
-- Keep animations in separate client components
-- Always run `bun run build` to test
+**MANDATORY Component Architecture:**
+
+**Pages (app/*/page.tsx) - MUST be Server Components:**
+```tsx
+// ✅ CORRECT - Server Component for SEO
+import { Metadata } from "next";
+
+export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  title: "Page Title",
+  description: "Page description"
+};
+
+export default function PageName() {
+  return <div>Static content with imported client components</div>;
+}
+```
+
+**Interactive Components - MUST be Client Components:**
+```tsx
+// ✅ CORRECT - Client Component for interactivity  
+"use client";
+import { useState } from 'react';
+
+export default function InteractiveComponent() {
+  const [state, setState] = useState(0);
+  return <button onClick={() => setState(state + 1)}>{state}</button>;
+}
+```
+
+**Static Generation Rules:**
+- Pages = Server components + `force-static` + `metadata`
+- Interactive elements = Separate client components
+- Import client components into server component pages
+- NO API routes or server-side functionality
+- ALWAYS test with `bun run build`
 
 ### e. Color System Implementation
 Extract and implement colors from the JSON template's `styles.colors` array. Use Tailwind CSS v4's modern `@theme inline` approach with a simplified 8-color palette.
@@ -205,114 +255,128 @@ Create visual interest through strategic contrast mixing:
 - **Depth through layering**: Use different dark/light levels for cards, overlays, and sections
 - Always test contrast ratios for accessibility, but don't limit creativity
 
-### f. Font Implementation **ATTENTION**
+### f. Font Implementation
 
 Don't put anything in globals.css for changing fonts
 ```tsx
-import type { Metadata } from "next";
-import { Lato, Source_Serif_Pro } from "next/font/google";
-import "./globals.css";
-
-const lato = Lato({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['300', '400', '700', '900'],
-})
-
-const sourceSerifPro = Source_Serif_Pro({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '600', '700'],
-})
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+import { Inter } from 'next/font/google'
+ 
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ['latin'] })
+ 
+export default function MyApp({ Component, pageProps }) {
   return (
-    <html lang="en">
-      <body
-        className={`${lato.className} ${sourceSerifPro.className} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    <main className={inter.className}>
+      <Component {...pageProps} />
+    </main>
+  )
 }
 ```
 
 
-**Client-Side**
-put "use-client" on all pages.
+**Static Generation Architecture**
+- Pages are server components for SEO optimization
+- Interactive elements are client components
+- NO client-side routing dependencies
 
-**Example: Next.js Configuration for Static Export**
+**Static Export Configuration (Already set in setup)**
 
-```js
-// next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export", // Disables SSR, enabling static export for CSR
-  reactStrictMode: true,
+```ts
+// next.config.ts
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   images: {
-    unoptimized: true, // Required for static export with next/image
+    unoptimized: true,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
 ```
 
-**Testing CSR Setup**
+**Testing Static Build**
 
-After configuring for CSR, test the application by running:
+ALWAYS test static generation with:
 ```bash
 bun run build
 ```
-Verify that no SSR-related console errors appear and that the site renders correctly on the client side.
+This creates a static `out/` directory ready for deployment to any static host.
 
-
-## 4. SEO Optimization
-Use Next.js built-in metadata API only (never `next-seo`):
+## 4. Static SEO Optimization
+Use Next.js built-in metadata API for static generation:
 
 ```tsx
 // Each page.tsx (server component)
 import { Metadata } from "next";
 
-export const dynamic = 'force-static'
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: "Page Title - Site Name",
   description: "Page description",
+  keywords: ["keyword1", "keyword2", "keyword3"],
+  authors: [{ name: "Author Name" }],
   openGraph: {
     title: "Page Title - Site Name", 
     description: "Page description",
+    type: "website",
+    images: ["/images/og-image.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Page Title - Site Name",
+    description: "Page description",
+    images: ["/images/og-image.jpg"],
   },
 };
+
+export default function PageName() {
+  return (
+    <div>
+      {/* Page content */}
+    </div>
+  );
+}
 ```
 
-Additional requirements:
-* Descriptive `alt` tags on images
-* Generate `robots.ts` and `sitemap.ts` files
+**Required Static SEO Files:**
+- Create `robots.txt` in `/public/`
+- Generate static sitemap in `/public/sitemap.xml`
+- Descriptive `alt` tags on ALL images
 
-## 5. Production
+## 5. Static Deployment
 
-We are using netlify for prod right now, so include a netlify.toml file with every new project.
+**Netlify Configuration**
+Create `netlify.toml` in project root:
 
-## 6. Extra 
+```toml
+[build]
+  publish = "out"
+  command = "bun run build"
 
-### Parallax
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
-```tsx
-<div className="relative h-screen flex items-center justify-center overflow-hidden">
-  <div 
-    className="absolute inset-0 bg-cover bg-center bg-fixed"
-    style={{
-      backgroundImage: `url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b')`
-    }}
-  />
-  <AnimatedSection className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-    <h1 className="text-5xl md:text-7xl font-bold mb-6">Your Title</h1>
-  </AnimatedSection>
-</div>
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[build.environment]
+  NODE_VERSION = "18"
 ```
 
+**Build Verification**
+Before deployment, ALWAYS run:
+```bash
+bun run build
+```
+Verify the `out/` directory contains all static files.

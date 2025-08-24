@@ -30,6 +30,8 @@ When creating filled templates from `generic-template.json`:
 
 Use format: `[purpose]-filled.json`
 
+AND PUT IT IN /prompt directory
+
 ### Result
 
 Filled templates must be complete, opinionated website specifications ready for immediate development use.

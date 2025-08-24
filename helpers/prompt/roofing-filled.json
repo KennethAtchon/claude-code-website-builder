@@ -1,0 +1,371 @@
+{
+  "website": {
+    "name": "Summit Roofing Solutions",
+    "type": "business",
+    "description": "Professional roofing contractor specializing in residential and commercial roofing services including installation, repair, and maintenance",
+    "industry": "Construction/Roofing",
+    "theme": {
+      "name": "Professional Contractor",
+      "aesthetic": "Clean, trustworthy, and professional with strong industrial elements",
+      "mood": "Reliable, expert, and approachable",
+      "targetAudience": "Homeowners and commercial property managers seeking quality roofing services",
+      "designPrinciples": "Build trust through clear communication, showcase expertise, emphasize reliability and quality craftsmanship",
+      "gradientStyle": "Subtle gradients that convey strength and reliability"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#DC2626"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#991B1B"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#FEFEFE"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#F8FAFC"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#E2E8F0"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#1E293B"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#334155"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#475569"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Inter",
+          "weights": ["300", "400", "600", "700", "800"]
+        },
+        "secondaryFont": {
+          "name": "Playfair Display",
+          "weights": ["400", "600", "700"]
+        }
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Hero section with service overview, about preview, services grid, testimonials, and contact CTA",
+          "sections": [
+            {
+              "name": "Hero Section",
+              "type": "hero",
+              "content": "Professional roofing services you can trust. 25+ years of experience protecting homes and businesses with quality craftsmanship and reliable service.",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8",
+                "video": ""
+              },
+              "cta": {
+                "label": "Get Free Estimate",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "Services Overview",
+              "type": "services-grid",
+              "content": "Complete roofing solutions including residential roofing, commercial roofing, roof repairs, gutter installation, and emergency services",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+                "video": ""
+              },
+              "cta": {
+                "label": "View All Services",
+                "link": "/services"
+              }
+            },
+            {
+              "name": "Why Choose Us",
+              "type": "features",
+              "content": "Licensed & insured, 25+ years experience, quality materials, lifetime warranty, emergency services, free estimates",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+                "video": ""
+              },
+              "cta": {
+                "label": "Learn More",
+                "link": "/about"
+              }
+            },
+            {
+              "name": "Customer Testimonials",
+              "type": "testimonials",
+              "content": "Reviews and testimonials from satisfied customers showcasing quality work and professional service",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43",
+                "video": ""
+              },
+              "cta": {
+                "label": "Read More Reviews",
+                "link": "/testimonials"
+              }
+            },
+            {
+              "name": "Contact CTA",
+              "type": "cta-section",
+              "content": "Ready to protect your property? Contact us today for a free consultation and estimate",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Contact Us Now",
+                "link": "/contact"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "path": "/services",
+          "layout": "Service categories with detailed descriptions, process overview, and pricing information",
+          "sections": [
+            {
+              "name": "Services Hero",
+              "type": "hero",
+              "content": "Comprehensive roofing services for residential and commercial properties",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+                "video": ""
+              },
+              "cta": {
+                "label": "Get Quote",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "Residential Services",
+              "type": "service-category",
+              "content": "New roof installation, roof replacement, roof repairs, shingle replacement, tile roofing, metal roofing",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1448630360428-65456885c650",
+                "video": ""
+              },
+              "cta": {
+                "label": "Residential Quote",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "Commercial Services",
+              "type": "service-category",
+              "content": "Commercial roof installation, flat roof repair, TPO roofing, EPDM roofing, roof maintenance programs",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+                "video": ""
+              },
+              "cta": {
+                "label": "Commercial Quote",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "Emergency Services",
+              "type": "service-category",
+              "content": "24/7 emergency roof repair, storm damage assessment, leak repair, temporary roof protection",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+                "video": ""
+              },
+              "cta": {
+                "label": "Emergency Contact",
+                "link": "/contact"
+              }
+            }
+          ]
+        },
+        {
+          "name": "About",
+          "path": "/about",
+          "layout": "Company story, team, certifications, service area, and company values",
+          "sections": [
+            {
+              "name": "About Hero",
+              "type": "hero",
+              "content": "25+ years of roofing excellence serving the community with integrity and craftsmanship",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43",
+                "video": ""
+              },
+              "cta": {
+                "label": "Meet Our Team",
+                "link": "#team"
+              }
+            },
+            {
+              "name": "Company Story",
+              "type": "content-block",
+              "content": "Founded in 1998, Summit Roofing Solutions has been protecting homes and businesses with quality roofing services. Family-owned and operated, we take pride in our craftsmanship and customer service.",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Our Services",
+                "link": "/services"
+              }
+            },
+            {
+              "name": "Team Section",
+              "type": "team",
+              "content": "Meet our experienced team of roofing professionals, including licensed contractors, project managers, and customer service specialists",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Contact Team",
+                "link": "/contact"
+              }
+            },
+            {
+              "name": "Certifications",
+              "type": "credentials",
+              "content": "Fully licensed and insured, GAF Master Elite certified, OSHA certified, Better Business Bureau A+ rating",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Credentials",
+                "link": "#credentials"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Portfolio",
+          "path": "/portfolio",
+          "layout": "Before/after photos, project galleries organized by service type, and case studies",
+          "sections": [
+            {
+              "name": "Portfolio Hero",
+              "type": "hero",
+              "content": "See our quality craftsmanship in action with recent roofing projects",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8",
+                "video": ""
+              },
+              "cta": {
+                "label": "View All Projects",
+                "link": "#gallery"
+              }
+            },
+            {
+              "name": "Residential Projects",
+              "type": "gallery",
+              "content": "Before and after photos of residential roofing projects including new installations, repairs, and replacements",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1448630360428-65456885c650",
+                "video": ""
+              },
+              "cta": {
+                "label": "Residential Services",
+                "link": "/services"
+              }
+            },
+            {
+              "name": "Commercial Projects",
+              "type": "gallery",
+              "content": "Commercial roofing installations and repairs showcasing our expertise with large-scale projects",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+                "video": ""
+              },
+              "cta": {
+                "label": "Commercial Services",
+                "link": "/services"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Contact",
+          "path": "/contact",
+          "layout": "Contact form, business information, service area map, and emergency contact details",
+          "sections": [
+            {
+              "name": "Contact Hero",
+              "type": "hero",
+              "content": "Get your free roofing estimate today. Contact our experts for all your roofing needs",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "video": ""
+              },
+              "cta": {
+                "label": "Call Now",
+                "link": "tel:555-ROOF-PRO"
+              }
+            },
+            {
+              "name": "Contact Form",
+              "type": "contact-form",
+              "content": "Request a free estimate with fields for contact info, service type, project details, and preferred contact method",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Submit Request",
+                "link": "#"
+              }
+            },
+            {
+              "name": "Business Info",
+              "type": "info-block",
+              "content": "Phone: (555) ROOF-PRO, Email: info@summitroofing.com, Address: 123 Main St, Your City, ST 12345, Hours: Mon-Fri 7AM-6PM, Sat 8AM-4PM",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Directions",
+                "link": "#map"
+              }
+            },
+            {
+              "name": "Emergency Contact",
+              "type": "emergency-info",
+              "content": "24/7 Emergency Service Available - Call (555) EMERGENCY for urgent roofing repairs and storm damage",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Emergency Call",
+                "link": "tel:555-EMERGENCY"
+              }
+            }
+          ]
+        }
+      ],
+      "layouts": {
+        "layoutStyle": "Clean, professional layout with strong navigation, prominent CTAs, and trust-building elements",
+        "navigationStyle": "Fixed header with clear service menu, contact button, and mobile-responsive hamburger menu",
+        "extra": "Include testimonials throughout, before/after photo galleries, service area information, and emergency contact banner"
+      }
+    }
+  },
+  "templateInfo": {
+    "version": "2.0",
+    "type": "filled",
+    "description": "Professional roofing contractor website with complete service information, portfolio showcase, and lead generation focus"
+  }
+}
