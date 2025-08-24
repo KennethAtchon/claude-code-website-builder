@@ -1,27 +1,33 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Slab } from "next/font/google";
+import { Montserrat, Merriweather } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['300', '400', '500', '700', '900'],
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const robotoSlab = Roboto_Slab({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '700'],
+const merriweather = Merriweather({
+  variable: "--font-merriweather",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Roof Solutions Charlotte - 24/7 Emergency Roof Repair | Free Inspections Since 1980",
-  description: "Professional roof repair in Charlotte, NC. 24/7 emergency service, free inspections, and guaranteed workmanship since 1980. Licensed & insured roofing contractor serving Charlotte metro. Call (704) 668-0707.",
-  keywords: ["roof repair charlotte nc", "emergency roofing charlotte", "charlotte roofer", "roof inspection charlotte"],
+  title: "Skyline Roof Masters - Premium Roofing Solutions",
+  description: "Premium roofing specialists delivering exceptional craftsmanship and innovative solutions for residential and commercial properties across the region",
+  keywords: ["roofing", "premium roofing", "residential roofing", "commercial roofing", "roof installation", "roof repair", "roofing contractors"],
+  authors: [{ name: "Skyline Roof Masters" }],
   openGraph: {
-    title: "Roof Solutions Charlotte - 24/7 Emergency Roof Repair",
-    description: "Professional roof repair in Charlotte, NC. 24/7 emergency service, free inspections, and guaranteed workmanship since 1980.",
+    title: "Skyline Roof Masters - Premium Roofing Solutions",
+    description: "Premium roofing specialists delivering exceptional craftsmanship and innovative solutions for residential and commercial properties across the region",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skyline Roof Masters - Premium Roofing Solutions",
+    description: "Premium roofing specialists delivering exceptional craftsmanship and innovative solutions for residential and commercial properties across the region",
   },
 };
 
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} ${robotoSlab.className} antialiased`}
+        className={`${montserrat.variable} ${merriweather.variable} font-sans antialiased`}
       >
         {children}
       </body>

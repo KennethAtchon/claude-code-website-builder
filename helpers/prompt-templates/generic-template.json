@@ -87,7 +87,7 @@
           {
             "name": "{{pageName}}",
             "path": "{{pagePath}}",
-            "layout": "{{pageLayoutDescription}}",
+            "layout": "{{pageLayoutDescription - BE VERY COMPREHENSIVE: Describe the complete visual structure, section ordering, spacing, grid layouts, content positioning, responsive behavior, and visual hierarchy. Include details about header positioning, main content flow, sidebar placements, footer style, and how sections should visually connect. Example: 'Full-width hero section with centered content, followed by 3-column features grid with equal spacing, then alternating left-right content blocks with images, testimonials carousel section, and contact form with company info sidebar'}}",
             "sections": [
               {
                 "name": "{{sectionName}}",

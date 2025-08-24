@@ -1,292 +1,176 @@
-"use client";
-import { useState } from "react";
-import { Phone, Filter } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AnimatedSection from "@/components/AnimatedSection";
+import HeroSection from "@/components/sections/HeroSection";
+
+export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  title: "Premium Project Portfolio - Skyline Roof Masters",
+  description: "Showcasing our premium craftsmanship through exceptional roofing projects and architectural transformations",
+  keywords: ["roofing portfolio", "luxury roofing projects", "commercial roofing showcase", "award-winning roofing"],
+};
 
 export default function PortfolioPage() {
-  const [activeFilter, setActiveFilter] = useState("All");
-
-  const categories = ["All", "Residential Roofing", "Commercial Roofing", "Emergency Repairs"];
-
   const projects = [
     {
-      id: 1,
-      title: "Complete Roof Replacement - Matthews Home",
-      category: "Residential Roofing",
-      image: "/2021-11-30.jpg",
-      description: "Full asphalt shingle replacement on 2-story home with storm damage restoration.",
-      location: "Matthews, NC",
-      completionTime: "3 days",
-      projectType: "Roof Replacement"
+      title: "Luxury Mountain Estate",
+      category: "Residential",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      description: "Custom slate and copper roofing system for a 12,000 sq ft mountain estate",
+      details: ["Premium Welsh slate", "Hand-soldered copper details", "Solar integration", "Smart monitoring system"]
     },
     {
-      id: 2,
-      title: "Emergency Storm Damage Repair",
-      category: "Emergency Repairs",
-      image: "/2021-048-11.jpg",
-      description: "Emergency tarping and repair service during severe thunderstorm with 24-hour completion.",
-      location: "Charlotte, NC",
-      completionTime: "24 hours",
-      projectType: "Emergency Repair"
+      title: "Corporate Headquarters",
+      category: "Commercial", 
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      description: "Large-scale commercial roofing with energy-efficient EPDM system",
+      details: ["50,000 sq ft coverage", "Energy-efficient EPDM", "Green roof sections", "25-year warranty"]
     },
     {
-      id: 3,
-      title: "Commercial Warehouse Roofing",
-      category: "Commercial Roofing",
-      image: "/25530.jpeg",
-      description: "Large-scale commercial roof replacement for 50,000 sq ft warehouse facility.",
-      location: "Concord, NC",
-      completionTime: "2 weeks",
-      projectType: "Commercial Replacement"
+      title: "Historic Downtown Restoration",
+      category: "Restoration",
+      image: "https://images.unsplash.com/photo-1593062091239-7d1a90e91c4c",
+      description: "Heritage building restoration with period-accurate materials",
+      details: ["Clay tile restoration", "Heritage compliance", "Structural reinforcement", "Weather sealing"]
     },
     {
-      id: 4,
-      title: "Luxury Home Roof Installation",
-      category: "Residential Roofing",
-      image: "/2021-11-025.jpg",
-      description: "Premium architectural shingles installation on luxury custom home.",
-      location: "Huntersville, NC",
-      completionTime: "5 days",
-      projectType: "New Construction"
+      title: "Modern Architectural Marvel",
+      category: "Residential",
+      image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716",
+      description: "Contemporary home featuring innovative roofing design",
+      details: ["Standing seam metal", "Geometric design", "Integrated lighting", "Smart ventilation"]
     },
     {
-      id: 5,
-      title: "Restaurant Leak Emergency Repair",
-      category: "Emergency Repairs",
-      image: "/719464.jpeg",
-      description: "Emergency leak repair during business hours with minimal disruption to operations.",
-      location: "Charlotte, NC",
-      completionTime: "4 hours",
-      projectType: "Emergency Repair"
+      title: "Industrial Complex",
+      category: "Commercial",
+      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+      description: "Multi-building industrial roofing system with advanced drainage",
+      details: ["TPO membrane system", "Advanced drainage", "Fall protection", "Maintenance access"]
     },
     {
-      id: 6,
-      title: "Office Building Roof Maintenance",
-      category: "Commercial Roofing",
-      image: "/2021-018-11.jpg",
-      description: "Comprehensive roof maintenance and repair program for multi-tenant office building.",
-      location: "Rock Hill, SC",
-      completionTime: "1 week",
-      projectType: "Maintenance"
-    },
-    {
-      id: 7,
-      title: "Historic Home Restoration",
-      category: "Residential Roofing",
-      image: "/unnaamed.jpg",
-      description: "Careful restoration of 1920s home roof using period-appropriate materials.",
-      location: "Charlotte, NC",
-      completionTime: "1 week",
-      projectType: "Restoration"
-    },
-    {
-      id: 8,
-      title: "Hail Damage Insurance Claim",
-      category: "Emergency Repairs",
-      image: "/unnamed.jpg",
-      description: "Complete roof replacement after severe hail storm with full insurance coverage.",
-      location: "Mint Hill, NC",
-      completionTime: "4 days",
-      projectType: "Insurance Claim"
-    },
-    {
-      id: 9,
-      title: "Manufacturing Facility Roof",
-      category: "Commercial Roofing",
-      image: "/25530.jpeg",
-      description: "Industrial roofing system installation for manufacturing facility with specialized requirements.",
-      location: "Gastonia, NC",
-      completionTime: "3 weeks",
-      projectType: "Industrial"
+      title: "Eco-Luxury Residence",
+      category: "Residential",
+      image: "https://images.unsplash.com/photo-1556156653-e5a7c83a09cb",
+      description: "Sustainable luxury home with integrated solar and living roof",
+      details: ["Living roof system", "Integrated solar", "Rainwater harvesting", "LEED Platinum"]
     }
   ];
-
-  const filteredProjects = activeFilter === "All" 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
 
   return (
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-dark-1 to-dark-2 text-light-1">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our Work Portfolio
-            </h1>
-            <p className="text-xl text-light-2 mb-8">
-              See examples of our quality roofing work across Charlotte and surrounding areas
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (704) 668-0707
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Get Free Quote
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <main className="pt-16">
+        {/* Portfolio Hero */}
+        <HeroSection
+          title="Premium Craftsmanship Portfolio"
+          content="Showcasing exceptional roofing projects and architectural transformations"
+          ctaLabel="View Complete Portfolio"
+          ctaLink="#gallery"
+          imageUrl="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+        />
 
-      {/* Filter Section */}
-      <section className="py-8 bg-light-2 sticky top-24 z-30">
-        <div className="container mx-auto px-4">
-          <AnimatedSection>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Filter className="w-5 h-5 text-dark-2 mt-2" />
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={activeFilter === category ? "default" : "outline"}
-                  onClick={() => setActiveFilter(category)}
-                  className={activeFilter === category ? "bg-primary text-primary-foreground" : ""}
-                >
-                  {category}
-                </Button>
-              ))}
+        {/* Portfolio Gallery */}
+        <section className="py-20 bg-light-1" id="gallery">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-dark-1 mb-6">Featured Projects</h2>
+              <p className="text-xl text-dark-2 max-w-3xl mx-auto">
+                Each project represents our commitment to excellence, innovation, and premium craftsmanship
+              </p>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
 
-      {/* Portfolio Grid */}
-      <section className="py-16 bg-light-1">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-dark-1 mb-4">
-              Quality Work Across Charlotte
-            </h2>
-            <p className="text-lg text-dark-2 max-w-2xl mx-auto">
-              From emergency repairs to complete replacements, see the quality and craftsmanship that sets us apart
-            </p>
-          </AnimatedSection>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
-              <AnimatedSection key={project.id}>
-                <Card className="h-full hover:shadow-xl transition-shadow overflow-hidden group">
-                  <div className="relative overflow-hidden">
-                    <img 
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project, index) => (
+                <div key={project.title} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <div className="relative h-64 overflow-hidden">
+                    <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
-                      {project.projectType}
-                    </Badge>
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                        {project.category}
+                      </span>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-1/60 via-transparent to-transparent" />
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-dark-1 mb-3">{project.title}</h3>
-                    <p className="text-dark-2 mb-4">{project.description}</p>
+                  
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-dark-1 mb-3">{project.title}</h3>
+                    <p className="text-dark-2 mb-6 leading-relaxed">{project.description}</p>
                     
                     <div className="space-y-2 mb-6">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-dark-3">Location:</span>
-                        <span className="text-dark-1 font-medium">{project.location}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-dark-3">Completion Time:</span>
-                        <span className="text-dark-1 font-medium">{project.completionTime}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-dark-3">Category:</span>
-                        <span className="text-dark-1 font-medium">{project.category}</span>
-                      </div>
+                      {project.details.map((detail, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-dark-2">
+                          <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                          {detail}
+                        </div>
+                      ))}
                     </div>
                     
-                    <Button className="w-full bg-primary hover:bg-primary/90">
+                    <button className="w-full bg-light-2 hover:bg-primary hover:text-primary-foreground text-dark-1 font-semibold py-3 px-6 rounded-lg transition-colors">
                       View Project Details
-                    </Button>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
-          
-          {filteredProjects.length === 0 && (
-            <AnimatedSection className="text-center py-12">
-              <p className="text-lg text-dark-2">No projects found for the selected category.</p>
-            </AnimatedSection>
-          )}
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Track Record</h2>
-            <p className="text-xl">
-              Four decades of successful projects across Charlotte
-            </p>
-          </AnimatedSection>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <AnimatedSection>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">500+</div>
-                <div className="text-lg">Projects Completed</div>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
-                <div className="text-lg">Customer Satisfaction</div>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">24/7</div>
-                <div className="text-lg">Emergency Response</div>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">40+</div>
-                <div className="text-lg">Years Experience</div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-dark-1 text-light-1">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center">
-            <h2 className="text-4xl font-bold mb-4">
-              Ready to Start Your Roofing Project?
-            </h2>
-            <p className="text-xl mb-8 text-light-2">
-              Let us bring the same quality and professionalism to your home or business
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90"
-                asChild
-              >
-                <a href="tel:7046680707" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call (704) 668-0707
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Get Free Estimate
-              </Button>
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
+        </section>
+
+        {/* Awards Section */}
+        <section className="py-20 bg-gradient-to-br from-dark-1 to-dark-2">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-light-1 mb-6">Awards & Recognition</h2>
+              <p className="text-xl text-light-2">Our projects have received industry recognition for excellence</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🏆</span>
+                </div>
+                <h3 className="text-xl font-semibold text-light-1 mb-2">Best Commercial Project 2024</h3>
+                <p className="text-light-2">National Roofing Contractors Association</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-silver-500 rounded-full flex items-center justify-center mx-auto mb-6 bg-gray-400">
+                  <span className="text-3xl">🥈</span>
+                </div>
+                <h3 className="text-xl font-semibold text-light-1 mb-2">Innovation Award 2023</h3>
+                <p className="text-light-2">Roofing Technology Institute</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-bronze-500 rounded-full flex items-center justify-center mx-auto mb-6 bg-amber-600">
+                  <span className="text-3xl">🥉</span>
+                </div>
+                <h3 className="text-xl font-semibold text-light-1 mb-2">Sustainability Excellence 2023</h3>
+                <p className="text-light-2">Green Building Council</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-primary">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Create Your Premium Project?</h2>
+            <p className="text-xl text-white/90 mb-8">Join our portfolio of exceptional roofing transformations</p>
+            <a
+              href="/consultation"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary font-semibold text-lg rounded-lg hover:bg-white/90 transition-colors"
+            >
+              Start Your Project
+            </a>
+          </div>
+        </section>
+      </main>
 
       <Footer />
     </div>

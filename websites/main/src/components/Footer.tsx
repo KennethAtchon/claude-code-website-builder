@@ -1,146 +1,141 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
-  const serviceAreas = [
-    "Charlotte, NC", "Matthews, NC", "Mint Hill, NC", "Concord, NC",
-    "Huntersville, NC", "Cornelius, NC", "Davidson, NC", "Pineville, NC",
-    "Gastonia, NC", "Rock Hill, SC"
-  ];
+  const navigation = {
+    services: [
+      { name: "Residential Roofing", href: "/services" },
+      { name: "Commercial Roofing", href: "/services" },
+      { name: "Roof Restoration", href: "/services" },
+      { name: "Emergency Repairs", href: "/services" },
+    ],
+    company: [
+      { name: "About Us", href: "/about" },
+      { name: "Portfolio", href: "/portfolio" },
+      { name: "Technology", href: "/technology" },
+      { name: "Testimonials", href: "/testimonials" },
+    ],
+    support: [
+      { name: "Contact", href: "/contact" },
+      { name: "Consultation", href: "/consultation" },
+      { name: "Warranty", href: "/warranty" },
+      { name: "Maintenance", href: "/maintenance" },
+    ],
+  };
 
-  const services = [
-    "Emergency Roof Repair",
-    "Free Roof Inspections", 
-    "Complete Roof Replacement",
-    "Storm Damage Repair",
-    "Commercial Roofing",
-    "Roof Maintenance"
+  const socialLinks = [
+    { name: "Facebook", icon: Facebook, href: "#" },
+    { name: "Twitter", icon: Twitter, href: "#" },
+    { name: "LinkedIn", icon: Linkedin, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "#" },
   ];
 
   return (
     <footer className="bg-dark-1 text-light-1">
-      {/* Emergency CTA Section */}
-      <div className="bg-primary py-8 border-t-1">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-            Emergency Roof Repair Available 24/7
-          </h3>
-          <p className="text-primary-foreground/90 mb-6">
-            Don't wait for roof damage to get worse. Call now for immediate assistance!
-          </p>
-          <Button 
-            asChild 
-            size="lg"
-            className="bg-light-1 text-primary hover:bg-light-2 font-bold"
-          >
-            <a href="tel:7046680707" className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
-              Call (704) 668-0707 Now
-            </a>
-          </Button>
-        </div>
-      </div>
-
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="text-primary font-bold text-xl mb-2">
-              ROOF SOLUTIONS
-            </div>
-            <div className="text-light-2 text-sm mb-4">Charlotte</div>
-            <p className="text-light-2 mb-6">
-              Charlotte's Premier 24/7 Roof Repair Specialists Since 1980. 
-              Family-owned business with guaranteed workmanship.
-            </p>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com/roofsolutionscharlotte" className="text-light-2 hover:text-primary">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://instagram.com/roofsolutionscharlotte" className="text-light-2 hover:text-primary">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-light-1 font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service}>
-                  <Link href="/services" className="text-light-2 hover:text-primary transition-colors">
-                    {service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-light-1 font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary mt-0.5" />
-                <div>
-                  <a href="tel:7046680707" className="text-light-2 hover:text-primary">
-                    (704) 668-0707
-                  </a>
-                  <div className="text-sm text-light-3">24/7 Emergency Line</div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main footer content */}
+        <div className="py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {/* Company info */}
+            <div className="lg:col-span-2">
+              <div className="text-2xl font-bold text-primary mb-4">
+                Skyline Roof Masters
+              </div>
+              <p className="text-light-2 mb-6 max-w-md">
+                Premium roofing specialists delivering exceptional craftsmanship and innovative solutions for residential and commercial properties across the region.
+              </p>
+              
+              {/* Contact info */}
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <span className="text-light-2">(555) 123-4567</span>
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary mt-0.5" />
-                <a href="mailto:info@roofsolutionscharlotte.com" className="text-light-2 hover:text-primary">
-                  info@roofsolutionscharlotte.com
-                </a>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                <div className="text-light-2">
-                  6611 Haddonfield Pl<br />
-                  Charlotte, NC 28277
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <span className="text-light-2">info@skylineroof.com</span>
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-primary mt-0.5" />
-                <div className="text-light-2">
-                  Open 24 hours<br />
-                  Emergency service available
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  <span className="text-light-2">123 Roofing Ave, City, ST 12345</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Service Areas */}
-          <div>
-            <h4 className="text-light-1 font-semibold mb-4">Service Areas</h4>
-            <div className="text-light-2 text-sm">
-              <p className="mb-2">Serving Greater Charlotte Area:</p>
-              <div className="space-y-1">
-                {serviceAreas.map((area) => (
-                  <div key={area}>{area}</div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-dark-2 py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-light-3">
+            {/* Navigation columns */}
             <div>
-              © 2024 Roof Solutions Charlotte. All rights reserved.
+              <h3 className="text-lg font-semibold text-light-1 mb-4">Services</h3>
+              <ul className="space-y-3">
+                {navigation.services.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-light-2 hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="hover:text-primary">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-primary">Terms of Service</Link>
-              <span>Licensed & Insured</span>
+
+            <div>
+              <h3 className="text-lg font-semibold text-light-1 mb-4">Company</h3>
+              <ul className="space-y-3">
+                {navigation.company.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-light-2 hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-light-1 mb-4">Support</h3>
+              <ul className="space-y-3">
+                {navigation.support.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-light-2 hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom section */}
+        <div className="border-t border-dark-3 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Social links */}
+            <div className="flex space-x-6">
+              {socialLinks.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-light-2 hover:text-primary transition-colors"
+                  >
+                    <Icon className="h-5 w-5" />
+                    <span className="sr-only">{item.name}</span>
+                  </a>
+                );
+              })}
+            </div>
+
+            {/* Copyright */}
+            <div className="text-light-3 text-sm">
+              © {new Date().getFullYear()} Skyline Roof Masters. All rights reserved.
             </div>
           </div>
         </div>
