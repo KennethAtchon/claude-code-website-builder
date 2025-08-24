@@ -1,0 +1,384 @@
+{
+  "website": {
+    "name": "Skyline Roof Masters",
+    "type": "business",
+    "description": "Premium roofing specialists delivering exceptional craftsmanship and innovative solutions for residential and commercial properties across the region",
+    "industry": "Construction/Roofing",
+    "theme": {
+      "name": "Modern Professional",
+      "aesthetic": "Contemporary clean design with premium materials and sophisticated color palette",
+      "mood": "Premium, trustworthy, and innovative",
+      "targetAudience": "Discerning homeowners and commercial property managers seeking high-quality roofing solutions",
+      "designPrinciples": "Emphasize premium quality, showcase innovative techniques, build trust through transparency and expertise",
+      "gradientStyle": "Elegant gradients that convey sophistication and modernity"
+    },
+    "styles": {
+      "colors": [
+        {
+          "name": "Primary",
+          "hex": "#2563EB"
+        },
+        {
+          "name": "Primary Dark",
+          "hex": "#1D4ED8"
+        },
+        {
+          "name": "Light 1",
+          "hex": "#F8FAFC"
+        },
+        {
+          "name": "Light 2",
+          "hex": "#E2E8F0"
+        },
+        {
+          "name": "Light 3",
+          "hex": "#CBD5E1"
+        },
+        {
+          "name": "Dark 1",
+          "hex": "#0F172A"
+        },
+        {
+          "name": "Dark 2",
+          "hex": "#1E293B"
+        },
+        {
+          "name": "Dark 3",
+          "hex": "#334155"
+        }
+      ],
+      "typography": {
+        "primaryFont": {
+          "name": "Montserrat",
+          "weights": ["300", "400", "500", "600", "700"]
+        },
+        "secondaryFont": {
+          "name": "Merriweather",
+          "weights": ["300", "400", "700"]
+        }
+      }
+    },
+    "structure": {
+      "pages": [
+        {
+          "name": "Home",
+          "path": "/",
+          "layout": "Modern hero section, premium services showcase, innovation highlights, client testimonials, and premium contact CTA",
+          "sections": [
+            {
+              "name": "Hero Section",
+              "type": "hero",
+              "content": "Premium roofing solutions crafted with precision. Transform your property with our award-winning expertise and premium materials.",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+                "video": ""
+              },
+              "cta": {
+                "label": "Schedule Premium Consultation",
+                "link": "/consultation"
+              }
+            },
+            {
+              "name": "Premium Services",
+              "type": "services-grid",
+              "content": "Exclusive roofing services including luxury residential roofing, commercial roofing solutions, roof restoration, and custom architectural roofing",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1582407947304-fd86f028f716",
+                "video": ""
+              },
+              "cta": {
+                "label": "Explore Premium Services",
+                "link": "/services"
+              }
+            },
+            {
+              "name": "Innovation Showcase",
+              "type": "features",
+              "content": "Cutting-edge materials, advanced installation techniques, energy-efficient solutions, smart roofing technology integration, and sustainable practices",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+                "video": ""
+              },
+              "cta": {
+                "label": "Discover Innovation",
+                "link": "/technology"
+              }
+            },
+            {
+              "name": "Client Success Stories",
+              "type": "testimonials",
+              "content": "Premium testimonials from satisfied clients showcasing exceptional craftsmanship and outstanding service delivery",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72",
+                "video": ""
+              },
+              "cta": {
+                "label": "Read More Success Stories",
+                "link": "/testimonials"
+              }
+            },
+            {
+              "name": "Premium Consultation CTA",
+              "type": "cta-section",
+              "content": "Ready for a premium roofing experience? Schedule your exclusive consultation with our master craftsmen",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1556156653-e5a7c83a09cb",
+                "video": ""
+              },
+              "cta": {
+                "label": "Book Premium Consultation",
+                "link": "/consultation"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "path": "/services",
+          "layout": "Premium service categories with detailed craftsmanship descriptions, material options, and custom solutions",
+          "sections": [
+            {
+              "name": "Services Hero",
+              "type": "hero",
+              "content": "Exclusive roofing services crafted to the highest standards with premium materials and expert craftsmanship",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1582407947304-fd86f028f716",
+                "video": ""
+              },
+              "cta": {
+                "label": "Request Custom Quote",
+                "link": "/quote"
+              }
+            },
+            {
+              "name": "Luxury Residential",
+              "type": "service-category",
+              "content": "Custom luxury roofing solutions, premium material selection, architectural design integration, and exclusive warranty programs",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+                "video": ""
+              },
+              "cta": {
+                "label": "Luxury Residential Quote",
+                "link": "/quote"
+              }
+            },
+            {
+              "name": "Commercial Excellence",
+              "type": "service-category",
+              "content": "Advanced commercial roofing systems, large-scale project management, energy-efficient solutions, and 24/7 maintenance support",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+                "video": ""
+              },
+              "cta": {
+                "label": "Commercial Solutions",
+                "link": "/quote"
+              }
+            },
+            {
+              "name": "Restoration Mastery",
+              "type": "service-category",
+              "content": "Historic roof restoration, premium material matching, structural reinforcement, and preservation techniques",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1593062091239-7d1a90e91c4c",
+                "video": ""
+              },
+              "cta": {
+                "label": "Restoration Quote",
+                "link": "/quote"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Technology",
+          "path": "/technology",
+          "layout": "Innovation showcase, advanced materials, smart roofing solutions, and sustainable practices",
+          "sections": [
+            {
+              "name": "Innovation Hero",
+              "type": "hero",
+              "content": "Leading the future of roofing with cutting-edge technology and sustainable innovation",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+                "video": ""
+              },
+              "cta": {
+                "label": "Explore Technology",
+                "link": "#innovation"
+              }
+            },
+            {
+              "name": "Advanced Materials",
+              "type": "content-block",
+              "content": "Premium materials including advanced composites, sustainable options, energy-efficient solutions, and cutting-edge protective coatings",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa",
+                "video": ""
+              },
+              "cta": {
+                "label": "Material Specifications",
+                "link": "#materials"
+              }
+            },
+            {
+              "name": "Smart Roofing",
+              "type": "features",
+              "content": "IoT integration, weather monitoring systems, energy optimization, and predictive maintenance technology",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+                "video": ""
+              },
+              "cta": {
+                "label": "Smart Solutions",
+                "link": "#smart"
+              }
+            },
+            {
+              "name": "Sustainability",
+              "type": "content-block",
+              "content": "Eco-friendly materials, energy-efficient installations, waste reduction practices, and LEED certification support",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1472289065668-ce650ac443d2",
+                "video": ""
+              },
+              "cta": {
+                "label": "Green Initiatives",
+                "link": "#sustainability"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Portfolio",
+          "path": "/portfolio",
+          "layout": "Premium project galleries, architectural showcases, before/after transformations, and award-winning installations",
+          "sections": [
+            {
+              "name": "Portfolio Hero",
+              "type": "hero",
+              "content": "Showcasing our premium craftsmanship through exceptional roofing projects and architectural transformations",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Complete Portfolio",
+                "link": "#gallery"
+              }
+            },
+            {
+              "name": "Luxury Residential Gallery",
+              "type": "gallery",
+              "content": "Stunning luxury residential projects featuring custom designs, premium materials, and exceptional craftsmanship",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+                "video": ""
+              },
+              "cta": {
+                "label": "Residential Services",
+                "link": "/services"
+              }
+            },
+            {
+              "name": "Commercial Showcase",
+              "type": "gallery",
+              "content": "Impressive commercial installations demonstrating our expertise with large-scale projects and complex requirements",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+                "video": ""
+              },
+              "cta": {
+                "label": "Commercial Services",
+                "link": "/services"
+              }
+            },
+            {
+              "name": "Award-Winning Projects",
+              "type": "gallery",
+              "content": "Recognized projects that have received industry awards for innovation, design excellence, and craftsmanship",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1593062091239-7d1a90e91c4c",
+                "video": ""
+              },
+              "cta": {
+                "label": "View Awards",
+                "link": "#awards"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Consultation",
+          "path": "/consultation",
+          "layout": "Premium consultation booking, expert assessment, custom solution design, and exclusive service packages",
+          "sections": [
+            {
+              "name": "Consultation Hero",
+              "type": "hero",
+              "content": "Experience our premium consultation service with master craftsmen who deliver personalized roofing solutions",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1556156653-e5a7c83a09cb",
+                "video": ""
+              },
+              "cta": {
+                "label": "Book Consultation",
+                "link": "#booking"
+              }
+            },
+            {
+              "name": "Consultation Process",
+              "type": "process",
+              "content": "Initial assessment, detailed analysis, custom solution design, premium quote, and project planning",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1552664730-d307ca884978",
+                "video": ""
+              },
+              "cta": {
+                "label": "Learn About Process",
+                "link": "#process"
+              }
+            },
+            {
+              "name": "Booking Form",
+              "type": "contact-form",
+              "content": "Schedule your premium consultation with fields for property details, service requirements, timeline, and preferred consultation method",
+              "media": {
+                "image": "",
+                "video": ""
+              },
+              "cta": {
+                "label": "Schedule Consultation",
+                "link": "#"
+              }
+            },
+            {
+              "name": "Expert Team",
+              "type": "team",
+              "content": "Meet our team of master craftsmen, certified roofing specialists, and design experts who deliver exceptional results",
+              "media": {
+                "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+                "video": ""
+              },
+              "cta": {
+                "label": "Meet Our Experts",
+                "link": "/about#team"
+              }
+            }
+          ]
+        }
+      ],
+      "layouts": {
+        "layoutStyle": "Modern premium layout with sophisticated navigation, elegant typography, and high-end visual elements",
+        "navigationStyle": "Minimalist header with premium service menu, consultation booking button, and seamless mobile experience",
+        "extra": "Include premium testimonials, detailed project galleries, technology showcase, and exclusive consultation booking system"
+      }
+    }
+  },
+  "templateInfo": {
+    "version": "2.0",
+    "type": "filled",
+    "description": "Premium roofing company website with focus on luxury services, innovative technology, and exceptional craftsmanship"
+  }
+}

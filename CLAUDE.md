@@ -20,19 +20,20 @@ For every new project, execute the following commands to set up the environment.
    cd {app}
    ```
 3. **Configure for Static Export (CRITICAL - Do this immediately):**
-   ```bash
-   cd {app} && echo 'import type { NextConfig } from "next";
+   Create `next.config.ts` file in the project root with the following content:
+   ```ts
+   import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  output: "export",
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  images: {
-    unoptimized: true,
-  },
-};
+   const nextConfig: NextConfig = {
+     output: "export",
+     trailingSlash: true,
+     skipTrailingSlashRedirect: true,
+     images: {
+       unoptimized: true,
+     },
+   };
 
-export default nextConfig;' > next.config.ts
+   export default nextConfig;
    ```
 4. **Initialize shadcn:**
    ```bash
