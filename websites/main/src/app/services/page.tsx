@@ -1,157 +1,191 @@
-import type { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/sections/HeroSection";
-import ServicesGrid from "@/components/sections/ServicesGrid";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { Phone, Droplets, Wrench, Hammer, Pickaxe, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import AnimatedSection from "@/components/animations/AnimatedSection";
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: "Premium Roofing Services - Skyline Roof Masters",
-  description: "Exclusive roofing services crafted to the highest standards with premium materials and expert craftsmanship",
-  keywords: ["luxury residential roofing", "commercial roofing", "roof restoration", "custom architectural roofing"],
+  title: "Plumbing Services - Water Heater, Drain Cleaning & More | B.E.T. Plumbing LLC",
+  description: "Complete plumbing services in Pittsburgh and Allegheny County. Water heater installation, drain cleaning, pipe repair, excavation work, and emergency services. Licensed and insured.",
+  keywords: ["water heater installation Pittsburgh", "drain cleaning", "pipe repair", "emergency plumbing", "excavation work", "bathroom remodel"],
 };
+
+const services = [
+  {
+    icon: Droplets,
+    title: "Water Heater Services",
+    description: "Complete water heater installation, repair, and replacement services. We work with all major brands and can handle both traditional tank and tankless systems. Professional installation ensures optimal performance and extends equipment life.",
+    features: [
+      "Tank and tankless water heater installation",
+      "Water heater repair and maintenance",
+      "Energy-efficient system upgrades",
+      "Emergency water heater replacement",
+      "Professional warranty service",
+      "All major brands supported"
+    ],
+    image: "/2021-02-01.jpg",
+  },
+  {
+    icon: Wrench,
+    title: "Drain Cleaning & Repair",
+    description: "Professional drain cleaning services using advanced equipment to clear even the toughest clogs. From kitchen sinks to main sewer lines, we restore proper drainage quickly and effectively.",
+    features: [
+      "Kitchen and bathroom drain cleaning",
+      "Main sewer line clearing",
+      "Hydro-jetting for tough blockages",
+      "Camera inspection services",
+      "Root removal from pipes",
+      "Preventive maintenance programs"
+    ],
+    image: "/2021-03-02.jpg",
+  },
+  {
+    icon: Hammer,
+    title: "Pipe Installation & Repair",
+    description: "Expert pipe installation and repair services for residential and commercial properties. We handle everything from small leak repairs to complete repiping projects using quality materials and proven techniques.",
+    features: [
+      "Leak detection and repair",
+      "Complete repiping projects",
+      "PEX and copper pipe installation",
+      "Frozen pipe repair and prevention",
+      "Water line installation",
+      "Gas line installation and repair"
+    ],
+    image: "/2021-03-09.jpg",
+  },
+  {
+    icon: Pickaxe,
+    title: "Excavation & Underground Work",
+    description: "Professional excavation services for sewer line repair, water line installation, and underground plumbing work. We use proper equipment and techniques to minimize property damage while completing necessary underground repairs.",
+    features: [
+      "Sewer line excavation and repair",
+      "Water line installation",
+      "Underground utility location",
+      "Trenchless repair options",
+      "Property restoration services",
+      "Emergency excavation services"
+    ],
+    image: "/2022-01-15.jpg",
+  },
+];
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
-      <Header />
-      
-      <main className="pt-16">
-        {/* Services Hero */}
-        <HeroSection
-          title="Exclusive Roofing Services"
-          content="Crafted to the highest standards with premium materials and expert craftsmanship"
-          ctaLabel="Request Custom Quote"
-          ctaLink="/quote"
-          imageUrl="https://images.unsplash.com/photo-1582407947304-fd86f028f716"
-        />
-
-        {/* Service Categories */}
-        <section className="py-20 bg-light-1">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              
-              {/* Luxury Residential */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="relative h-64">
-                  <img
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                    alt="Luxury Residential Roofing"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-1/60 to-transparent" />
-                </div>
-                <div className="p-8">
-                  <h2 className="text-2xl font-bold text-dark-1 mb-4">Luxury Residential</h2>
-                  <p className="text-dark-2 mb-6">Custom luxury roofing solutions, premium material selection, architectural design integration, and exclusive warranty programs</p>
-                  <ul className="space-y-2 text-dark-2 mb-6">
-                    <li>• Premium material selection</li>
-                    <li>• Custom design integration</li>
-                    <li>• Exclusive warranty programs</li>
-                    <li>• Master craftsman installation</li>
-                  </ul>
-                  <a
-                    href="/consultation"
-                    className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    Get Luxury Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Commercial Excellence */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="relative h-64">
-                  <img
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
-                    alt="Commercial Roofing"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-1/60 to-transparent" />
-                </div>
-                <div className="p-8">
-                  <h2 className="text-2xl font-bold text-dark-1 mb-4">Commercial Excellence</h2>
-                  <p className="text-dark-2 mb-6">Advanced commercial roofing systems, large-scale project management, energy-efficient solutions, and 24/7 maintenance support</p>
-                  <ul className="space-y-2 text-dark-2 mb-6">
-                    <li>• Large-scale project management</li>
-                    <li>• Energy-efficient solutions</li>
-                    <li>• 24/7 maintenance support</li>
-                    <li>• Advanced roofing systems</li>
-                  </ul>
-                  <a
-                    href="/consultation"
-                    className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    Commercial Solutions
-                  </a>
-                </div>
-              </div>
-
-              {/* Restoration Mastery */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="relative h-64">
-                  <img
-                    src="https://images.unsplash.com/photo-1593062091239-7d1a90e91c4c"
-                    alt="Roof Restoration"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-1/60 to-transparent" />
-                </div>
-                <div className="p-8">
-                  <h2 className="text-2xl font-bold text-dark-1 mb-4">Restoration Mastery</h2>
-                  <p className="text-dark-2 mb-6">Historic roof restoration, premium material matching, structural reinforcement, and preservation techniques</p>
-                  <ul className="space-y-2 text-dark-2 mb-6">
-                    <li>• Historic preservation techniques</li>
-                    <li>• Premium material matching</li>
-                    <li>• Structural reinforcement</li>
-                    <li>• Heritage compliance</li>
-                  </ul>
-                  <a
-                    href="/consultation"
-                    className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    Restoration Quote
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-20 bg-gradient-to-br from-dark-1 to-dark-2">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-light-1 mb-6">
-                Our Premium Process
-              </h2>
-              <p className="text-xl text-light-2 max-w-3xl mx-auto">
-                From initial consultation to final installation, every step is crafted for excellence
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Professional Plumbing Services
+              </h1>
+              <p className="text-xl text-white/90 leading-relaxed">
+                From emergency repairs to planned installations, we handle it all with professional 
+                expertise and fair pricing. Serving Pittsburgh and Allegheny County.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
+                  <Link href="tel:+14127336355">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (412) 733-6355
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-white text-black hover:bg-white hover:text-primary">
+                  <Link href="/contact">
+                    Get Free Estimate
+                  </Link>
+                </Button>
+              </div>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[
-                { step: "01", title: "Consultation", description: "Comprehensive assessment and custom solution design" },
-                { step: "02", title: "Design", description: "Detailed planning with premium material selection" },
-                { step: "03", title: "Installation", description: "Expert craftsmanship with precision techniques" },
-                { step: "04", title: "Quality Assurance", description: "Thorough inspection and lifetime warranty" },
-              ].map((item, index) => (
-                <div key={item.step} className="text-center">
-                  <div className="bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">{item.step}</span>
+      {/* Services Grid */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="space-y-16">
+            {services.map((service, index) => (
+              <AnimatedSection key={service.title} delay={index * 0.2}>
+                <Card className="overflow-hidden">
+                  <div className={`grid grid-cols-1 lg:grid-cols-2 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                    <div className={`aspect-[4/3] relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
+                    <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                      <div className="flex items-center space-x-3 mb-6">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                          <service.icon className="w-6 h-6 text-primary" />
+                        </div>
+                        <h2 className="text-3xl font-bold text-foreground">
+                          {service.title}
+                        </h2>
+                      </div>
+                      
+                      <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center space-x-2">
+                            <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                            <span className="text-sm text-foreground">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <Button asChild className="bg-primary hover:bg-primary/90 self-start">
+                        <Link href="tel:+14127336355">
+                          Get Quote for {service.title}
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-light-1 mb-2">{item.title}</h3>
-                  <p className="text-light-2 text-sm">{item.description}</p>
-                </div>
-              ))}
-            </div>
+                </Card>
+              </AnimatedSection>
+            ))}
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      <Footer />
+      {/* Emergency Service CTA */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <Card className="bg-gradient-to-r from-red-600 to-red-700 text-white">
+              <CardContent className="p-12 text-center">
+                <h2 className="text-4xl font-bold mb-6">
+                  24/7 Emergency Plumbing Services
+                </h2>
+                <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+                  Plumbing emergency? We're available 24/7 on weekends for urgent repairs. 
+                  Fast response times when you need us most in Pittsburgh and Allegheny County.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button asChild size="lg" className="bg-white text-red-600 hover:bg-white/90 text-lg px-8 py-6">
+                    <Link href="tel:+14127336355">
+                      <Phone className="w-5 h-5 mr-3" />
+                      Emergency Call: (412) 733-6355
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,132 +1,106 @@
-"use client";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { Phone, Clock, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Calendar } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/animations/AnimatedSection";
 
-interface CTASectionProps {
-  title: string;
-  content: string;
-  ctaLabel: string;
-  ctaLink: string;
-  imageUrl: string;
-}
-
-export default function CTASection({ title, content, ctaLabel, ctaLink, imageUrl }: CTASectionProps) {
+export default function CTASection() {
   return (
-    <section className="relative py-20 overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <Image
-          src={imageUrl}
-          alt="Premium consultation"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
-      </div>
+    <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <AnimatedSection>
+            <div className="space-y-6">
+              <div className="flex items-center space-x-2 text-yellow-400 mb-4">
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <span className="text-white font-medium">5.0 Stars • 76+ Reviews</span>
+              </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection>
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              {title}
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed">
-              {content}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link href={ctaLink}>
-                <Button 
-                  size="lg"
-                  className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Calendar className="h-5 w-5 mr-2" />
-                  {ctaLabel}
-                </Button>
-              </Link>
+              <h2 className="text-4xl font-bold leading-tight">
+                Ready to Solve Your Plumbing Problems?
+              </h2>
               
-              <a href="tel:+1-555-123-4567">
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold"
-                >
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (555) 123-4567
+              <p className="text-xl text-white/90 leading-relaxed">
+                Contact Brandon at B.E.T. Plumbing LLC today for fast, professional service. 
+                Located at 121 Ingram Ave, Pittsburgh, we serve all of Allegheny County.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Clock className="w-6 h-6 text-yellow-400" />
+                  <div>
+                    <p className="font-semibold">Business Hours</p>
+                    <p className="text-white/90">Monday-Friday 7AM-5PM</p>
+                    <p className="text-sm text-yellow-400">24-hour weekend emergency services available</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-6 h-6 text-yellow-400" />
+                  <div>
+                    <p className="font-semibold">Service Area</p>
+                    <p className="text-white/90">Pittsburgh, Ingram, and all of Allegheny County</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6">
+                  <Link href="tel:+14127336355">
+                    <Phone className="w-5 h-5 mr-3" />
+                    Call (412) 733-6355
+                  </Link>
                 </Button>
-              </a>
+                <Button asChild variant="outline" size="lg" className="border-white text-black hover:bg-white hover:text-primary text-lg px-8 py-6">
+                  <Link href="/contact">
+                    Schedule Service
+                  </Link>
+                </Button>
+              </div>
             </div>
+          </AnimatedSection>
 
-            {/* Contact options */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-center"
-              >
-                <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
-                  <Calendar className="h-8 w-8 text-white mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    Free Consultation
-                  </h3>
-                  <p className="text-white/80 text-sm">
-                    Schedule your premium consultation with our master craftsmen
+          <AnimatedSection delay={0.2}>
+            <div className="space-y-6">
+              <Card className="bg-white/10 backdrop-blur border-white/20">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold mb-4">Emergency Service</h3>
+                  <p className="text-white/90 mb-6">
+                    Plumbing emergency? We're available 24/7 on weekends for urgent repairs. 
+                    Fast response times when you need us most.
                   </p>
-                </div>
-              </motion.div>
+                  <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
+                    <Link href="tel:+14127336355">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Emergency Call
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-center"
-              >
-                <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
-                  <Phone className="h-8 w-8 text-white mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    24/7 Emergency
-                  </h3>
-                  <p className="text-white/80 text-sm">
-                    Emergency roofing services available around the clock
+              <Card className="bg-white/10 backdrop-blur border-white/20">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold mb-4">Free Estimates</h3>
+                  <p className="text-white/90 mb-6">
+                    Get a free estimate for your plumbing project. We provide honest, 
+                    transparent pricing with no hidden fees.
                   </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center"
-              >
-                <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
-                  <Mail className="h-8 w-8 text-white mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    Expert Advice
-                  </h3>
-                  <p className="text-white/80 text-sm">
-                    Get professional recommendations for your roofing needs
-                  </p>
-                </div>
-              </motion.div>
+                  <Button asChild variant="outline" className="border-white text-black hover:bg-white hover:text-primary">
+                    <Link href="/contact">
+                      Request Estimate
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-2xl" />
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-3xl" />
     </section>
   );
 }

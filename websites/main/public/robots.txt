@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://skylineroof.com/sitemap.xml
+# Sitemap location
+Sitemap: https://bet-plumbing.netlify.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

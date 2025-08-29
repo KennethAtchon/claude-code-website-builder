@@ -1,142 +1,119 @@
+import React from "react";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Phone, MapPin, Clock, Mail, Star } from "lucide-react";
 
 export default function Footer() {
-  const navigation = {
-    services: [
-      { name: "Residential Roofing", href: "/services" },
-      { name: "Commercial Roofing", href: "/services" },
-      { name: "Roof Restoration", href: "/services" },
-      { name: "Emergency Repairs", href: "/services" },
-    ],
-    company: [
-      { name: "About Us", href: "/about" },
-      { name: "Portfolio", href: "/portfolio" },
-      { name: "Technology", href: "/technology" },
-      { name: "Testimonials", href: "/testimonials" },
-    ],
-    support: [
-      { name: "Contact", href: "/contact" },
-      { name: "Consultation", href: "/consultation" },
-      { name: "Warranty", href: "/warranty" },
-      { name: "Maintenance", href: "/maintenance" },
-    ],
-  };
-
-  const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "#" },
-    { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "LinkedIn", icon: Linkedin, href: "#" },
-    { name: "Instagram", icon: Instagram, href: "#" },
-  ];
-
   return (
-    <footer className="bg-dark-1 text-light-1">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main footer content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {/* Company info */}
-            <div className="lg:col-span-2">
-              <div className="text-2xl font-bold text-primary mb-4">
-                Skyline Roof Masters
+    <footer className="bg-primary text-primary-foreground">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div>
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center">
+                <span className="text-primary  font-bold text-xl">BET</span>
               </div>
-              <p className="text-light-2 mb-6 max-w-md">
-                Premium roofing specialists delivering exceptional craftsmanship and innovative solutions for residential and commercial properties across the region.
-              </p>
-              
-              {/* Contact info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <span className="text-light-2">(555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <span className="text-light-2">info@skylineroof.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <span className="text-light-2">123 Roofing Ave, City, ST 12345</span>
-                </div>
+              <div>
+                <span className="text-xl  font-bold">B.E.T. Plumbing</span>
+                <p className="text-sm  opacity-90">Professional Plumbing Services</p>
               </div>
             </div>
-
-            {/* Navigation columns */}
-            <div>
-              <h3 className="text-lg font-semibold text-light-1 mb-4">Services</h3>
-              <ul className="space-y-3">
-                {navigation.services.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-light-2 hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
+            <p className="text-sm  opacity-90 mb-4">
+              Professional plumbing services you can trust. Serving Pittsburgh and Allegheny County with fast, reliable repairs and installations.
+            </p>
+            <div className="flex items-center space-x-1 text-sm">
+              <div className="flex">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-4 h-4 fill-current text-yellow-400" />
                 ))}
-              </ul>
+              </div>
+              <span className="ml-2 ">5.0 Stars (76+ Reviews)</span>
             </div>
+          </div>
 
-            <div>
-              <h3 className="text-lg font-semibold text-light-1 mb-4">Company</h3>
-              <ul className="space-y-3">
-                {navigation.company.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-light-2 hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg  font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/portfolio" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            <div>
-              <h3 className="text-lg font-semibold text-light-1 mb-4">Support</h3>
-              <ul className="space-y-3">
-                {navigation.support.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-light-2 hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Services */}
+          <div>
+            <h3 className="text-lg  font-semibold mb-4">Our Services</h3>
+            <ul className="space-y-2 text-sm  opacity-90">
+              <li>Water Heater Installation</li>
+              <li>Drain Cleaning</li>
+              <li>Pipe Repair & Installation</li>
+              <li>Emergency Plumbing</li>
+              <li>Bathroom Remodels</li>
+              <li>Excavation Work</li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg  font-semibold mb-4">Contact Info</h3>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className=" font-semibold">(412) 733-6355</p>
+                  <p className="text-sm  opacity-90">24/7 Weekend Emergency</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm ">121 Ingram Ave</p>
+                  <p className="text-sm ">Pittsburgh, PA 15205</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm ">Mon-Fri: 7AM-5PM</p>
+                  <p className="text-sm  opacity-90">24/7 Weekend Availability</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom section */}
-        <div className="border-t border-dark-3 py-8">
+        {/* Bottom Bar */}
+        <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Social links */}
-            <div className="flex space-x-6">
-              {socialLinks.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-light-2 hover:text-primary transition-colors"
-                  >
-                    <Icon className="h-5 w-5" />
-                    <span className="sr-only">{item.name}</span>
-                  </a>
-                );
-              })}
-            </div>
-
-            {/* Copyright */}
-            <div className="text-light-3 text-sm">
-              © {new Date().getFullYear()} Skyline Roof Masters. All rights reserved.
-            </div>
+            <p className="text-sm  opacity-90">
+              © 2024 B.E.T. Plumbing LLC. All rights reserved. | Licensed & Insured
+            </p>
+            <p className="text-sm  opacity-90">
+              Serving Pittsburgh, Ingram, and all of Allegheny County
+            </p>
           </div>
         </div>
       </div>

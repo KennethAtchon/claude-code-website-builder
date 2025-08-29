@@ -1,0 +1,420 @@
+{
+    "website": {
+      "name": "B.E.T. Plumbing LLC",
+      "type": "business",
+      "description": "Professional plumbing company owned by Brandon Tolkacevic, serving Pittsburgh and Allegheny County with comprehensive plumbing services including emergency repairs, water heater installation, drain cleaning, and complete bathroom remodels. Available 24/7 on weekends with same-day service.",
+      "industry": "plumbing",
+      "theme": {
+        "name": "Professional Plumbing Services",
+        "aesthetic": "Professional and trustworthy with clean, modern design showcasing expertise and reliability",
+        "mood": "Confident, dependable, and approachable - conveying professional competence while remaining accessible to homeowners",
+        "targetAudience": "Homeowners and property managers in Pittsburgh and Allegheny County seeking reliable plumbing services",
+        "designPrinciples": "Clean layouts with strong visual hierarchy, prominent contact information, before/after work showcases, and trust signals like reviews and certifications",
+        "gradientStyle": "Navy blue hexagonal logo-inspired design with subtle gradients from navy to deeper navy tones, clean white backgrounds and professional navy accents matching the BET logo"
+      },
+      "styles": {
+        "colors": [
+          {
+            "name": "Primary",
+            "hex": "#1B2951"
+          },
+          {
+            "name": "Primary Dark",
+            "hex": "#0F1937"
+          },
+          {
+            "name": "Light 1",
+            "hex": "#F8FAFC"
+          },
+          {
+            "name": "Light 2",
+            "hex": "#F1F5F9"
+          },
+          {
+            "name": "Light 3",
+            "hex": "#E2E8F0"
+          },
+          {
+            "name": "Dark 1",
+            "hex": "#334155"
+          },
+          {
+            "name": "Dark 2",
+            "hex": "#1E293B"
+          },
+          {
+            "name": "Dark 3",
+            "hex": "#1B2951"
+          }
+        ],
+        "typography": {
+          "primaryFont": {
+            "name": "Inter",
+            "weights": "400,500,600,700"
+          },
+          "secondaryFont": {
+            "name": "Inter",
+            "weights": "400,500,600"
+          }
+        }
+      },
+      "structure": {
+        "pages": [
+          {
+            "name": "Home",
+            "path": "/",
+            "layout": "Hero section with company name, tagline, and emergency contact prominently displayed over professional plumbing background image. Below hero: services overview grid with 6 key services (3 columns on desktop, 2 on tablet, 1 on mobile). Next section: company credentials with years of experience, service areas, and review score with star rating. Testimonials section with customer reviews in card format. Contact section with phone, address, service hours, and service area map. Footer with contact info, service links, and business information.",
+            "sections": [
+              {
+                "name": "Hero",
+                "type": "hero",
+                "content": "Professional plumbing services you can trust. Brandon Tolkacevic and the B.E.T. Plumbing team serve Pittsburgh and Allegheny County with fast, reliable repairs and installations. Available 24/7 on weekends - we respond within hours, not days.",
+                "media": {
+                  "image": "/images/2021-02-01.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Call Now: (412) 733-6355",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Services Grid",
+                "type": "services",
+                "content": "Complete plumbing solutions for your home and business. From emergency repairs to scheduled installations, we handle it all with professional expertise and fair pricing.",
+                "media": {
+                  "image": "/images/2021-03-07.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Get Free Estimate",
+                  "link": "/contact"
+                }
+              },
+              {
+                "name": "About & Credentials",
+                "type": "about",
+                "content": "B.E.T. Plumbing LLC, owned by Brandon Tolkacevic, has been serving Pittsburgh and surrounding areas with professional plumbing services. We specialize in water heater installation, drain cleaning, pipe repair, complete bathroom remodels, and emergency services. Operating Monday-Friday 7AM-5PM with 24-hour weekend availability, our commitment to quality work and customer satisfaction has earned us 5.0 stars on Google with over 76 reviews.",
+                "media": {
+                  "image": "/images/2021-03-09.jpg",
+                  "video": "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC/@40.4427197,-80.0705883,3a,75y,90t/data=!3m8!1e5!3m6!1sAF1QipOxIsgJ2zIrpVLsngSTUroBAzwPZwkuVeJfMzMQ!2e10!3e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipOxIsgJ2zIrpVLsngSTUroBAzwPZwkuVeJfMzMQ%3Dw203-h360-k-no!7i2160!8i3840!4m9!3m8!1s0x8834f784bc3c6c29:0x8fb929fd03fd8dd9!8m2!3d40.4425312!4d-80.0704956!10e5!14m1!1BCgIgARICCAQ!16s%2Fg%2F11m46qykhn"
+                },
+                "cta": {
+                  "label": "View Our Work",
+                  "link": "/portfolio"
+                }
+              },
+              {
+                "name": "Customer Reviews",
+                "type": "testimonials",
+                "content": "Real testimonials from satisfied customers: 'I couldn't be happier with the service I received from BET Plumbing' - Dandelion Nails. 'BET is literally the fastest plumber service that I've ever encountered' - M D. 'Prices are fair and quality of work is guaranteed satisfaction' - LeQuira Hutson. 'Brandon is a true professional and knows what he is doing when it comes to plumbing. Quick, reliable young man' - Home Advisor (5.0 rating).",
+                "media": {
+                  "image": "/images/2021-03-14.jpg",
+                  "video": "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC/@40.4427197,-80.0705883,3a,75y,90t/data=!3m8!1e5!3m6!1sAF1QipOv2ed1ptO7RnWPPvPOK98QxtIDaTR8fjZUGraT!2e10!3e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipOv2ed1ptO7RnWPPvPOK98QxtIDaTR8fjZUGraT%3Dw203-h114-k-no!7i3840!8i2160!4m9!3m8!1s0x8834f784bc3c6c29:0x8fb929fd03fd8dd9!8m2!3d40.4425312!4d-80.0704956!10e5!14m1!1BCgIgARICCAQ!16s%2Fg%2F11m46qykhn"
+                },
+                "cta": {
+                  "label": "Read All Reviews",
+                  "link": "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC"
+                }
+              },
+              {
+                "name": "Contact & Service Areas",
+                "type": "contact",
+                "content": "Ready to solve your plumbing problems? Contact Brandon at B.E.T. Plumbing LLC today for fast, professional service. Located at 121 Ingram Ave, Pittsburgh, we serve all of Allegheny County. Monday-Friday 7AM-5PM, with 24-hour weekend emergency services available.",
+                "media": {
+                  "image": "/images/2022-01-15.jpg",
+                  "video": "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC/@40.4427197,-80.0705883,3a,75y,90t/data=!3m8!1e5!3m6!1sAF1QipPx5w3ZiR88L8752EmfPt25nkfHRObkBPbMHtwT!2e10!3e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipPx5w3ZiR88L8752EmfPt25nkfHRObkBPbMHtwT%3Dw203-h360-k-no!7i2160!8i3840!4m9!3m8!1s0x8834f784bc3c6c29:0x8fb929fd03fd8dd9!8m2!3d40.4425312!4d-80.0704956!10e5!14m1!1BCgIgARICCAQ!16s%2Fg%2F11m46qykhn"
+                },
+                "cta": {
+                  "label": "Schedule Service",
+                  "link": "tel:+14127336355"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Services",
+            "path": "/services",
+            "layout": "Page header with services overview and value proposition. Main content area with detailed service sections, each featuring service description, typical projects, and pricing approach. Service categories include water heater services, drain cleaning, pipe repair, leak detection, excavation work, and emergency services. Each section includes relevant project images and clear calls to action.",
+            "sections": [
+              {
+                "name": "Water Heater Services",
+                "type": "service-detail",
+                "content": "Complete water heater installation, repair, and replacement services. We work with all major brands and can handle both traditional tank and tankless systems. Professional installation ensures optimal performance and extends equipment life.",
+                "media": {
+                  "image": "/images/2021-02-01.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Get Water Heater Quote",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Drain Cleaning & Repair",
+                "type": "service-detail",
+                "content": "Professional drain cleaning services using advanced equipment to clear even the toughest clogs. From kitchen sinks to main sewer lines, we restore proper drainage quickly and effectively.",
+                "media": {
+                  "image": "/images/2021-03-02.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Clear Your Drains",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Pipe Installation & Repair",
+                "type": "service-detail",
+                "content": "Expert pipe installation and repair services for residential and commercial properties. We handle everything from small leak repairs to complete repiping projects using quality materials and proven techniques.",
+                "media": {
+                  "image": "/images/2021-03-09.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Fix Pipe Problems",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Excavation & Underground Work",
+                "type": "service-detail",
+                "content": "Professional excavation services for sewer line repair, water line installation, and underground plumbing work. We use proper equipment and techniques to minimize property damage while completing necessary underground repairs.",
+                "media": {
+                  "image": "/images/2022-01-15.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Schedule Excavation",
+                  "link": "tel:+14127336355"
+                }
+              }
+            ]
+          },
+          {
+            "name": "About",
+            "path": "/about",
+            "layout": "Company introduction with business history and values. Team section highlighting expertise and commitment to quality. Service area information with coverage map. Credentials and certifications section. Company mission and customer commitment statements with supporting testimonials.",
+            "sections": [
+              {
+                "name": "Our Story",
+                "type": "company-intro",
+                "content": "B.E.T. Plumbing LLC was founded with a simple mission: provide reliable, professional plumbing services at fair prices. Based in Ingram, Pennsylvania, we've built our reputation on quality work, honest pricing, and exceptional customer service throughout Pittsburgh and Allegheny County.",
+                "media": {
+                  "image": "/images/2021-03-14.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Learn More About Our Services",
+                  "link": "/services"
+                }
+              },
+              {
+                "name": "Service Excellence",
+                "type": "values",
+                "content": "Our commitment to excellence shows in every job we complete. From emergency repairs to planned installations, we approach each project with professionalism and attention to detail. Our 5.0 Google rating reflects our dedication to customer satisfaction and quality workmanship.",
+                "media": {
+                  "image": "/images/2021-09-11.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Read Customer Reviews",
+                  "link": "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC"
+                }
+              },
+              {
+                "name": "Service Area",
+                "type": "coverage",
+                "content": "Proudly serving Pittsburgh, Ingram, and all of Allegheny County. Our central location allows us to provide fast response times throughout the region. Whether you're dealing with a plumbing emergency or planning a renovation, we're here to help.",
+                "media": {
+                  "image": "/images/2021-09-12.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Call for Service",
+                  "link": "tel:+14127336355"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Portfolio",
+            "path": "/portfolio",
+            "layout": "Project showcase gallery with before/after images organized by service category. Each project features description of work performed, challenges overcome, and results achieved. Filter options allow visitors to view projects by service type (water heaters, drain cleaning, pipe work, excavation). Testimonials integrated throughout to provide context and customer feedback.",
+            "sections": [
+              {
+                "name": "Water Heater Installations",
+                "type": "project-gallery",
+                "content": "Professional water heater installations showcasing our expertise with various systems and configurations. Each installation meets code requirements and manufacturer specifications for optimal performance and longevity.",
+                "media": {
+                  "image": "/images/2021-02-01.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Request Water Heater Service",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Drain Cleaning Projects",
+                "type": "project-gallery",
+                "content": "Examples of our drain cleaning work, from simple clogs to complex main line issues. We use professional equipment and techniques to restore proper drainage and prevent future problems.",
+                "media": {
+                  "image": "/images/2021-03-02.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Get Drain Cleaning Help",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Pipe Installation & Repair",
+                "type": "project-gallery",
+                "content": "Comprehensive pipe work including new installations, repairs, and system upgrades. Our work ensures reliable water supply and proper drainage for residential and commercial properties.",
+                "media": {
+                  "image": "/images/2021-03-09.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Schedule Pipe Work",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Excavation & Underground Work",
+                "type": "project-gallery",
+                "content": "Professional excavation projects for sewer line repair, water line installation, and underground utility work. We complete these projects efficiently while minimizing disruption to your property.",
+                "media": {
+                  "image": "/images/2022-01-15.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Discuss Underground Work",
+                  "link": "tel:+14127336355"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Contact",
+            "path": "/contact",
+            "layout": "Contact header with multiple contact methods prominently displayed. Main section split between contact form on left and business information on right including address, phone, hours, and service areas. Emergency contact information highlighted throughout. Map section showing service coverage area across Pittsburgh and Allegheny County.",
+            "sections": [
+              {
+                "name": "Get In Touch",
+                "type": "contact-form",
+                "content": "Ready for professional plumbing service? Contact B.E.T. Plumbing LLC today. Call us directly for immediate assistance or use our contact form to describe your plumbing needs. We provide free estimates for most services.",
+                "media": {
+                  "image": "/images/2021-03-07.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Call Now: (412) 733-6355",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Business Information",
+                "type": "business-info",
+                "content": "B.E.T. Plumbing LLC is located at 121 Ingram Ave, Pittsburgh, PA 15205. We serve all of Allegheny County and surrounding areas. Our team is available for emergency services and scheduled appointments.",
+                "media": {
+                  "image": "/images/2021-03-14.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Schedule Service",
+                  "link": "tel:+14127336355"
+                }
+              },
+              {
+                "name": "Service Hours & Coverage",
+                "type": "hours-coverage",
+                "content": "We provide plumbing services throughout Pittsburgh and Allegheny County. Emergency services available for urgent plumbing problems. Regular business hours with extended availability for scheduled work and emergency calls.",
+                "media": {
+                  "image": "/images/2022-01-15.jpg",
+                  "video": ""
+                },
+                "cta": {
+                  "label": "Check Service Availability",
+                  "link": "tel:+14127336355"
+                }
+              }
+            ]
+          }
+        ],
+        "layouts": {
+          "layoutStyle": "Clean, professional layout with strong visual hierarchy and prominent contact information throughout. Navy blue and white color scheme matching the hexagonal BET logo conveys trust and professionalism. Generous use of white space with clear section divisions.",
+          "navigationStyle": "Fixed header navigation with company logo, main menu items (Home, Services, About, Portfolio, Contact), and prominent phone number. Mobile hamburger menu with slide-out navigation. Sticky contact button on mobile for easy access.",
+          "extra": "Navy blue hexagonal BET logo prominently displayed in header. Emergency contact information prominently displayed in header and footer. Review ratings and testimonials integrated throughout site. Before/after image galleries showcasing work quality. Service area coverage clearly communicated. Brandon Tolkacevic's name and expertise highlighted throughout. 24/7 weekend availability emphasized for competitive advantage."
+        }
+      }
+    },
+    "templateInfo": {
+      "version": "2.0",
+      "type": "filled",
+      "description": "Professional plumbing services website for B.E.T. Plumbing LLC, showcasing comprehensive plumbing services with emphasis on trustworthiness, professional expertise, and customer satisfaction.",
+      "businessInfo": {
+        "name": "B.E.T. Plumbing LLC",
+        "owner": "Brandon Tolkacevic",
+        "phone": "(412) 733-6355",
+        "address": "121 Ingram Ave, Pittsburgh, PA 15205",
+        "serviceArea": "Pittsburgh, Ingram, Crafton, and all of Allegheny County",
+        "hours": "Monday-Friday 7AM-5PM, 24-hour weekend availability",
+        "rating": "5.0 stars on Google with 76+ reviews",
+        "bbbStatus": "BBB Business Profile (not accredited)",
+        "responseTime": "Same-day service, within 1 hour for emergencies",
+        "specialties": [
+          "Water heater installation and repair",
+          "Drain cleaning and sewer line repairs",
+          "Pipe installation and repair",
+          "Complete bathroom remodels",
+          "Emergency plumbing services (24/7 weekends)",
+          "Excavation and underground work",
+          "Faucet installations",
+          "Kitchen sink repairs",
+          "Small repairs to major renovations"
+        ],
+        "keyDifferentiators": [
+          "Fastest response time in Pittsburgh area",
+          "Available 24/7 on weekends",
+          "Fair and competitive pricing",
+          "Professional, knowledgeable, and timely service",
+          "Highly rated with 5.0 Google rating",
+          "Local owner-operated business"
+        ],
+        "realTestimonials": [
+          {
+            "customer": "Dandelion Nails",
+            "review": "✨ I couldn't be happier with the service I received from BET Plumbing.",
+            "rating": "5.0"
+          },
+          {
+            "customer": "M D",
+            "review": "BET is literally the fastest plumber service that I've ever encountered.",
+            "rating": "5.0"
+          },
+          {
+            "customer": "LeQuira Hutson", 
+            "review": "Prices are fair and quality of work is guaranteed satisfaction.",
+            "rating": "5.0"
+          },
+          {
+            "customer": "Yelp Review",
+            "review": "Excellent work, excellent response time and continued communication. I would highly recommend them for any plumbing job.",
+            "rating": "5.0"
+          },
+          {
+            "customer": "Home Advisor",
+            "review": "Brandon is a true professional and knows what he is doing when it comes to plumbing. Quick, reliable young man. I highly recommend BET for all of your plumbing...",
+            "rating": "5.0"
+          }
+        ],
+        "videoReferences": [
+          "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC/@40.4427197,-80.0705883,3a,75y,90t/data=!3m8!1e5!3m6!1sAF1QipOv2ed1ptO7RnWPPvPOK98QxtIDaTR8fjZUGraT!2e10!3e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipOv2ed1ptO7RnWPPvPOK98QxtIDaTR8fjZUGraT%3Dw203-h114-k-no!7i3840!8i2160!4m9!3m8!1s0x8834f784bc3c6c29:0x8fb929fd03fd8dd9!8m2!3d40.4425312!4d-80.0704956!10e5!14m1!1BCgIgARICCAQ!16s%2Fg%2F11m46qykhn",
+          "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC/@40.4427197,-80.0705883,3a,75y,90t/data=!3m8!1e5!3m6!1sAF1QipOxIsgJ2zIrpVLsngSTUroBAzwPZwkuVeJfMzMQ!2e10!3e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipOxIsgJ2zIrpVLsngSTUroBAzwPZwkuVeJfMzMQ%3Dw203-h360-k-no!7i2160!8i3840!4m9!3m8!1s0x8834f784bc3c6c29:0x8fb929fd03fd8dd9!8m2!3d40.4425312!4d-80.0704956!10e5!14m1!1BCgIgARICCAQ!16s%2Fg%2F11m46qykhn",
+          "https://www.google.com/maps/place/B.E.T.+Plumbing+LLC/@40.4427197,-80.0705883,3a,75y,90t/data=!3m8!1e5!3m6!1sAF1QipPx5w3ZiR88L8752EmfPt25nkfHRObkBPbMHtwT!2e10!3e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipPx5w3ZiR88L8752EmfPt25nkfHRObkBPbMHtwT%3Dw203-h360-k-no!7i2160!8i3840!4m9!3m8!1s0x8834f784bc3c6c29:0x8fb929fd03fd8dd9!8m2!3d40.4425312!4d-80.0704956!10e5!14m1!1BCgIgARICCAQ!16s%2Fg%2F11m46qykhn"
+        ]
+      }
+    }
+  }

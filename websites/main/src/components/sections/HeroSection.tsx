@@ -1,78 +1,103 @@
-"use client";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { Phone, Star, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnimatedSection from "@/components/animations/AnimatedSection";
 
-interface HeroSectionProps {
-  title: string;
-  content: string;
-  ctaLabel: string;
-  ctaLink: string;
-  imageUrl: string;
-}
-
-export default function HeroSection({ title, content, ctaLabel, ctaLink, imageUrl }: HeroSectionProps) {
+export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={imageUrl}
-          alt="Premium roofing craftsmanship"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-1/80 via-dark-1/60 to-dark-1/40" />
-      </div>
+    <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="relative container mx-auto px-4 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <AnimatedSection>
+            <div className="space-y-6">
+              <div className="flex items-center space-x-2 text-yellow-400">
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <span className="text-white font-medium">5.0 Stars • 76+ Reviews</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Professional Plumbing Services You Can Trust
+              </h1>
+              
+              <p className="text-xl text-white/90 leading-relaxed">
+                Brandon Tolkacevic and the B.E.T. Plumbing team serve Pittsburgh and Allegheny County 
+                with fast, reliable repairs and installations. Available 24/7 on weekends - we respond within hours, not days.
+              </p>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto"
-        >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-light-1 mb-6 leading-tight">
-            {title}
-          </h1>
-          <p className="text-xl md:text-2xl text-light-2 mb-8 max-w-3xl mx-auto leading-relaxed">
-            {content}
-          </p>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <Link href={ctaLink}>
-              <Button 
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                {ctaLabel}
-              </Button>
-            </Link>
-          </motion.div>
-        </motion.div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6">
+                  <Link href="tel:+14127336355">
+                    <Phone className="w-5 h-5 mr-3" />
+                    Call Now: (412) 733-6355
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-white text-black hover:bg-white hover:text-primary text-lg px-8 py-6">
+                  <Link href="/contact">
+                    Get Free Estimate
+                  </Link>
+                </Button>
+              </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 border-2 border-light-2 rounded-full flex justify-center"
-          >
-            <div className="w-1 h-3 bg-light-2 rounded-full mt-2" />
-          </motion.div>
-        </motion.div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+                <div className="flex items-center space-x-3">
+                  <Clock className="w-6 h-6 text-yellow-400" />
+                  <div>
+                    <p className="font-semibold">24/7 Emergency</p>
+                    <p className="text-sm opacity-90">Weekend Availability</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-6 h-6 text-yellow-400" />
+                  <div>
+                    <p className="font-semibold">Local Service</p>
+                    <p className="text-sm opacity-90">Pittsburgh & Allegheny County</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Star className="w-6 h-6 text-yellow-400 fill-current" />
+                  <div>
+                    <p className="font-semibold">Licensed & Insured</p>
+                    <p className="text-sm opacity-90">Professional Service</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.2}>
+            <div className="relative">
+              <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/2021-02-01.jpg"
+                  alt="Professional plumber working on pipes"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white text-primary p-6 rounded-lg shadow-xl">
+                <div className="text-center">
+                  <div className="text-3xl font-bold">15+</div>
+                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                </div>
+              </div>
+              <div className="absolute -top-6 -right-6 bg-yellow-400 text-primary p-6 rounded-lg shadow-xl">
+                <div className="text-center">
+                  <div className="text-3xl font-bold">76+</div>
+                  <div className="text-sm text-primary/80">Happy Customers</div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
       </div>
     </section>
   );

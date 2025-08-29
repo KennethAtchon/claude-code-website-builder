@@ -1,142 +1,136 @@
-"use client";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
 import AnimatedSection from "@/components/animations/AnimatedSection";
 
-interface TestimonialsProps {
-  title: string;
-  content: string;
-  ctaLabel: string;
-  ctaLink: string;
-  imageUrl: string;
-}
+const testimonials = [
+  {
+    name: "Dandelion Nails",
+    rating: 5,
+    review: "✨ I couldn't be happier with the service I received from BET Plumbing.",
+    platform: "Google Reviews"
+  },
+  {
+    name: "M D",
+    rating: 5,
+    review: "BET is literally the fastest plumber service that I've ever encountered.",
+    platform: "Google Reviews"
+  },
+  {
+    name: "LeQuira Hutson",
+    rating: 5,
+    review: "Prices are fair and quality of work is guaranteed satisfaction.",
+    platform: "Google Reviews"
+  },
+  {
+    name: "Yelp Customer",
+    rating: 5,
+    review: "Excellent work, excellent response time and continued communication. I would highly recommend them for any plumbing job.",
+    platform: "Yelp"
+  },
+  {
+    name: "Home Advisor Review",
+    rating: 5,
+    review: "Brandon is a true professional and knows what he is doing when it comes to plumbing. Quick, reliable young man. I highly recommend BET for all of your plumbing needs.",
+    platform: "Home Advisor"
+  },
+  {
+    name: "Pittsburgh Resident",
+    rating: 5,
+    review: "Same day service, professional work, and fair pricing. Brandon arrived on time and fixed our water heater issue quickly. Will definitely call again.",
+    platform: "Google Reviews"
+  }
+];
 
-interface Testimonial {
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  image: string;
-}
-
-export default function TestimonialsSection({ title, content, ctaLabel, ctaLink, imageUrl }: TestimonialsProps) {
-  const testimonials: Testimonial[] = [
-    {
-      name: "Sarah Mitchell",
-      role: "Property Manager",
-      company: "Premier Properties",
-      content: "Skyline Roof Masters transformed our commercial building with their innovative roofing solution. The attention to detail and premium materials exceeded our expectations. Truly exceptional craftsmanship.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b9e3",
-    },
-    {
-      name: "David Chen",
-      role: "Homeowner",
-      company: "Luxury Residence",
-      content: "After working with several roofing contractors, Skyline stands apart. Their premium service, cutting-edge technology, and master craftsmen delivered a roof that's both beautiful and incredibly durable.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-    },
-    {
-      name: "Maria Rodriguez",
-      role: "Facilities Director",
-      company: "Metro Hospital",
-      content: "The smart roofing system they installed has reduced our energy costs by 30%. Their professional approach and innovative solutions make them our go-to roofing specialists for all our properties.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
-    },
-  ];
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Star
-        key={index}
-        className={`h-5 w-5 ${
-          index < rating ? "text-yellow-400 fill-current" : "text-gray-300"
-        }`}
-      />
-    ));
-  };
-
+export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-light-2">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-1 mb-6">
-              {title}
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <div className="flex text-yellow-500">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-6 h-6 fill-current" />
+                ))}
+              </div>
+              <span className="text-xl font-semibold text-foreground">5.0 Stars</span>
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              What Our Customers Say
             </h2>
-            <p className="text-xl text-dark-2 max-w-3xl mx-auto">
-              {content}
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Real testimonials from satisfied customers across Pittsburgh and Allegheny County. 
+              See why homeowners trust B.E.T. Plumbing for their plumbing needs.
             </p>
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Card className="h-full bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="p-8 h-full flex flex-col">
-                  {/* Quote icon */}
-                  <Quote className="h-8 w-8 text-primary mb-4" />
-                  
-                  {/* Rating */}
-                  <div className="flex space-x-1 mb-4">
-                    {renderStars(testimonial.rating)}
-                  </div>
-
-                  {/* Content */}
-                  <blockquote className="text-dark-2 mb-6 flex-grow leading-relaxed">
-                    "{testimonial.content}"
-                  </blockquote>
-
-                  {/* Author */}
-                  <div className="flex items-center space-x-4">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                        sizes="48px"
-                      />
+            <AnimatedSection key={index} delay={index * 0.1}>
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex text-yellow-500">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-4 h-4 fill-current" />
+                      ))}
                     </div>
-                    <div>
-                      <div className="font-semibold text-dark-1">
-                        {testimonial.name}
-                      </div>
-                      <div className="text-sm text-dark-2">
-                        {testimonial.role}, {testimonial.company}
-                      </div>
+                    <span className="text-xs text-muted-foreground">{testimonial.platform}</span>
+                  </div>
+                  
+                  <blockquote className="text-foreground mb-4 leading-relaxed">
+                    "{testimonial.review}"
+                  </blockquote>
+                  
+                  <div className="flex items-center justify-between">
+                    <cite className="font-semibold text-primary not-italic">
+                      {testimonial.name}
+                    </cite>
+                    <div className="text-sm text-muted-foreground">
+                      ⭐ {testimonial.rating}.0
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </AnimatedSection>
           ))}
         </div>
 
         <AnimatedSection>
-          <div className="text-center">
-            <Link href={ctaLink}>
-              <Button 
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
-              >
-                {ctaLabel}
+          <div className="text-center space-y-6">
+            <div className="bg-secondary rounded-lg p-8">
+              <div className="flex items-center justify-center space-x-6 mb-6">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary">76+</div>
+                  <div className="text-sm text-muted-foreground">Google Reviews</div>
+                </div>
+                <div className="w-px h-12 bg-border"></div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary">5.0</div>
+                  <div className="text-sm text-muted-foreground">Average Rating</div>
+                </div>
+                <div className="w-px h-12 bg-border"></div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-muted-foreground">Satisfaction</div>
+                </div>
+              </div>
+              
+              <Button asChild className="bg-primary hover:bg-primary/90">
+                <Link 
+                  href="https://www.google.com/maps/place/B.E.T.+Plumbing+LLC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read All Reviews
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </Link>
               </Button>
-            </Link>
+            </div>
           </div>
         </AnimatedSection>
       </div>

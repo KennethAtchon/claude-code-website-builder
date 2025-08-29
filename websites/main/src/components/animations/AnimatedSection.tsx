@@ -1,20 +1,22 @@
 "use client";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ReactNode } from "react";
 
 interface AnimatedSectionProps {
-  children: ReactNode;
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
 }
 
-export default function AnimatedSection({ children }: AnimatedSectionProps) {
+export default function AnimatedSection({ children, className = "", delay = 0 }: AnimatedSectionProps) {
   return (
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="section-content"
+        transition={{ duration: 0.6, ease: "easeOut", delay }}
+        className={className}
       >
         {children}
       </motion.div>
