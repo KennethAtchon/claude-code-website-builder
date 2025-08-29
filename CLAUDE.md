@@ -256,7 +256,7 @@ Create visual interest through strategic contrast mixing:
 - **Depth through layering**: Use different dark/light levels for cards, overlays, and sections
 - Always test contrast ratios for accessibility, but don't limit creativity
 
-### f. Font Implementation
+### f. Font Implementation **PLEASE PAY ATTENTION** ! ! ! !
 
 Don't put anything in globals.css for changing fonts
 ```tsx
